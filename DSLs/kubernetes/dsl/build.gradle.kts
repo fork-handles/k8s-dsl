@@ -17,8 +17,8 @@ val sourcesJar by tasks.creating(Jar::class) {
 publishing {
     publications {
         create<MavenPublication>("mavenJava") {
-            groupId = "com.github.fkorotkov"
-            artifactId = "kubernetes-dsl"
+            groupId = "dev.forkhandles"
+            artifactId = "k8s-dsl"
             version = "current_k8s_dsl_version"
             from(components["java"])
             artifact(sourcesJar)

@@ -1,5 +1,4 @@
-[![Build Status](https://api.cirrus-ci.com/github/fkorotkov/k8s-kotlin-dsl.svg)](https://cirrus-ci.com/github/fkorotkov/k8s-kotlin-dsl)
-[![](https://jitpack.io/v/fkorotkov/k8s-kotlin-dsl.svg)](https://jitpack.io/#fkorotkov/k8s-kotlin-dsl)
+[![Build Status](https://api.cirrus-ci.com/github/fork-handles/k8s-dsl.svg)](https://cirrus-ci.com/github/fork-handles/k8s-dsl)
 
 [Kotlin](https://kotlinlang.org) DSL for [Kubernetes](https://kubernetes.io/) generated on top of
 the [fabric8 client](https://github.com/fabric8io/kubernetes-client).
@@ -8,8 +7,9 @@ the [fabric8 client](https://github.com/fabric8io/kubernetes-client).
 
 ## Usage
 
-`k8s-kotlin-dsl` package can be found on [jitpack](https://jitpack.io/#fkorotkov/k8s-kotlin-dsl). Simply add following lines to your `build.gradle`:
- 
+The `k8s-dsl` package can be found on [jitpack](https://jitpack.io/#fkorotkov/k8s-kotlin-dsl).
+Simply add following lines to your `build.gradle.kts`:
+
  ```groovy
 allprojects {
     repositories {
@@ -18,7 +18,7 @@ allprojects {
 }
 
 dependencies {
-    implementation("com.github.fkorotkov:k8s-kotlin-dsl:${kubernetes_dsl_version}")
+    implementation("dev.forkhandles:k8s-dsl:${kubernetes_dsl_version}")
 }
 ```
 
@@ -28,14 +28,20 @@ Let's check out how to create an Ingress via [fabric8 client](https://github.com
 Don't forget to add a dependency on `io.fabric8:kubernetes-client:${kubernetes_client_version}`.
 
 ```kotlin
-import com.fkorotkov.kubernetes.extensions.*
+import dev.forkhandles.k8s.extensions.backend
+import dev.forkhandles.k8s.extensions.metadata
+import dev.forkhandles.k8s.extensions.newIngress
+import dev.forkhandles.k8s.extensions.spec
 import io.fabric8.kubernetes.api.model.IntOrString
 import io.fabric8.kubernetes.client.DefaultKubernetesClient
 
 
 fun main() {
-    val client = DefaultKubernetesClient().inNamespace("default")
-    client.extensions().ingresses().createOrReplace(
+    val client = KubernetesClientBuilder()
+        .withConfig(ConfigBuilder().withNamespace("default").build())
+        .build()
+
+    client.extensions().ingresses().resource(
         newIngress {
             metadata {
                 name = "example-ingress"
@@ -47,7 +53,7 @@ fun main() {
                 }
             }
         }
-    )
+    ).serverSideApply()
 }
 ```
 
@@ -71,8 +77,20 @@ Here is an example of `BaseDeployment` that defines a deployment with one replic
 by the service.
 
 ```kotlin
-import com.fkorotkov.kubernetes.*
-import com.fkorotkov.kubernetes.apps.*
+import dev.forkhandles.k8s.apps.metadata
+import dev.forkhandles.k8s.apps.spec
+import dev.forkhandles.k8s.apps.template
+import dev.forkhandles.k8s.httpGet
+import dev.forkhandles.k8s.livenessProbe
+import dev.forkhandles.k8s.metadata
+import dev.forkhandles.k8s.newContainer
+import dev.forkhandles.k8s.newContainerPort
+import dev.forkhandles.k8s.newEnvVar
+import dev.forkhandles.k8s.newVolume
+import dev.forkhandles.k8s.newVolumeMount
+import dev.forkhandles.k8s.readinessProbe
+import dev.forkhandles.k8s.secret
+import dev.forkhandles.k8s.spec
 import io.fabric8.kubernetes.api.model.IntOrString
 import io.fabric8.kubernetes.api.model.apps.Deployment
 
@@ -98,7 +116,7 @@ class BaseDeployment : Deployment {
                     containers = listOf(
                         newContainer {
                             name = "$serviceName-service"
-                            image = "gcr.io/fkorotkov/$serviceName-service:latest"
+                            image = "gcr.io/fork-handles/$serviceName-service:latest"
                             volumeMounts = listOf(
                                 newVolumeMount {
                                     name = "gcp-credentials"

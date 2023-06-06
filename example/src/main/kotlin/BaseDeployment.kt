@@ -31,7 +31,7 @@ class BaseDeployment : Deployment {
                     containers = listOf(
                         newContainer {
                             name = "$serviceName-service"
-                            image = "gcr.io/fkorotkov/$serviceName-service:latest"
+                            image = "gcr.io/fork-handles/$serviceName-service:latest"
                             volumeMounts = listOf(
                                 newVolumeMount {
                                     name = "gcp-credentials"

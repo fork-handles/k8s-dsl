@@ -40,7 +40,7 @@
               }
             ],
             "envFrom": [],
-            "image": "gcr.io/fkorotkov/foo-service:latest",
+            "image": "gcr.io/fork-handles/foo-service:latest",
             "livenessProbe": {
               "httpGet": {
                 "httpHeaders": [],
