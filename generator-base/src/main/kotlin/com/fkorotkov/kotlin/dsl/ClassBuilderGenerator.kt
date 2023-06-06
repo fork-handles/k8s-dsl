@@ -37,7 +37,7 @@ ${
 
   private fun classBuilderTemplate(clazz: KClass<*>): String {
     return """
-fun new${clazz.simpleName}(block : ${clazz.uniqueSimpleAlias}.() -> Unit = {}): ${clazz.uniqueSimpleAlias} {
+fun new${clazz.simpleName}(block: ${clazz.uniqueSimpleAlias}.() -> Unit = {}): ${clazz.uniqueSimpleAlias} {
     val instance = ${clazz.uniqueSimpleAlias}()
     instance.block()
     return instance

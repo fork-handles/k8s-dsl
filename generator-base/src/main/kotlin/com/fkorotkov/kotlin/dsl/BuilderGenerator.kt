@@ -49,7 +49,7 @@ clazzToProperties.map { (clazz, property) -> extensionFunctionTemplate(clazz, pr
     val returnClassDecl = returnClass.uniqueSimpleAlias + genericsTemplate(Collections.nCopies(returnClass.typeParameters.size, "*"))
 
     return """
-fun ${genericsTemplate(generics)} $clazzDecl.`${property.name}`(block: $returnClassDecl.() -> Unit = {}) {${initializer(property, returnClass)}
+fun${ if (generics.isEmpty()) "" else " " }${genericsTemplate(generics)} $clazzDecl.`${property.name}`(block: $returnClassDecl.() -> Unit = {}) {${initializer(property, returnClass)}
     this.`${sanitizePropertyName(property.name)}`.block()
 }
 """
