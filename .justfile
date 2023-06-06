@@ -8,3 +8,7 @@ _targets:
 # generates the latest k8s DSL from fabric8
 @generate:
   ./gradlew :DSLs:kubernetes:generator:run
+
+# runs tests across all sub-projects
+@check:
+  ./gradlew check --warning-mode=all
