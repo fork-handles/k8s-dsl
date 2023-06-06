@@ -1,11 +1,17 @@
-import com.fkorotkov.kubernetes.extensions.*
+import com.fkorotkov.kubernetes.extensions.backend
+import com.fkorotkov.kubernetes.extensions.metadata
+import com.fkorotkov.kubernetes.extensions.newIngress
+import com.fkorotkov.kubernetes.extensions.spec
 import io.fabric8.kubernetes.api.model.IntOrString
-import io.fabric8.kubernetes.client.DefaultKubernetesClient
-
+import io.fabric8.kubernetes.client.ConfigBuilder
+import io.fabric8.kubernetes.client.KubernetesClientBuilder
 
 fun main() {
-  val client = DefaultKubernetesClient().inNamespace("default")
-  client.extensions().ingresses().createOrReplace(
+  val client = KubernetesClientBuilder()
+    .withConfig(ConfigBuilder().withNamespace("default").build())
+    .build()
+
+  client.extensions().ingresses().resource(
     newIngress {
       metadata {
         name = "example-ingress"
@@ -17,5 +23,5 @@ fun main() {
         }
       }
     }
-  )
+  ).serverSideApply()
 }
