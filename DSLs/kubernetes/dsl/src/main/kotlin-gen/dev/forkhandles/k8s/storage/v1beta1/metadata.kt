@@ -1,0 +1,66 @@
+// GENERATED
+package dev.forkhandles.k8s.storage.v1beta1
+
+import io.fabric8.kubernetes.api.model.ListMeta as model_ListMeta
+import io.fabric8.kubernetes.api.model.ObjectMeta as model_ObjectMeta
+import io.fabric8.kubernetes.api.model.storage.v1beta1.CSIDriver as v1beta1_CSIDriver
+import io.fabric8.kubernetes.api.model.storage.v1beta1.CSIDriverList as v1beta1_CSIDriverList
+import io.fabric8.kubernetes.api.model.storage.v1beta1.CSINode as v1beta1_CSINode
+import io.fabric8.kubernetes.api.model.storage.v1beta1.CSINodeList as v1beta1_CSINodeList
+import io.fabric8.kubernetes.api.model.storage.v1beta1.CSIStorageCapacity as v1beta1_CSIStorageCapacity
+import io.fabric8.kubernetes.api.model.storage.v1beta1.CSIStorageCapacityList as v1beta1_CSIStorageCapacityList
+
+
+fun v1beta1_CSIDriver.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
+    if (this.`metadata` == null) {
+        this.`metadata` = model_ObjectMeta()
+    }
+
+    this.`metadata`.block()
+}
+
+
+fun v1beta1_CSIDriverList.`metadata`(block: model_ListMeta.() -> Unit = {}) {
+    if (this.`metadata` == null) {
+        this.`metadata` = model_ListMeta()
+    }
+
+    this.`metadata`.block()
+}
+
+
+fun v1beta1_CSINode.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
+    if (this.`metadata` == null) {
+        this.`metadata` = model_ObjectMeta()
+    }
+
+    this.`metadata`.block()
+}
+
+
+fun v1beta1_CSINodeList.`metadata`(block: model_ListMeta.() -> Unit = {}) {
+    if (this.`metadata` == null) {
+        this.`metadata` = model_ListMeta()
+    }
+
+    this.`metadata`.block()
+}
+
+
+fun v1beta1_CSIStorageCapacity.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
+    if (this.`metadata` == null) {
+        this.`metadata` = model_ObjectMeta()
+    }
+
+    this.`metadata`.block()
+}
+
+
+fun v1beta1_CSIStorageCapacityList.`metadata`(block: model_ListMeta.() -> Unit = {}) {
+    if (this.`metadata` == null) {
+        this.`metadata` = model_ListMeta()
+    }
+
+    this.`metadata`.block()
+}
+
