@@ -1,8 +1,8 @@
 task:
   matrix:
-    - name: Test (JDK 11)
+    - name: Tests (JDK 17)
       container:
-        image: gradle:jdk11
+        image: gradle:8.1.1-jdk17-alpine
   gradle_cache:
     folder: ~/.gradle/caches
   check_script: gradle check --stacktrace
