@@ -1,7 +1,17 @@
-import com.fkorotkov.kubernetes.*
-import com.fkorotkov.kubernetes.apps.metadata
-import com.fkorotkov.kubernetes.apps.spec
-import com.fkorotkov.kubernetes.apps.template
+import dev.forkhandles.k8s.apps.metadata
+import dev.forkhandles.k8s.apps.spec
+import dev.forkhandles.k8s.apps.template
+import dev.forkhandles.k8s.httpGet
+import dev.forkhandles.k8s.livenessProbe
+import dev.forkhandles.k8s.metadata
+import dev.forkhandles.k8s.newContainer
+import dev.forkhandles.k8s.newContainerPort
+import dev.forkhandles.k8s.newEnvVar
+import dev.forkhandles.k8s.newVolume
+import dev.forkhandles.k8s.newVolumeMount
+import dev.forkhandles.k8s.readinessProbe
+import dev.forkhandles.k8s.secret
+import dev.forkhandles.k8s.spec
 import io.fabric8.kubernetes.api.model.IntOrString
 import io.fabric8.kubernetes.api.model.apps.Deployment
 

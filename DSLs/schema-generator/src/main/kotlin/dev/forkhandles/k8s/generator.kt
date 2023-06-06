@@ -1,4 +1,4 @@
-package com.fkorotkov.kubernetes
+package dev.forkhandles.k8s
 
 import com.fkorotkov.kotlin.dsl.crd.CRDDefinition
 import com.fkorotkov.kotlin.dsl.crd.OpenAPIV3Schema

@@ -1,6 +1,6 @@
-import com.fkorotkov.kubernetes.metadata
-import com.fkorotkov.kubernetes.newServicePort
-import com.fkorotkov.kubernetes.spec
+import dev.forkhandles.k8s.metadata
+import dev.forkhandles.k8s.newServicePort
+import dev.forkhandles.k8s.spec
 import io.fabric8.kubernetes.api.model.Service
 
 open class BaseService(val serviceName: String) : Service() {

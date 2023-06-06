@@ -1,4 +1,4 @@
-package com.fkorotkov.kubernetes
+package dev.forkhandles.k8s
 
 import com.google.gson.annotations.SerializedName
 

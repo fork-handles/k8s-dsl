@@ -1,4 +1,4 @@
-package com.fkorotkov.kubernetes
+package dev.forkhandles.k8s
 
 import io.fabric8.kubernetes.api.model.IntOrString
 import org.junit.Test

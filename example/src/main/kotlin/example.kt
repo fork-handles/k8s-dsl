@@ -1,7 +1,7 @@
-import com.fkorotkov.kubernetes.extensions.backend
-import com.fkorotkov.kubernetes.extensions.metadata
-import com.fkorotkov.kubernetes.extensions.newIngress
-import com.fkorotkov.kubernetes.extensions.spec
+import dev.forkhandles.k8s.extensions.backend
+import dev.forkhandles.k8s.extensions.metadata
+import dev.forkhandles.k8s.extensions.newIngress
+import dev.forkhandles.k8s.extensions.spec
 import io.fabric8.kubernetes.api.model.IntOrString
 import io.fabric8.kubernetes.client.ConfigBuilder
 import io.fabric8.kubernetes.client.KubernetesClientBuilder

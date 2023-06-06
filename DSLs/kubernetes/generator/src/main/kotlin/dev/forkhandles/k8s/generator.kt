@@ -1,4 +1,4 @@
-package com.fkorotkov.kubernetes
+package dev.forkhandles.k8s
 
 import com.fkorotkov.kotlin.dsl.Generator
 import io.fabric8.kubernetes.api.model.KubernetesResource
@@ -14,6 +14,6 @@ fun main(args: Array<String>) {
         KubernetesResource::class,
         "io.fabric8.kubernetes.api.model",
         outputFolder,
-        "com.fkorotkov.kubernetes",
+        "dev.forkhandles.k8s",
     )
 }
