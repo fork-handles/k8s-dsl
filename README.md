@@ -12,9 +12,9 @@ the [fabric8 client](https://github.com/fabric8io/kubernetes-client).
  
  ```groovy
 allprojects {
-		repositories {
-			 maven { url 'https://jitpack.io' }
-		}
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
 }
 
 dependencies {
@@ -24,7 +24,8 @@ dependencies {
 
 ### Using with `kubernetes-client`
 
-Let's check out how to create an Ingress via [fabric8 client](https://github.com/fabric8io/kubernetes-client). Don't forget to add a dependency on `io.fabric8:kubernetes-client:${kubernetes_client_version}`.
+Let's check out how to create an Ingress via [fabric8 client](https://github.com/fabric8io/kubernetes-client).
+Don't forget to add a dependency on `io.fabric8:kubernetes-client:${kubernetes_client_version}`.
 
 ```kotlin
 import com.fkorotkov.kubernetes.extensions.*
@@ -33,39 +34,41 @@ import io.fabric8.kubernetes.client.DefaultKubernetesClient
 
 
 fun main() {
-  val client = DefaultKubernetesClient().inNamespace("default")
-  client.extensions().ingresses().createOrReplace(
-    newIngress {
-      metadata {
-        name = "example-ingress"
-      }
-      spec {
-        backend {
-          serviceName = "example-service"
-          servicePort = IntOrString(8080)
+    val client = DefaultKubernetesClient().inNamespace("default")
+    client.extensions().ingresses().createOrReplace(
+        newIngress {
+            metadata {
+                name = "example-ingress"
+            }
+            spec {
+                backend {
+                    serviceName = "example-service"
+                    servicePort = IntOrString(8080)
+                }
+            }
         }
-      }
-    }
-  )
+    )
 }
 ```
 
 ### Apply modifications
 
-By leveraging awesomeness of Kotlin it becomes super easy to have a base service template that every microservice is created from:
- 
+By leveraging awesomeness of Kotlin it becomes super easy to have a base service template that every microservice
+is created from:
+
 ```kotlin
 val baseService = defaultServiceTemplate()
 baseService.apply {
-  metadata {
-    name = "foo"
-  }
+    metadata {
+        name = "foo"
+    }
 }
 ```
 
 ### Complete Deployment example
 
-Here is an example of `BaseDeployment` that defines a deployment with one replica and mounts a secret that can be used by the service.
+Here is an example of `BaseDeployment` that defines a deployment with one replica and mounts a secret that can be used
+by the service.
 
 ```kotlin
 import com.fkorotkov.kubernetes.*
@@ -74,75 +77,75 @@ import io.fabric8.kubernetes.api.model.IntOrString
 import io.fabric8.kubernetes.api.model.apps.Deployment
 
 class BaseDeployment : Deployment {
-  constructor(serviceName: String) {
-    metadata {
-      name = "$serviceName-service-deployment"
-      labels = mapOf(
-        "app" to serviceName,
-        "tier" to "backend"
-      )
-    }
-    spec {
-      replicas = 1
-      template {
+    constructor(serviceName: String) {
         metadata {
-          labels = mapOf(
-            "app" to serviceName,
-            "tier" to "backend"
-          )
+            name = "$serviceName-service-deployment"
+            labels = mapOf(
+                "app" to serviceName,
+                "tier" to "backend"
+            )
         }
         spec {
-          containers = listOf(
-            newContainer {
-              name = "$serviceName-service"
-              image = "gcr.io/fkorotkov/$serviceName-service:latest"
-              volumeMounts = listOf(
-                newVolumeMount {
-                  name = "gcp-credentials"
-                  mountPath = "/etc/credentials"
-                  readOnly = true
+            replicas = 1
+            template {
+                metadata {
+                    labels = mapOf(
+                        "app" to serviceName,
+                        "tier" to "backend"
+                    )
                 }
-              )
-              env = listOf(
-                newEnvVar {
-                  name = "GOOGLE_APPLICATION_CREDENTIALS"
-                  value = "/etc/credentials/service-account-credentials.json"
+                spec {
+                    containers = listOf(
+                        newContainer {
+                            name = "$serviceName-service"
+                            image = "gcr.io/fkorotkov/$serviceName-service:latest"
+                            volumeMounts = listOf(
+                                newVolumeMount {
+                                    name = "gcp-credentials"
+                                    mountPath = "/etc/credentials"
+                                    readOnly = true
+                                }
+                            )
+                            env = listOf(
+                                newEnvVar {
+                                    name = "GOOGLE_APPLICATION_CREDENTIALS"
+                                    value = "/etc/credentials/service-account-credentials.json"
+                                }
+                            )
+                            ports = listOf(
+                                newContainerPort {
+                                    containerPort = 8080
+                                }
+                            )
+                            livenessProbe {
+                                httpGet {
+                                    path = "/healthz"
+                                    port = IntOrString(8080)
+                                }
+                                periodSeconds = 60
+                            }
+                            readinessProbe {
+                                httpGet {
+                                    path = "/healthz"
+                                    port = IntOrString(8080)
+                                }
+                                initialDelaySeconds = 10
+                                periodSeconds = 60
+                            }
+                        }
+                    )
+                    volumes = listOf(
+                        newVolume {
+                            name = "gcp-credentials"
+                            secret {
+                                secretName = "gcp-credentials"
+                            }
+                        }
+                    )
                 }
-              )
-              ports = listOf(
-                newContainerPort {
-                  containerPort = 8080
-                }
-              )
-              livenessProbe {
-                httpGet {
-                  path = "/healthz"
-                  port = IntOrString(8080)
-                }
-                periodSeconds = 60
-              }
-              readinessProbe {
-                httpGet {
-                  path = "/healthz"
-                  port = IntOrString(8080)
-                }
-                initialDelaySeconds = 10
-                periodSeconds = 60
-              }
             }
-          )
-          volumes = listOf(
-            newVolume {
-              name = "gcp-credentials"
-              secret {
-                secretName = "gcp-credentials"
-              }
-            }
-          )
         }
-      }
     }
-  }
 }
 ```
 

@@ -1,5 +1,4 @@
-A simple generator that uses reflections to generate DSL for building any kind of objects. 
-
+A simple generator that uses reflections to generate DSL for building any kind of objects.
 
 1. For a given class `Foo` it will generate object initializer:
     ```kotlin
