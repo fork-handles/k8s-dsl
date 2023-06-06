@@ -4,7 +4,7 @@ plugins {
 }
 
 application {
-    mainClass.set("com.fkorotkov.kubernetes.GeneratorKt")
+    mainClass.set("dev.forkhandles.k8s.GeneratorKt")
 }
 
 tasks.named<JavaExec>("run").configure {
