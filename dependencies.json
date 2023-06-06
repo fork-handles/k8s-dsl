@@ -13,7 +13,7 @@
     {
       "group": "com.google.code.gson",
       "name": "gson",
-      "version": "2.9.0"
+      "version": "2.10.1"
     },
     {
       "group": "com.google.code.gson",
@@ -23,7 +23,7 @@
     {
       "group": "com.google.guava",
       "name": "guava",
-      "version": "31.1-jre"
+      "version": "32.0.0-jre"
     },
     {
       "group": "io.fabric8",
