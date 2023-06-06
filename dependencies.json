@@ -58,22 +58,22 @@
     {
       "group": "org.jetbrains.kotlin",
       "name": "kotlin-gradle-plugin",
-      "version": "1.7.0"
+      "version": "1.8.21"
     },
     {
       "group": "org.jetbrains.kotlin",
       "name": "kotlin-reflect",
-      "version": "1.7.0"
+      "version": "1.8.21"
     },
     {
       "group": "org.jetbrains.kotlin",
       "name": "kotlin-stdlib",
-      "version": "1.7.0"
+      "version": "1.8.21"
     },
     {
       "group": "org.jetbrains.kotlin",
       "name": "kotlin-test-junit",
-      "version": "1.7.0"
+      "version": "1.8.21"
     },
     {
       "group": "org.jsonschema2pojo",
