@@ -1,7 +1,8 @@
 [![Build Status](https://api.cirrus-ci.com/github/fkorotkov/k8s-kotlin-dsl.svg)](https://cirrus-ci.com/github/fkorotkov/k8s-kotlin-dsl)
 [![](https://jitpack.io/v/fkorotkov/k8s-kotlin-dsl.svg)](https://jitpack.io/#fkorotkov/k8s-kotlin-dsl)
 
-[Kotlin](https://kotlinlang.org) DSL for [Kubernetes](https://kubernetes.io/) and [Openshift Container Platform](https://www.openshift.com/container-platform/) on top of [fabric8 client](https://github.com/fabric8io/kubernetes-client).
+[Kotlin](https://kotlinlang.org) DSL for [Kubernetes](https://kubernetes.io/) generated on top of
+the [fabric8 client](https://github.com/fabric8io/kubernetes-client).
 
 ![screencast](demo.gif)
 

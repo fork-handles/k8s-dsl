@@ -15,13 +15,5 @@ fun main(args: Array<String>) {
       "io.fabric8.kubernetes.api.model",
       outputFolder,
       "com.fkorotkov.kubernetes",
-      setOf("io.fabric8.openshift")
-  )
-  Generator.generate(
-      KubernetesResource::class,
-      "io.fabric8.openshift.api.model",
-      outputFolder,
-      "com.fkorotkov.openshift",
-      setOf("io.fabric8.kubernetes")
   )
 }
