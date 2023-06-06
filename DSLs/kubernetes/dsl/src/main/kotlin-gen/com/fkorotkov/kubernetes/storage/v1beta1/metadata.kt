@@ -11,56 +11,56 @@ import io.fabric8.kubernetes.api.model.storage.v1beta1.CSIStorageCapacity as v1b
 import io.fabric8.kubernetes.api.model.storage.v1beta1.CSIStorageCapacityList as v1beta1_CSIStorageCapacityList
 
 
-fun  v1beta1_CSIDriver.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
-  if(this.`metadata` == null) {
-    this.`metadata` = model_ObjectMeta()
-  }
+fun v1beta1_CSIDriver.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
+    if (this.`metadata` == null) {
+        this.`metadata` = model_ObjectMeta()
+    }
 
-  this.`metadata`.block()
+    this.`metadata`.block()
 }
 
 
-fun  v1beta1_CSIDriverList.`metadata`(block: model_ListMeta.() -> Unit = {}) {
-  if(this.`metadata` == null) {
-    this.`metadata` = model_ListMeta()
-  }
+fun v1beta1_CSIDriverList.`metadata`(block: model_ListMeta.() -> Unit = {}) {
+    if (this.`metadata` == null) {
+        this.`metadata` = model_ListMeta()
+    }
 
-  this.`metadata`.block()
+    this.`metadata`.block()
 }
 
 
-fun  v1beta1_CSINode.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
-  if(this.`metadata` == null) {
-    this.`metadata` = model_ObjectMeta()
-  }
+fun v1beta1_CSINode.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
+    if (this.`metadata` == null) {
+        this.`metadata` = model_ObjectMeta()
+    }
 
-  this.`metadata`.block()
+    this.`metadata`.block()
 }
 
 
-fun  v1beta1_CSINodeList.`metadata`(block: model_ListMeta.() -> Unit = {}) {
-  if(this.`metadata` == null) {
-    this.`metadata` = model_ListMeta()
-  }
+fun v1beta1_CSINodeList.`metadata`(block: model_ListMeta.() -> Unit = {}) {
+    if (this.`metadata` == null) {
+        this.`metadata` = model_ListMeta()
+    }
 
-  this.`metadata`.block()
+    this.`metadata`.block()
 }
 
 
-fun  v1beta1_CSIStorageCapacity.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
-  if(this.`metadata` == null) {
-    this.`metadata` = model_ObjectMeta()
-  }
+fun v1beta1_CSIStorageCapacity.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
+    if (this.`metadata` == null) {
+        this.`metadata` = model_ObjectMeta()
+    }
 
-  this.`metadata`.block()
+    this.`metadata`.block()
 }
 
 
-fun  v1beta1_CSIStorageCapacityList.`metadata`(block: model_ListMeta.() -> Unit = {}) {
-  if(this.`metadata` == null) {
-    this.`metadata` = model_ListMeta()
-  }
+fun v1beta1_CSIStorageCapacityList.`metadata`(block: model_ListMeta.() -> Unit = {}) {
+    if (this.`metadata` == null) {
+        this.`metadata` = model_ListMeta()
+    }
 
-  this.`metadata`.block()
+    this.`metadata`.block()
 }
 

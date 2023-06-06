@@ -6,20 +6,20 @@ import io.fabric8.kubernetes.api.model.autoscaling.v2beta1.ObjectMetricSource as
 import io.fabric8.kubernetes.api.model.autoscaling.v2beta1.ObjectMetricStatus as v2beta1_ObjectMetricStatus
 
 
-fun  v2beta1_ObjectMetricSource.`target`(block: v2beta1_CrossVersionObjectReference.() -> Unit = {}) {
-  if(this.`target` == null) {
-    this.`target` = v2beta1_CrossVersionObjectReference()
-  }
+fun v2beta1_ObjectMetricSource.`target`(block: v2beta1_CrossVersionObjectReference.() -> Unit = {}) {
+    if (this.`target` == null) {
+        this.`target` = v2beta1_CrossVersionObjectReference()
+    }
 
-  this.`target`.block()
+    this.`target`.block()
 }
 
 
-fun  v2beta1_ObjectMetricStatus.`target`(block: v2beta1_CrossVersionObjectReference.() -> Unit = {}) {
-  if(this.`target` == null) {
-    this.`target` = v2beta1_CrossVersionObjectReference()
-  }
+fun v2beta1_ObjectMetricStatus.`target`(block: v2beta1_CrossVersionObjectReference.() -> Unit = {}) {
+    if (this.`target` == null) {
+        this.`target` = v2beta1_CrossVersionObjectReference()
+    }
 
-  this.`target`.block()
+    this.`target`.block()
 }
 

@@ -5,7 +5,7 @@ import io.fabric8.kubernetes.api.model.KubernetesResource as model_KubernetesRes
 import io.fabric8.kubernetes.api.model.apps.ControllerRevision as apps_ControllerRevision
 
 
-fun  apps_ControllerRevision.`data`(block: model_KubernetesResource.() -> Unit = {}) {
-  this.`data`.block()
+fun apps_ControllerRevision.`data`(block: model_KubernetesResource.() -> Unit = {}) {
+    this.`data`.block()
 }
 

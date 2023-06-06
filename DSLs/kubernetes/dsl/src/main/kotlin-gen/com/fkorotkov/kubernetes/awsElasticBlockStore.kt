@@ -6,20 +6,20 @@ import io.fabric8.kubernetes.api.model.PersistentVolumeSpec as model_PersistentV
 import io.fabric8.kubernetes.api.model.Volume as model_Volume
 
 
-fun  model_PersistentVolumeSpec.`awsElasticBlockStore`(block: model_AWSElasticBlockStoreVolumeSource.() -> Unit = {}) {
-  if(this.`awsElasticBlockStore` == null) {
-    this.`awsElasticBlockStore` = model_AWSElasticBlockStoreVolumeSource()
-  }
+fun model_PersistentVolumeSpec.`awsElasticBlockStore`(block: model_AWSElasticBlockStoreVolumeSource.() -> Unit = {}) {
+    if (this.`awsElasticBlockStore` == null) {
+        this.`awsElasticBlockStore` = model_AWSElasticBlockStoreVolumeSource()
+    }
 
-  this.`awsElasticBlockStore`.block()
+    this.`awsElasticBlockStore`.block()
 }
 
 
-fun  model_Volume.`awsElasticBlockStore`(block: model_AWSElasticBlockStoreVolumeSource.() -> Unit = {}) {
-  if(this.`awsElasticBlockStore` == null) {
-    this.`awsElasticBlockStore` = model_AWSElasticBlockStoreVolumeSource()
-  }
+fun model_Volume.`awsElasticBlockStore`(block: model_AWSElasticBlockStoreVolumeSource.() -> Unit = {}) {
+    if (this.`awsElasticBlockStore` == null) {
+        this.`awsElasticBlockStore` = model_AWSElasticBlockStoreVolumeSource()
+    }
 
-  this.`awsElasticBlockStore`.block()
+    this.`awsElasticBlockStore`.block()
 }
 

@@ -5,11 +5,11 @@ import io.fabric8.kubernetes.api.model.admissionregistration.v1alpha1.MatchResou
 import io.fabric8.kubernetes.api.model.admissionregistration.v1alpha1.ValidatingAdmissionPolicySpec as v1alpha1_ValidatingAdmissionPolicySpec
 
 
-fun  v1alpha1_ValidatingAdmissionPolicySpec.`matchConstraints`(block: v1alpha1_MatchResources.() -> Unit = {}) {
-  if(this.`matchConstraints` == null) {
-    this.`matchConstraints` = v1alpha1_MatchResources()
-  }
+fun v1alpha1_ValidatingAdmissionPolicySpec.`matchConstraints`(block: v1alpha1_MatchResources.() -> Unit = {}) {
+    if (this.`matchConstraints` == null) {
+        this.`matchConstraints` = v1alpha1_MatchResources()
+    }
 
-  this.`matchConstraints`.block()
+    this.`matchConstraints`.block()
 }
 

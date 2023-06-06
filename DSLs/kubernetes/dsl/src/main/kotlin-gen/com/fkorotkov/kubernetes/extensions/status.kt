@@ -13,47 +13,47 @@ import io.fabric8.kubernetes.api.model.extensions.ReplicaSet as extensions_Repli
 import io.fabric8.kubernetes.api.model.extensions.ReplicaSetStatus as extensions_ReplicaSetStatus
 
 
-fun  extensions_DaemonSet.`status`(block: extensions_DaemonSetStatus.() -> Unit = {}) {
-  if(this.`status` == null) {
-    this.`status` = extensions_DaemonSetStatus()
-  }
+fun extensions_DaemonSet.`status`(block: extensions_DaemonSetStatus.() -> Unit = {}) {
+    if (this.`status` == null) {
+        this.`status` = extensions_DaemonSetStatus()
+    }
 
-  this.`status`.block()
+    this.`status`.block()
 }
 
 
-fun  extensions_Deployment.`status`(block: extensions_DeploymentStatus.() -> Unit = {}) {
-  if(this.`status` == null) {
-    this.`status` = extensions_DeploymentStatus()
-  }
+fun extensions_Deployment.`status`(block: extensions_DeploymentStatus.() -> Unit = {}) {
+    if (this.`status` == null) {
+        this.`status` = extensions_DeploymentStatus()
+    }
 
-  this.`status`.block()
+    this.`status`.block()
 }
 
 
-fun  extensions_Ingress.`status`(block: extensions_IngressStatus.() -> Unit = {}) {
-  if(this.`status` == null) {
-    this.`status` = extensions_IngressStatus()
-  }
+fun extensions_Ingress.`status`(block: extensions_IngressStatus.() -> Unit = {}) {
+    if (this.`status` == null) {
+        this.`status` = extensions_IngressStatus()
+    }
 
-  this.`status`.block()
+    this.`status`.block()
 }
 
 
-fun  extensions_NetworkPolicy.`status`(block: extensions_NetworkPolicyStatus.() -> Unit = {}) {
-  if(this.`status` == null) {
-    this.`status` = extensions_NetworkPolicyStatus()
-  }
+fun extensions_NetworkPolicy.`status`(block: extensions_NetworkPolicyStatus.() -> Unit = {}) {
+    if (this.`status` == null) {
+        this.`status` = extensions_NetworkPolicyStatus()
+    }
 
-  this.`status`.block()
+    this.`status`.block()
 }
 
 
-fun  extensions_ReplicaSet.`status`(block: extensions_ReplicaSetStatus.() -> Unit = {}) {
-  if(this.`status` == null) {
-    this.`status` = extensions_ReplicaSetStatus()
-  }
+fun extensions_ReplicaSet.`status`(block: extensions_ReplicaSetStatus.() -> Unit = {}) {
+    if (this.`status` == null) {
+        this.`status` = extensions_ReplicaSetStatus()
+    }
 
-  this.`status`.block()
+    this.`status`.block()
 }
 

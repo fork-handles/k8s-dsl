@@ -8,37 +8,37 @@ import io.fabric8.kubernetes.api.model.certificates.v1.CertificateSigningRequest
 import io.fabric8.kubernetes.api.model.certificates.v1.CertificateSigningRequestStatus as v1_CertificateSigningRequestStatus
 
 
-fun newCertificateSigningRequest(block : v1_CertificateSigningRequest.() -> Unit = {}): v1_CertificateSigningRequest {
-  val instance = v1_CertificateSigningRequest()
-  instance.block()
-  return instance
+fun newCertificateSigningRequest(block: v1_CertificateSigningRequest.() -> Unit = {}): v1_CertificateSigningRequest {
+    val instance = v1_CertificateSigningRequest()
+    instance.block()
+    return instance
 }
 
 
-fun newCertificateSigningRequestCondition(block : v1_CertificateSigningRequestCondition.() -> Unit = {}): v1_CertificateSigningRequestCondition {
-  val instance = v1_CertificateSigningRequestCondition()
-  instance.block()
-  return instance
+fun newCertificateSigningRequestCondition(block: v1_CertificateSigningRequestCondition.() -> Unit = {}): v1_CertificateSigningRequestCondition {
+    val instance = v1_CertificateSigningRequestCondition()
+    instance.block()
+    return instance
 }
 
 
-fun newCertificateSigningRequestList(block : v1_CertificateSigningRequestList.() -> Unit = {}): v1_CertificateSigningRequestList {
-  val instance = v1_CertificateSigningRequestList()
-  instance.block()
-  return instance
+fun newCertificateSigningRequestList(block: v1_CertificateSigningRequestList.() -> Unit = {}): v1_CertificateSigningRequestList {
+    val instance = v1_CertificateSigningRequestList()
+    instance.block()
+    return instance
 }
 
 
-fun newCertificateSigningRequestSpec(block : v1_CertificateSigningRequestSpec.() -> Unit = {}): v1_CertificateSigningRequestSpec {
-  val instance = v1_CertificateSigningRequestSpec()
-  instance.block()
-  return instance
+fun newCertificateSigningRequestSpec(block: v1_CertificateSigningRequestSpec.() -> Unit = {}): v1_CertificateSigningRequestSpec {
+    val instance = v1_CertificateSigningRequestSpec()
+    instance.block()
+    return instance
 }
 
 
-fun newCertificateSigningRequestStatus(block : v1_CertificateSigningRequestStatus.() -> Unit = {}): v1_CertificateSigningRequestStatus {
-  val instance = v1_CertificateSigningRequestStatus()
-  instance.block()
-  return instance
+fun newCertificateSigningRequestStatus(block: v1_CertificateSigningRequestStatus.() -> Unit = {}): v1_CertificateSigningRequestStatus {
+    val instance = v1_CertificateSigningRequestStatus()
+    instance.block()
+    return instance
 }
 

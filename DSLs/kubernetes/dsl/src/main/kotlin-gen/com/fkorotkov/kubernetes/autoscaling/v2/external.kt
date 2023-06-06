@@ -7,20 +7,20 @@ import io.fabric8.kubernetes.api.model.autoscaling.v2.MetricSpec as v2_MetricSpe
 import io.fabric8.kubernetes.api.model.autoscaling.v2.MetricStatus as v2_MetricStatus
 
 
-fun  v2_MetricSpec.`external`(block: v2_ExternalMetricSource.() -> Unit = {}) {
-  if(this.`external` == null) {
-    this.`external` = v2_ExternalMetricSource()
-  }
+fun v2_MetricSpec.`external`(block: v2_ExternalMetricSource.() -> Unit = {}) {
+    if (this.`external` == null) {
+        this.`external` = v2_ExternalMetricSource()
+    }
 
-  this.`external`.block()
+    this.`external`.block()
 }
 
 
-fun  v2_MetricStatus.`external`(block: v2_ExternalMetricStatus.() -> Unit = {}) {
-  if(this.`external` == null) {
-    this.`external` = v2_ExternalMetricStatus()
-  }
+fun v2_MetricStatus.`external`(block: v2_ExternalMetricStatus.() -> Unit = {}) {
+    if (this.`external` == null) {
+        this.`external` = v2_ExternalMetricStatus()
+    }
 
-  this.`external`.block()
+    this.`external`.block()
 }
 

@@ -8,38 +8,38 @@ import io.fabric8.kubernetes.api.model.authorization.v1.SelfSubjectRulesReview a
 import io.fabric8.kubernetes.api.model.authorization.v1.SubjectAccessReview as v1_SubjectAccessReview
 
 
-fun  v1_LocalSubjectAccessReview.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
-  if(this.`metadata` == null) {
-    this.`metadata` = model_ObjectMeta()
-  }
+fun v1_LocalSubjectAccessReview.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
+    if (this.`metadata` == null) {
+        this.`metadata` = model_ObjectMeta()
+    }
 
-  this.`metadata`.block()
+    this.`metadata`.block()
 }
 
 
-fun  v1_SelfSubjectAccessReview.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
-  if(this.`metadata` == null) {
-    this.`metadata` = model_ObjectMeta()
-  }
+fun v1_SelfSubjectAccessReview.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
+    if (this.`metadata` == null) {
+        this.`metadata` = model_ObjectMeta()
+    }
 
-  this.`metadata`.block()
+    this.`metadata`.block()
 }
 
 
-fun  v1_SelfSubjectRulesReview.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
-  if(this.`metadata` == null) {
-    this.`metadata` = model_ObjectMeta()
-  }
+fun v1_SelfSubjectRulesReview.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
+    if (this.`metadata` == null) {
+        this.`metadata` = model_ObjectMeta()
+    }
 
-  this.`metadata`.block()
+    this.`metadata`.block()
 }
 
 
-fun  v1_SubjectAccessReview.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
-  if(this.`metadata` == null) {
-    this.`metadata` = model_ObjectMeta()
-  }
+fun v1_SubjectAccessReview.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
+    if (this.`metadata` == null) {
+        this.`metadata` = model_ObjectMeta()
+    }
 
-  this.`metadata`.block()
+    this.`metadata`.block()
 }
 

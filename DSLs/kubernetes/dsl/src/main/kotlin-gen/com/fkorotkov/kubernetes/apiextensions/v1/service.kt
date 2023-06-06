@@ -5,11 +5,11 @@ import io.fabric8.kubernetes.api.model.apiextensions.v1.ServiceReference as v1_S
 import io.fabric8.kubernetes.api.model.apiextensions.v1.WebhookClientConfig as v1_WebhookClientConfig
 
 
-fun  v1_WebhookClientConfig.`service`(block: v1_ServiceReference.() -> Unit = {}) {
-  if(this.`service` == null) {
-    this.`service` = v1_ServiceReference()
-  }
+fun v1_WebhookClientConfig.`service`(block: v1_ServiceReference.() -> Unit = {}) {
+    if (this.`service` == null) {
+        this.`service` = v1_ServiceReference()
+    }
 
-  this.`service`.block()
+    this.`service`.block()
 }
 

@@ -7,29 +7,29 @@ import io.fabric8.kubernetes.api.model.apps.RollingUpdateDeployment as apps_Roll
 import io.fabric8.kubernetes.api.model.apps.RollingUpdateStatefulSetStrategy as apps_RollingUpdateStatefulSetStrategy
 
 
-fun  apps_RollingUpdateDaemonSet.`maxUnavailable`(block: model_IntOrString.() -> Unit = {}) {
-  if(this.`maxUnavailable` == null) {
-    this.`maxUnavailable` = model_IntOrString()
-  }
+fun apps_RollingUpdateDaemonSet.`maxUnavailable`(block: model_IntOrString.() -> Unit = {}) {
+    if (this.`maxUnavailable` == null) {
+        this.`maxUnavailable` = model_IntOrString()
+    }
 
-  this.`maxUnavailable`.block()
+    this.`maxUnavailable`.block()
 }
 
 
-fun  apps_RollingUpdateDeployment.`maxUnavailable`(block: model_IntOrString.() -> Unit = {}) {
-  if(this.`maxUnavailable` == null) {
-    this.`maxUnavailable` = model_IntOrString()
-  }
+fun apps_RollingUpdateDeployment.`maxUnavailable`(block: model_IntOrString.() -> Unit = {}) {
+    if (this.`maxUnavailable` == null) {
+        this.`maxUnavailable` = model_IntOrString()
+    }
 
-  this.`maxUnavailable`.block()
+    this.`maxUnavailable`.block()
 }
 
 
-fun  apps_RollingUpdateStatefulSetStrategy.`maxUnavailable`(block: model_IntOrString.() -> Unit = {}) {
-  if(this.`maxUnavailable` == null) {
-    this.`maxUnavailable` = model_IntOrString()
-  }
+fun apps_RollingUpdateStatefulSetStrategy.`maxUnavailable`(block: model_IntOrString.() -> Unit = {}) {
+    if (this.`maxUnavailable` == null) {
+        this.`maxUnavailable` = model_IntOrString()
+    }
 
-  this.`maxUnavailable`.block()
+    this.`maxUnavailable`.block()
 }
 

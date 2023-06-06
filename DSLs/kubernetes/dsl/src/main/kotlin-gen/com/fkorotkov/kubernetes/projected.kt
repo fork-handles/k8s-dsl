@@ -5,11 +5,11 @@ import io.fabric8.kubernetes.api.model.ProjectedVolumeSource as model_ProjectedV
 import io.fabric8.kubernetes.api.model.Volume as model_Volume
 
 
-fun  model_Volume.`projected`(block: model_ProjectedVolumeSource.() -> Unit = {}) {
-  if(this.`projected` == null) {
-    this.`projected` = model_ProjectedVolumeSource()
-  }
+fun model_Volume.`projected`(block: model_ProjectedVolumeSource.() -> Unit = {}) {
+    if (this.`projected` == null) {
+        this.`projected` = model_ProjectedVolumeSource()
+    }
 
-  this.`projected`.block()
+    this.`projected`.block()
 }
 

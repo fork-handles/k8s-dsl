@@ -5,11 +5,11 @@ import io.fabric8.kubernetes.api.model.policy.v1beta1.PodDisruptionBudget as v1b
 import io.fabric8.kubernetes.api.model.policy.v1beta1.PodDisruptionBudgetStatus as v1beta1_PodDisruptionBudgetStatus
 
 
-fun  v1beta1_PodDisruptionBudget.`status`(block: v1beta1_PodDisruptionBudgetStatus.() -> Unit = {}) {
-  if(this.`status` == null) {
-    this.`status` = v1beta1_PodDisruptionBudgetStatus()
-  }
+fun v1beta1_PodDisruptionBudget.`status`(block: v1beta1_PodDisruptionBudgetStatus.() -> Unit = {}) {
+    if (this.`status` == null) {
+        this.`status` = v1beta1_PodDisruptionBudgetStatus()
+    }
 
-  this.`status`.block()
+    this.`status`.block()
 }
 

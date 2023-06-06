@@ -9,38 +9,38 @@ import io.fabric8.kubernetes.api.model.authorization.v1beta1.SubjectAccessReview
 import io.fabric8.kubernetes.api.model.authorization.v1beta1.SubjectRulesReviewStatus as v1beta1_SubjectRulesReviewStatus
 
 
-fun  v1beta1_LocalSubjectAccessReview.`status`(block: v1beta1_SubjectAccessReviewStatus.() -> Unit = {}) {
-  if(this.`status` == null) {
-    this.`status` = v1beta1_SubjectAccessReviewStatus()
-  }
+fun v1beta1_LocalSubjectAccessReview.`status`(block: v1beta1_SubjectAccessReviewStatus.() -> Unit = {}) {
+    if (this.`status` == null) {
+        this.`status` = v1beta1_SubjectAccessReviewStatus()
+    }
 
-  this.`status`.block()
+    this.`status`.block()
 }
 
 
-fun  v1beta1_SelfSubjectAccessReview.`status`(block: v1beta1_SubjectAccessReviewStatus.() -> Unit = {}) {
-  if(this.`status` == null) {
-    this.`status` = v1beta1_SubjectAccessReviewStatus()
-  }
+fun v1beta1_SelfSubjectAccessReview.`status`(block: v1beta1_SubjectAccessReviewStatus.() -> Unit = {}) {
+    if (this.`status` == null) {
+        this.`status` = v1beta1_SubjectAccessReviewStatus()
+    }
 
-  this.`status`.block()
+    this.`status`.block()
 }
 
 
-fun  v1beta1_SelfSubjectRulesReview.`status`(block: v1beta1_SubjectRulesReviewStatus.() -> Unit = {}) {
-  if(this.`status` == null) {
-    this.`status` = v1beta1_SubjectRulesReviewStatus()
-  }
+fun v1beta1_SelfSubjectRulesReview.`status`(block: v1beta1_SubjectRulesReviewStatus.() -> Unit = {}) {
+    if (this.`status` == null) {
+        this.`status` = v1beta1_SubjectRulesReviewStatus()
+    }
 
-  this.`status`.block()
+    this.`status`.block()
 }
 
 
-fun  v1beta1_SubjectAccessReview.`status`(block: v1beta1_SubjectAccessReviewStatus.() -> Unit = {}) {
-  if(this.`status` == null) {
-    this.`status` = v1beta1_SubjectAccessReviewStatus()
-  }
+fun v1beta1_SubjectAccessReview.`status`(block: v1beta1_SubjectAccessReviewStatus.() -> Unit = {}) {
+    if (this.`status` == null) {
+        this.`status` = v1beta1_SubjectAccessReviewStatus()
+    }
 
-  this.`status`.block()
+    this.`status`.block()
 }
 

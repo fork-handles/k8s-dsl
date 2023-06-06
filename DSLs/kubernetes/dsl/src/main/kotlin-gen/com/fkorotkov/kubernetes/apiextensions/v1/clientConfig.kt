@@ -5,11 +5,11 @@ import io.fabric8.kubernetes.api.model.apiextensions.v1.WebhookClientConfig as v
 import io.fabric8.kubernetes.api.model.apiextensions.v1.WebhookConversion as v1_WebhookConversion
 
 
-fun  v1_WebhookConversion.`clientConfig`(block: v1_WebhookClientConfig.() -> Unit = {}) {
-  if(this.`clientConfig` == null) {
-    this.`clientConfig` = v1_WebhookClientConfig()
-  }
+fun v1_WebhookConversion.`clientConfig`(block: v1_WebhookClientConfig.() -> Unit = {}) {
+    if (this.`clientConfig` == null) {
+        this.`clientConfig` = v1_WebhookClientConfig()
+    }
 
-  this.`clientConfig`.block()
+    this.`clientConfig`.block()
 }
 

@@ -7,20 +7,20 @@ import io.fabric8.kubernetes.api.model.PersistentVolumeSpec as model_PersistentV
 import io.fabric8.kubernetes.api.model.Volume as model_Volume
 
 
-fun  model_PersistentVolumeSpec.`cinder`(block: model_CinderPersistentVolumeSource.() -> Unit = {}) {
-  if(this.`cinder` == null) {
-    this.`cinder` = model_CinderPersistentVolumeSource()
-  }
+fun model_PersistentVolumeSpec.`cinder`(block: model_CinderPersistentVolumeSource.() -> Unit = {}) {
+    if (this.`cinder` == null) {
+        this.`cinder` = model_CinderPersistentVolumeSource()
+    }
 
-  this.`cinder`.block()
+    this.`cinder`.block()
 }
 
 
-fun  model_Volume.`cinder`(block: model_CinderVolumeSource.() -> Unit = {}) {
-  if(this.`cinder` == null) {
-    this.`cinder` = model_CinderVolumeSource()
-  }
+fun model_Volume.`cinder`(block: model_CinderVolumeSource.() -> Unit = {}) {
+    if (this.`cinder` == null) {
+        this.`cinder` = model_CinderVolumeSource()
+    }
 
-  this.`cinder`.block()
+    this.`cinder`.block()
 }
 

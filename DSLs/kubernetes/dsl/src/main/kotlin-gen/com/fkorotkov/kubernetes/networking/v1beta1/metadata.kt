@@ -9,38 +9,38 @@ import io.fabric8.kubernetes.api.model.networking.v1beta1.IngressClassList as v1
 import io.fabric8.kubernetes.api.model.networking.v1beta1.IngressList as v1beta1_IngressList
 
 
-fun  v1beta1_Ingress.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
-  if(this.`metadata` == null) {
-    this.`metadata` = model_ObjectMeta()
-  }
+fun v1beta1_Ingress.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
+    if (this.`metadata` == null) {
+        this.`metadata` = model_ObjectMeta()
+    }
 
-  this.`metadata`.block()
+    this.`metadata`.block()
 }
 
 
-fun  v1beta1_IngressClass.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
-  if(this.`metadata` == null) {
-    this.`metadata` = model_ObjectMeta()
-  }
+fun v1beta1_IngressClass.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
+    if (this.`metadata` == null) {
+        this.`metadata` = model_ObjectMeta()
+    }
 
-  this.`metadata`.block()
+    this.`metadata`.block()
 }
 
 
-fun  v1beta1_IngressClassList.`metadata`(block: model_ListMeta.() -> Unit = {}) {
-  if(this.`metadata` == null) {
-    this.`metadata` = model_ListMeta()
-  }
+fun v1beta1_IngressClassList.`metadata`(block: model_ListMeta.() -> Unit = {}) {
+    if (this.`metadata` == null) {
+        this.`metadata` = model_ListMeta()
+    }
 
-  this.`metadata`.block()
+    this.`metadata`.block()
 }
 
 
-fun  v1beta1_IngressList.`metadata`(block: model_ListMeta.() -> Unit = {}) {
-  if(this.`metadata` == null) {
-    this.`metadata` = model_ListMeta()
-  }
+fun v1beta1_IngressList.`metadata`(block: model_ListMeta.() -> Unit = {}) {
+    if (this.`metadata` == null) {
+        this.`metadata` = model_ListMeta()
+    }
 
-  this.`metadata`.block()
+    this.`metadata`.block()
 }
 

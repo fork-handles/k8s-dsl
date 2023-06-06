@@ -5,11 +5,11 @@ import io.fabric8.kubernetes.api.model.apiextensions.v1beta1.CustomResourceDefin
 import io.fabric8.kubernetes.api.model.apiextensions.v1beta1.CustomResourceDefinitionSpec as v1beta1_CustomResourceDefinitionSpec
 
 
-fun  v1beta1_CustomResourceDefinition.`spec`(block: v1beta1_CustomResourceDefinitionSpec.() -> Unit = {}) {
-  if(this.`spec` == null) {
-    this.`spec` = v1beta1_CustomResourceDefinitionSpec()
-  }
+fun v1beta1_CustomResourceDefinition.`spec`(block: v1beta1_CustomResourceDefinitionSpec.() -> Unit = {}) {
+    if (this.`spec` == null) {
+        this.`spec` = v1beta1_CustomResourceDefinitionSpec()
+    }
 
-  this.`spec`.block()
+    this.`spec`.block()
 }
 

@@ -10,38 +10,38 @@ import io.fabric8.kubernetes.api.model.authorization.v1.SubjectAccessReview as v
 import io.fabric8.kubernetes.api.model.authorization.v1.SubjectAccessReviewSpec as v1_SubjectAccessReviewSpec
 
 
-fun  v1_LocalSubjectAccessReview.`spec`(block: v1_SubjectAccessReviewSpec.() -> Unit = {}) {
-  if(this.`spec` == null) {
-    this.`spec` = v1_SubjectAccessReviewSpec()
-  }
+fun v1_LocalSubjectAccessReview.`spec`(block: v1_SubjectAccessReviewSpec.() -> Unit = {}) {
+    if (this.`spec` == null) {
+        this.`spec` = v1_SubjectAccessReviewSpec()
+    }
 
-  this.`spec`.block()
+    this.`spec`.block()
 }
 
 
-fun  v1_SelfSubjectAccessReview.`spec`(block: v1_SelfSubjectAccessReviewSpec.() -> Unit = {}) {
-  if(this.`spec` == null) {
-    this.`spec` = v1_SelfSubjectAccessReviewSpec()
-  }
+fun v1_SelfSubjectAccessReview.`spec`(block: v1_SelfSubjectAccessReviewSpec.() -> Unit = {}) {
+    if (this.`spec` == null) {
+        this.`spec` = v1_SelfSubjectAccessReviewSpec()
+    }
 
-  this.`spec`.block()
+    this.`spec`.block()
 }
 
 
-fun  v1_SelfSubjectRulesReview.`spec`(block: v1_SelfSubjectRulesReviewSpec.() -> Unit = {}) {
-  if(this.`spec` == null) {
-    this.`spec` = v1_SelfSubjectRulesReviewSpec()
-  }
+fun v1_SelfSubjectRulesReview.`spec`(block: v1_SelfSubjectRulesReviewSpec.() -> Unit = {}) {
+    if (this.`spec` == null) {
+        this.`spec` = v1_SelfSubjectRulesReviewSpec()
+    }
 
-  this.`spec`.block()
+    this.`spec`.block()
 }
 
 
-fun  v1_SubjectAccessReview.`spec`(block: v1_SubjectAccessReviewSpec.() -> Unit = {}) {
-  if(this.`spec` == null) {
-    this.`spec` = v1_SubjectAccessReviewSpec()
-  }
+fun v1_SubjectAccessReview.`spec`(block: v1_SubjectAccessReviewSpec.() -> Unit = {}) {
+    if (this.`spec` == null) {
+        this.`spec` = v1_SubjectAccessReviewSpec()
+    }
 
-  this.`spec`.block()
+    this.`spec`.block()
 }
 

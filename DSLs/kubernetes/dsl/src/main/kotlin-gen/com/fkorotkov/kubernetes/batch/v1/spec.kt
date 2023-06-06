@@ -8,29 +8,29 @@ import io.fabric8.kubernetes.api.model.batch.v1.JobSpec as v1_JobSpec
 import io.fabric8.kubernetes.api.model.batch.v1.JobTemplateSpec as v1_JobTemplateSpec
 
 
-fun  v1_CronJob.`spec`(block: v1_CronJobSpec.() -> Unit = {}) {
-  if(this.`spec` == null) {
-    this.`spec` = v1_CronJobSpec()
-  }
+fun v1_CronJob.`spec`(block: v1_CronJobSpec.() -> Unit = {}) {
+    if (this.`spec` == null) {
+        this.`spec` = v1_CronJobSpec()
+    }
 
-  this.`spec`.block()
+    this.`spec`.block()
 }
 
 
-fun  v1_Job.`spec`(block: v1_JobSpec.() -> Unit = {}) {
-  if(this.`spec` == null) {
-    this.`spec` = v1_JobSpec()
-  }
+fun v1_Job.`spec`(block: v1_JobSpec.() -> Unit = {}) {
+    if (this.`spec` == null) {
+        this.`spec` = v1_JobSpec()
+    }
 
-  this.`spec`.block()
+    this.`spec`.block()
 }
 
 
-fun  v1_JobTemplateSpec.`spec`(block: v1_JobSpec.() -> Unit = {}) {
-  if(this.`spec` == null) {
-    this.`spec` = v1_JobSpec()
-  }
+fun v1_JobTemplateSpec.`spec`(block: v1_JobSpec.() -> Unit = {}) {
+    if (this.`spec` == null) {
+        this.`spec` = v1_JobSpec()
+    }
 
-  this.`spec`.block()
+    this.`spec`.block()
 }
 

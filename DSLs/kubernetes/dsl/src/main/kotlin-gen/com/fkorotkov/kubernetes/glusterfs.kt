@@ -7,20 +7,20 @@ import io.fabric8.kubernetes.api.model.PersistentVolumeSpec as model_PersistentV
 import io.fabric8.kubernetes.api.model.Volume as model_Volume
 
 
-fun  model_PersistentVolumeSpec.`glusterfs`(block: model_GlusterfsPersistentVolumeSource.() -> Unit = {}) {
-  if(this.`glusterfs` == null) {
-    this.`glusterfs` = model_GlusterfsPersistentVolumeSource()
-  }
+fun model_PersistentVolumeSpec.`glusterfs`(block: model_GlusterfsPersistentVolumeSource.() -> Unit = {}) {
+    if (this.`glusterfs` == null) {
+        this.`glusterfs` = model_GlusterfsPersistentVolumeSource()
+    }
 
-  this.`glusterfs`.block()
+    this.`glusterfs`.block()
 }
 
 
-fun  model_Volume.`glusterfs`(block: model_GlusterfsVolumeSource.() -> Unit = {}) {
-  if(this.`glusterfs` == null) {
-    this.`glusterfs` = model_GlusterfsVolumeSource()
-  }
+fun model_Volume.`glusterfs`(block: model_GlusterfsVolumeSource.() -> Unit = {}) {
+    if (this.`glusterfs` == null) {
+        this.`glusterfs` = model_GlusterfsVolumeSource()
+    }
 
-  this.`glusterfs`.block()
+    this.`glusterfs`.block()
 }
 

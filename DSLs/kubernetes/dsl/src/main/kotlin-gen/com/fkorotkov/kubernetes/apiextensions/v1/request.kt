@@ -5,11 +5,11 @@ import io.fabric8.kubernetes.api.model.apiextensions.v1.ConversionRequest as v1_
 import io.fabric8.kubernetes.api.model.apiextensions.v1.ConversionReview as v1_ConversionReview
 
 
-fun  v1_ConversionReview.`request`(block: v1_ConversionRequest.() -> Unit = {}) {
-  if(this.`request` == null) {
-    this.`request` = v1_ConversionRequest()
-  }
+fun v1_ConversionReview.`request`(block: v1_ConversionRequest.() -> Unit = {}) {
+    if (this.`request` == null) {
+        this.`request` = v1_ConversionRequest()
+    }
 
-  this.`request`.block()
+    this.`request`.block()
 }
 

@@ -5,11 +5,11 @@ import io.fabric8.kubernetes.api.model.authentication.TokenReviewStatus as authe
 import io.fabric8.kubernetes.api.model.authentication.UserInfo as authentication_UserInfo
 
 
-fun  authentication_TokenReviewStatus.`user`(block: authentication_UserInfo.() -> Unit = {}) {
-  if(this.`user` == null) {
-    this.`user` = authentication_UserInfo()
-  }
+fun authentication_TokenReviewStatus.`user`(block: authentication_UserInfo.() -> Unit = {}) {
+    if (this.`user` == null) {
+        this.`user` = authentication_UserInfo()
+    }
 
-  this.`user`.block()
+    this.`user`.block()
 }
 
