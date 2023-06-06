@@ -50,7 +50,7 @@ clazzToProperties.map { (clazz, property) -> extensionFunctionTemplate(clazz, pr
 
     return """
 fun ${genericsTemplate(generics)} $clazzDecl.`${property.name}`(block: $returnClassDecl.() -> Unit = {}) {${initializer(property, returnClass)}
-  this.`${sanitizePropertyName(property.name)}`.block()
+    this.`${sanitizePropertyName(property.name)}`.block()
 }
 """
   }
@@ -59,9 +59,9 @@ fun ${genericsTemplate(generics)} $clazzDecl.`${property.name}`(block: $returnCl
     if (returnClass.isAbstract) return ""
     val propertyName = sanitizePropertyName(property.name)
     return """
-  if(this.`$propertyName` == null) {
-    this.`$propertyName` = ${returnClass.uniqueSimpleAlias}()
-  }
+    if (this.`$propertyName` == null) {
+        this.`$propertyName` = ${returnClass.uniqueSimpleAlias}()
+    }
 """
   }
 
