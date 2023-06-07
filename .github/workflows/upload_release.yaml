@@ -8,8 +8,7 @@ jobs:
   StageMC:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v3.5.0
       - name: Grab tag name
         uses: olegtarasov/get-tag@v2
         id: tagName
@@ -31,8 +30,7 @@ jobs:
     needs: [StageMC]
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v3.5.0
       - uses: actions/setup-java@v3.10.0
         with:
           distribution: temurin
