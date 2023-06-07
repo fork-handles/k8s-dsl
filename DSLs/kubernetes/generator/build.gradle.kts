@@ -15,8 +15,8 @@ tasks.named<JavaExec>("run").configure {
 dependencies {
     implementation(project(":generator-base"))
 
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.8.21")
-    implementation("org.jetbrains.kotlin:kotlin-reflect:1.8.21")
+    implementation(Kotlin.stdlib)
+    implementation("org.jetbrains.kotlin:kotlin-reflect:_")
 
-    implementation("io.fabric8:kubernetes-model:6.7.0")
+    implementation("io.fabric8:kubernetes-model:_")
 }

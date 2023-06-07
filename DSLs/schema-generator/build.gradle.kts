@@ -8,12 +8,12 @@ application.mainClass.set("dev.forkhandles.k8s.GeneratorKt")
 dependencies {
     implementation(project(":generator-base"))
 
-    implementation("com.google.code.gson:gson:2.10.1")
-    implementation("com.google.code.gson:gson-extras:2.8.5")
+    implementation("com.google.code.gson:gson:_")
+    implementation("com.google.code.gson:gson-extras:_")
 
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.8.21")
-    implementation("org.jetbrains.kotlin:kotlin-reflect:1.8.21")
+    implementation(Kotlin.stdlib)
+    implementation("org.jetbrains.kotlin:kotlin-reflect:_")
 
-    implementation("io.fabric8:kubernetes-client:6.7.0")
-    implementation("io.fabric8:kubernetes-model:6.7.0")
+    implementation("io.fabric8:kubernetes-client:_")
+    implementation("io.fabric8:kubernetes-model:_")
 }

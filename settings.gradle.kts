@@ -9,6 +9,7 @@ pluginManagement {
 
 plugins {
     id("org.gradle.toolchains.foojay-resolver-convention")
+    id("de.fayard.refreshVersions").version("0.51.0")
 }
 
 rootProject.name = "k8s-dsl"

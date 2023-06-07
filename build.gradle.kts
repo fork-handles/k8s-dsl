@@ -8,7 +8,8 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompilationTask
 plugins {
     java
     jacoco
-    kotlin("jvm") version "1.8.21"
+    kotlin("jvm")
+    id("io.github.gradle-nexus.publish-plugin")
 }
 
 kotlin {
@@ -23,6 +24,7 @@ repositories {
 }
 
 subprojects {
+
     repositories {
         mavenLocal()
         mavenCentral()
@@ -46,7 +48,7 @@ subprojects {
 
         withType<JavaCompile>().configureEach {
             options.release.set(8)
-            options.compilerArgs.addAll(arrayOf("-Xlint:all", "-Werror"))
+            options.compilerArgs.addAll(arrayOf("-Xlint:all:_", "-Werror"))
         }
 
         named<Test>("test").configure {
