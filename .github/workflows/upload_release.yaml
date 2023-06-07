@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3.5.0
       - name: Grab tag name
-        uses: olegtarasov/get-tag@v2
+        uses: olegtarasov/get-tag@v2.1.2
         id: tagName
       - uses: actions/setup-java@v3.10.0
         with:
