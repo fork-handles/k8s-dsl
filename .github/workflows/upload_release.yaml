@@ -19,7 +19,7 @@ jobs:
           cache: gradle
       - name: Upload to Sonatype
         run: |
-          ./gradlew publishMavenJavaPublicationToSonatypeStagingRepository \
+          ./gradlew :DSLs:kubernetes:dsl:publishMavenJavaPublicationToSonatypeStagingRepository \
           -Psign=true \
           -PreleaseVersion="${{ steps.tagName.outputs.tag }}" \
           -PsigningKey="${{ secrets.SIGNING_KEY }}" \
