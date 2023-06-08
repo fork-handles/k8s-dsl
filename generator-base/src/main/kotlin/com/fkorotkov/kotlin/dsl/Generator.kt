@@ -23,11 +23,8 @@ object Generator {
             } catch (e: Throwable) {
                 false
             }
-        }.filterNot { clazz ->
-            excludePackagesPrefixes.any { clazz.java.`package`.name.startsWith(it) }
-        }.filterNot { clazz ->
-            clazz.isAbstract || clazz.typeParameters.isNotEmpty()
-        }
+        }.filterNot { kClass -> excludePackagesPrefixes.any { kClass.java.`package`.name.startsWith(it) }
+        }.filterNot { kClass -> kClass.isAbstract || kClass.typeParameters.isNotEmpty() }
 
         allClasses.flatMap { subClazz ->
             subClazz.memberProperties.mapNotNull {
