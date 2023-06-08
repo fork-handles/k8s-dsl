@@ -20,11 +20,11 @@ jobs:
           java-version: 17
           cache: gradle
       - name: Upload to Sonatype
-        run: |
-          ./gradlew k8s-dsl:publishToSonatype k8s-dsl:closeAndReleaseSonatypeStagingRepository \
-          -Psign=true \
-          -PreleaseVersion="${{ steps.tagName.outputs.tag }}" \
-          -PsigningKey="${{ secrets.SIGNING_KEY }}" \
-          -PsigningPassword="${{ secrets.SIGNING_PASSWORD }}" \
-          -PnexusUsername="${{ secrets.NEXUS_USERNAME }}" \
-          -PnexusPassword="${{ secrets.NEXUS_PASSWORD }}"
+        run:
+          ./gradlew k8s-dsl:publishToSonatype k8s-dsl:closeAndReleaseSonatypeStagingRepository
+            -Psign=true
+            -PreleaseVersion="${{ steps.tagName.outputs.tag }}"
+            -PsigningKey="${{ secrets.SIGNING_KEY }}"
+            -PsigningPassword="${{ secrets.SIGNING_PASSWORD }}"
+            -PnexusUsername="${{ secrets.NEXUS_USERNAME }}"
+            -PnexusPassword="${{ secrets.NEXUS_PASSWORD }}"
