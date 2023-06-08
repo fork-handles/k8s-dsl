@@ -54,14 +54,15 @@ ${
         val returnClassDecl =
             returnClass.uniqueSimpleAlias + genericsTemplate(Collections.nCopies(returnClass.typeParameters.size, "*"))
 
+        val propertyName = sanitizePropertyName(property.name)
         return """
-fun${if (generics.isEmpty()) "" else " "}${genericsTemplate(generics)} $clazzDecl.`${property.name}`(block: $returnClassDecl.() -> Unit = {}) {${
+fun${if (generics.isEmpty()) "" else " "}${genericsTemplate(generics)} $clazzDecl.$propertyName(block: $returnClassDecl.() -> Unit = {}) {${
             initializer(
                 property,
                 returnClass
             )
         }
-    this.`${sanitizePropertyName(property.name)}`.block()
+    this.$propertyName!!.block()
 }
 """
     }
@@ -70,13 +71,15 @@ fun${if (generics.isEmpty()) "" else " "}${genericsTemplate(generics)} $clazzDec
         if (returnClass.isAbstract) return ""
         val propertyName = sanitizePropertyName(property.name)
         return """
-    if (this.`$propertyName` == null) {
-        this.`$propertyName` = ${returnClass.uniqueSimpleAlias}()
+    if (this.$propertyName == null) {
+        this.$propertyName = ${returnClass.uniqueSimpleAlias}()
     }
 """
     }
 
-    private fun sanitizePropertyName(name: String) = name.removePrefix("_") // remove "_" for names as Java keywords
+    private fun sanitizePropertyName(name: String) = name
+        .removePrefix("_") // remove "_" for names as Java keywords
+        .run { if (this == "object") "`object`" else this }
 
     private fun genericsTemplate(generics: List<String>): String {
         if (generics.isEmpty()) {
