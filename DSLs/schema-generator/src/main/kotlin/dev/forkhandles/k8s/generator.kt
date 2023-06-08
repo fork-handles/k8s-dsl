@@ -5,7 +5,7 @@ import com.fkorotkov.kotlin.dsl.crd.OpenAPIV3Schema
 import com.google.gson.GsonBuilder
 import com.google.gson.typeadapters.RuntimeTypeAdapterFactory
 import java.io.File
-import java.util.*
+import java.util.TreeMap
 
 fun main(args: Array<String>) {
     val schemeName = args[0]
