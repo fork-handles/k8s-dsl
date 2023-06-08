@@ -22,8 +22,8 @@ jobs:
       - name: Upload to Sonatype
         run:
           ./gradlew
-              k8s-dsl:publishToSonatype
-              k8s-dsl:closeAndReleaseSonatypeStagingRepository
+              :DSLs:kubernetes:dsl:publishToSonatype
+              :DSLs:kubernetes:dsl:closeAndReleaseSonatypeStagingRepository
             -Psign=true
             -PreleaseVersion="${{ steps.tagName.outputs.tag }}"
             -PsigningKey="${{ secrets.SIGNING_KEY }}"
