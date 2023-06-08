@@ -10,7 +10,6 @@ import io.fabric8.kubernetes.api.model.apps.ReplicaSetStatus as apps_ReplicaSetS
 import io.fabric8.kubernetes.api.model.apps.StatefulSet as apps_StatefulSet
 import io.fabric8.kubernetes.api.model.apps.StatefulSetStatus as apps_StatefulSetStatus
 
-
 fun apps_DaemonSet.status(block: apps_DaemonSetStatus.() -> Unit = {}) {
     if (this.status == null) {
         this.status = apps_DaemonSetStatus()
@@ -18,7 +17,6 @@ fun apps_DaemonSet.status(block: apps_DaemonSetStatus.() -> Unit = {}) {
 
     this.status!!.block()
 }
-
 
 fun apps_Deployment.status(block: apps_DeploymentStatus.() -> Unit = {}) {
     if (this.status == null) {
@@ -28,7 +26,6 @@ fun apps_Deployment.status(block: apps_DeploymentStatus.() -> Unit = {}) {
     this.status!!.block()
 }
 
-
 fun apps_ReplicaSet.status(block: apps_ReplicaSetStatus.() -> Unit = {}) {
     if (this.status == null) {
         this.status = apps_ReplicaSetStatus()
@@ -37,7 +34,6 @@ fun apps_ReplicaSet.status(block: apps_ReplicaSetStatus.() -> Unit = {}) {
     this.status!!.block()
 }
 
-
 fun apps_StatefulSet.status(block: apps_StatefulSetStatus.() -> Unit = {}) {
     if (this.status == null) {
         this.status = apps_StatefulSetStatus()
@@ -45,4 +41,3 @@ fun apps_StatefulSet.status(block: apps_StatefulSetStatus.() -> Unit = {}) {
 
     this.status!!.block()
 }
-

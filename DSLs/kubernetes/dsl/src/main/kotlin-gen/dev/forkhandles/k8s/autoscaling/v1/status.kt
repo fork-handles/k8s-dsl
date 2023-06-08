@@ -6,7 +6,6 @@ import io.fabric8.kubernetes.api.model.autoscaling.v1.HorizontalPodAutoscalerSta
 import io.fabric8.kubernetes.api.model.autoscaling.v1.Scale as v1_Scale
 import io.fabric8.kubernetes.api.model.autoscaling.v1.ScaleStatus as v1_ScaleStatus
 
-
 fun v1_HorizontalPodAutoscaler.status(block: v1_HorizontalPodAutoscalerStatus.() -> Unit = {}) {
     if (this.status == null) {
         this.status = v1_HorizontalPodAutoscalerStatus()
@@ -15,7 +14,6 @@ fun v1_HorizontalPodAutoscaler.status(block: v1_HorizontalPodAutoscalerStatus.()
     this.status!!.block()
 }
 
-
 fun v1_Scale.status(block: v1_ScaleStatus.() -> Unit = {}) {
     if (this.status == null) {
         this.status = v1_ScaleStatus()
@@ -23,4 +21,3 @@ fun v1_Scale.status(block: v1_ScaleStatus.() -> Unit = {}) {
 
     this.status!!.block()
 }
-

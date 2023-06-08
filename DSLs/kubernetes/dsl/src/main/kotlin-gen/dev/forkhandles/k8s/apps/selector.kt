@@ -7,7 +7,6 @@ import io.fabric8.kubernetes.api.model.apps.DeploymentSpec as apps_DeploymentSpe
 import io.fabric8.kubernetes.api.model.apps.ReplicaSetSpec as apps_ReplicaSetSpec
 import io.fabric8.kubernetes.api.model.apps.StatefulSetSpec as apps_StatefulSetSpec
 
-
 fun apps_DaemonSetSpec.selector(block: model_LabelSelector.() -> Unit = {}) {
     if (this.selector == null) {
         this.selector = model_LabelSelector()
@@ -15,7 +14,6 @@ fun apps_DaemonSetSpec.selector(block: model_LabelSelector.() -> Unit = {}) {
 
     this.selector!!.block()
 }
-
 
 fun apps_DeploymentSpec.selector(block: model_LabelSelector.() -> Unit = {}) {
     if (this.selector == null) {
@@ -25,7 +23,6 @@ fun apps_DeploymentSpec.selector(block: model_LabelSelector.() -> Unit = {}) {
     this.selector!!.block()
 }
 
-
 fun apps_ReplicaSetSpec.selector(block: model_LabelSelector.() -> Unit = {}) {
     if (this.selector == null) {
         this.selector = model_LabelSelector()
@@ -34,7 +31,6 @@ fun apps_ReplicaSetSpec.selector(block: model_LabelSelector.() -> Unit = {}) {
     this.selector!!.block()
 }
 
-
 fun apps_StatefulSetSpec.selector(block: model_LabelSelector.() -> Unit = {}) {
     if (this.selector == null) {
         this.selector = model_LabelSelector()
@@ -42,4 +38,3 @@ fun apps_StatefulSetSpec.selector(block: model_LabelSelector.() -> Unit = {}) {
 
     this.selector!!.block()
 }
-

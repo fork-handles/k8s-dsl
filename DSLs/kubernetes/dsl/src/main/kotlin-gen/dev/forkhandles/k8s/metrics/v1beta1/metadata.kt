@@ -8,7 +8,6 @@ import io.fabric8.kubernetes.api.model.metrics.v1beta1.NodeMetricsList as v1beta
 import io.fabric8.kubernetes.api.model.metrics.v1beta1.PodMetrics as v1beta1_PodMetrics
 import io.fabric8.kubernetes.api.model.metrics.v1beta1.PodMetricsList as v1beta1_PodMetricsList
 
-
 fun v1beta1_NodeMetrics.metadata(block: model_ObjectMeta.() -> Unit = {}) {
     if (this.metadata == null) {
         this.metadata = model_ObjectMeta()
@@ -16,7 +15,6 @@ fun v1beta1_NodeMetrics.metadata(block: model_ObjectMeta.() -> Unit = {}) {
 
     this.metadata!!.block()
 }
-
 
 fun v1beta1_NodeMetricsList.metadata(block: model_ListMeta.() -> Unit = {}) {
     if (this.metadata == null) {
@@ -26,7 +24,6 @@ fun v1beta1_NodeMetricsList.metadata(block: model_ListMeta.() -> Unit = {}) {
     this.metadata!!.block()
 }
 
-
 fun v1beta1_PodMetrics.metadata(block: model_ObjectMeta.() -> Unit = {}) {
     if (this.metadata == null) {
         this.metadata = model_ObjectMeta()
@@ -35,7 +32,6 @@ fun v1beta1_PodMetrics.metadata(block: model_ObjectMeta.() -> Unit = {}) {
     this.metadata!!.block()
 }
 
-
 fun v1beta1_PodMetricsList.metadata(block: model_ListMeta.() -> Unit = {}) {
     if (this.metadata == null) {
         this.metadata = model_ListMeta()
@@ -43,4 +39,3 @@ fun v1beta1_PodMetricsList.metadata(block: model_ListMeta.() -> Unit = {}) {
 
     this.metadata!!.block()
 }
-

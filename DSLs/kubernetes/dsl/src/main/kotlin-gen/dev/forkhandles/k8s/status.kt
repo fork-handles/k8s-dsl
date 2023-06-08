@@ -20,7 +20,6 @@ import io.fabric8.kubernetes.api.model.ResourceQuotaStatus as model_ResourceQuot
 import io.fabric8.kubernetes.api.model.Service as model_Service
 import io.fabric8.kubernetes.api.model.ServiceStatus as model_ServiceStatus
 
-
 fun model_APIService.status(block: model_APIServiceStatus.() -> Unit = {}) {
     if (this.status == null) {
         this.status = model_APIServiceStatus()
@@ -28,7 +27,6 @@ fun model_APIService.status(block: model_APIServiceStatus.() -> Unit = {}) {
 
     this.status!!.block()
 }
-
 
 fun model_Namespace.status(block: model_NamespaceStatus.() -> Unit = {}) {
     if (this.status == null) {
@@ -38,7 +36,6 @@ fun model_Namespace.status(block: model_NamespaceStatus.() -> Unit = {}) {
     this.status!!.block()
 }
 
-
 fun model_Node.status(block: model_NodeStatus.() -> Unit = {}) {
     if (this.status == null) {
         this.status = model_NodeStatus()
@@ -46,7 +43,6 @@ fun model_Node.status(block: model_NodeStatus.() -> Unit = {}) {
 
     this.status!!.block()
 }
-
 
 fun model_PersistentVolume.status(block: model_PersistentVolumeStatus.() -> Unit = {}) {
     if (this.status == null) {
@@ -56,7 +52,6 @@ fun model_PersistentVolume.status(block: model_PersistentVolumeStatus.() -> Unit
     this.status!!.block()
 }
 
-
 fun model_PersistentVolumeClaim.status(block: model_PersistentVolumeClaimStatus.() -> Unit = {}) {
     if (this.status == null) {
         this.status = model_PersistentVolumeClaimStatus()
@@ -64,7 +59,6 @@ fun model_PersistentVolumeClaim.status(block: model_PersistentVolumeClaimStatus.
 
     this.status!!.block()
 }
-
 
 fun model_Pod.status(block: model_PodStatus.() -> Unit = {}) {
     if (this.status == null) {
@@ -74,7 +68,6 @@ fun model_Pod.status(block: model_PodStatus.() -> Unit = {}) {
     this.status!!.block()
 }
 
-
 fun model_ReplicationController.status(block: model_ReplicationControllerStatus.() -> Unit = {}) {
     if (this.status == null) {
         this.status = model_ReplicationControllerStatus()
@@ -82,7 +75,6 @@ fun model_ReplicationController.status(block: model_ReplicationControllerStatus.
 
     this.status!!.block()
 }
-
 
 fun model_ResourceQuota.status(block: model_ResourceQuotaStatus.() -> Unit = {}) {
     if (this.status == null) {
@@ -92,7 +84,6 @@ fun model_ResourceQuota.status(block: model_ResourceQuotaStatus.() -> Unit = {})
     this.status!!.block()
 }
 
-
 fun model_Service.status(block: model_ServiceStatus.() -> Unit = {}) {
     if (this.status == null) {
         this.status = model_ServiceStatus()
@@ -100,4 +91,3 @@ fun model_Service.status(block: model_ServiceStatus.() -> Unit = {}) {
 
     this.status!!.block()
 }
-

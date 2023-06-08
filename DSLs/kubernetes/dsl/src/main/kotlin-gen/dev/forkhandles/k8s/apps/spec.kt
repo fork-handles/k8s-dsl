@@ -10,7 +10,6 @@ import io.fabric8.kubernetes.api.model.apps.ReplicaSetSpec as apps_ReplicaSetSpe
 import io.fabric8.kubernetes.api.model.apps.StatefulSet as apps_StatefulSet
 import io.fabric8.kubernetes.api.model.apps.StatefulSetSpec as apps_StatefulSetSpec
 
-
 fun apps_DaemonSet.spec(block: apps_DaemonSetSpec.() -> Unit = {}) {
     if (this.spec == null) {
         this.spec = apps_DaemonSetSpec()
@@ -18,7 +17,6 @@ fun apps_DaemonSet.spec(block: apps_DaemonSetSpec.() -> Unit = {}) {
 
     this.spec!!.block()
 }
-
 
 fun apps_Deployment.spec(block: apps_DeploymentSpec.() -> Unit = {}) {
     if (this.spec == null) {
@@ -28,7 +26,6 @@ fun apps_Deployment.spec(block: apps_DeploymentSpec.() -> Unit = {}) {
     this.spec!!.block()
 }
 
-
 fun apps_ReplicaSet.spec(block: apps_ReplicaSetSpec.() -> Unit = {}) {
     if (this.spec == null) {
         this.spec = apps_ReplicaSetSpec()
@@ -37,7 +34,6 @@ fun apps_ReplicaSet.spec(block: apps_ReplicaSetSpec.() -> Unit = {}) {
     this.spec!!.block()
 }
 
-
 fun apps_StatefulSet.spec(block: apps_StatefulSetSpec.() -> Unit = {}) {
     if (this.spec == null) {
         this.spec = apps_StatefulSetSpec()
@@ -45,4 +41,3 @@ fun apps_StatefulSet.spec(block: apps_StatefulSetSpec.() -> Unit = {}) {
 
     this.spec!!.block()
 }
-

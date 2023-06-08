@@ -21,13 +21,11 @@ import io.fabric8.kubernetes.api.model.storage.VolumeAttachmentStatus as storage
 import io.fabric8.kubernetes.api.model.storage.VolumeError as storage_VolumeError
 import io.fabric8.kubernetes.api.model.storage.VolumeNodeResources as storage_VolumeNodeResources
 
-
 fun newCSIDriver(block: storage_CSIDriver.() -> Unit = {}): storage_CSIDriver {
     val instance = storage_CSIDriver()
     instance.block()
     return instance
 }
-
 
 fun newCSIDriverList(block: storage_CSIDriverList.() -> Unit = {}): storage_CSIDriverList {
     val instance = storage_CSIDriverList()
@@ -35,13 +33,11 @@ fun newCSIDriverList(block: storage_CSIDriverList.() -> Unit = {}): storage_CSID
     return instance
 }
 
-
 fun newCSIDriverSpec(block: storage_CSIDriverSpec.() -> Unit = {}): storage_CSIDriverSpec {
     val instance = storage_CSIDriverSpec()
     instance.block()
     return instance
 }
-
 
 fun newCSINode(block: storage_CSINode.() -> Unit = {}): storage_CSINode {
     val instance = storage_CSINode()
@@ -49,13 +45,11 @@ fun newCSINode(block: storage_CSINode.() -> Unit = {}): storage_CSINode {
     return instance
 }
 
-
 fun newCSINodeDriver(block: storage_CSINodeDriver.() -> Unit = {}): storage_CSINodeDriver {
     val instance = storage_CSINodeDriver()
     instance.block()
     return instance
 }
-
 
 fun newCSINodeList(block: storage_CSINodeList.() -> Unit = {}): storage_CSINodeList {
     val instance = storage_CSINodeList()
@@ -63,13 +57,11 @@ fun newCSINodeList(block: storage_CSINodeList.() -> Unit = {}): storage_CSINodeL
     return instance
 }
 
-
 fun newCSINodeSpec(block: storage_CSINodeSpec.() -> Unit = {}): storage_CSINodeSpec {
     val instance = storage_CSINodeSpec()
     instance.block()
     return instance
 }
-
 
 fun newCSIStorageCapacity(block: storage_CSIStorageCapacity.() -> Unit = {}): storage_CSIStorageCapacity {
     val instance = storage_CSIStorageCapacity()
@@ -77,13 +69,11 @@ fun newCSIStorageCapacity(block: storage_CSIStorageCapacity.() -> Unit = {}): st
     return instance
 }
 
-
 fun newCSIStorageCapacityList(block: storage_CSIStorageCapacityList.() -> Unit = {}): storage_CSIStorageCapacityList {
     val instance = storage_CSIStorageCapacityList()
     instance.block()
     return instance
 }
-
 
 fun newStorageClass(block: storage_StorageClass.() -> Unit = {}): storage_StorageClass {
     val instance = storage_StorageClass()
@@ -91,13 +81,11 @@ fun newStorageClass(block: storage_StorageClass.() -> Unit = {}): storage_Storag
     return instance
 }
 
-
 fun newStorageClassList(block: storage_StorageClassList.() -> Unit = {}): storage_StorageClassList {
     val instance = storage_StorageClassList()
     instance.block()
     return instance
 }
-
 
 fun newTokenRequest(block: storage_TokenRequest.() -> Unit = {}): storage_TokenRequest {
     val instance = storage_TokenRequest()
@@ -105,13 +93,11 @@ fun newTokenRequest(block: storage_TokenRequest.() -> Unit = {}): storage_TokenR
     return instance
 }
 
-
 fun newVolumeAttachment(block: storage_VolumeAttachment.() -> Unit = {}): storage_VolumeAttachment {
     val instance = storage_VolumeAttachment()
     instance.block()
     return instance
 }
-
 
 fun newVolumeAttachmentList(block: storage_VolumeAttachmentList.() -> Unit = {}): storage_VolumeAttachmentList {
     val instance = storage_VolumeAttachmentList()
@@ -119,13 +105,11 @@ fun newVolumeAttachmentList(block: storage_VolumeAttachmentList.() -> Unit = {})
     return instance
 }
 
-
 fun newVolumeAttachmentSource(block: storage_VolumeAttachmentSource.() -> Unit = {}): storage_VolumeAttachmentSource {
     val instance = storage_VolumeAttachmentSource()
     instance.block()
     return instance
 }
-
 
 fun newVolumeAttachmentSpec(block: storage_VolumeAttachmentSpec.() -> Unit = {}): storage_VolumeAttachmentSpec {
     val instance = storage_VolumeAttachmentSpec()
@@ -133,13 +117,11 @@ fun newVolumeAttachmentSpec(block: storage_VolumeAttachmentSpec.() -> Unit = {})
     return instance
 }
 
-
 fun newVolumeAttachmentStatus(block: storage_VolumeAttachmentStatus.() -> Unit = {}): storage_VolumeAttachmentStatus {
     val instance = storage_VolumeAttachmentStatus()
     instance.block()
     return instance
 }
-
 
 fun newVolumeError(block: storage_VolumeError.() -> Unit = {}): storage_VolumeError {
     val instance = storage_VolumeError()
@@ -147,10 +129,8 @@ fun newVolumeError(block: storage_VolumeError.() -> Unit = {}): storage_VolumeEr
     return instance
 }
 
-
 fun newVolumeNodeResources(block: storage_VolumeNodeResources.() -> Unit = {}): storage_VolumeNodeResources {
     val instance = storage_VolumeNodeResources()
     instance.block()
     return instance
 }
-

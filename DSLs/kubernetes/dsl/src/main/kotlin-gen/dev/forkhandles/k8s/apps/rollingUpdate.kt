@@ -8,7 +8,6 @@ import io.fabric8.kubernetes.api.model.apps.RollingUpdateDeployment as apps_Roll
 import io.fabric8.kubernetes.api.model.apps.RollingUpdateStatefulSetStrategy as apps_RollingUpdateStatefulSetStrategy
 import io.fabric8.kubernetes.api.model.apps.StatefulSetUpdateStrategy as apps_StatefulSetUpdateStrategy
 
-
 fun apps_DaemonSetUpdateStrategy.rollingUpdate(block: apps_RollingUpdateDaemonSet.() -> Unit = {}) {
     if (this.rollingUpdate == null) {
         this.rollingUpdate = apps_RollingUpdateDaemonSet()
@@ -16,7 +15,6 @@ fun apps_DaemonSetUpdateStrategy.rollingUpdate(block: apps_RollingUpdateDaemonSe
 
     this.rollingUpdate!!.block()
 }
-
 
 fun apps_DeploymentStrategy.rollingUpdate(block: apps_RollingUpdateDeployment.() -> Unit = {}) {
     if (this.rollingUpdate == null) {
@@ -26,7 +24,6 @@ fun apps_DeploymentStrategy.rollingUpdate(block: apps_RollingUpdateDeployment.()
     this.rollingUpdate!!.block()
 }
 
-
 fun apps_StatefulSetUpdateStrategy.rollingUpdate(block: apps_RollingUpdateStatefulSetStrategy.() -> Unit = {}) {
     if (this.rollingUpdate == null) {
         this.rollingUpdate = apps_RollingUpdateStatefulSetStrategy()
@@ -34,4 +31,3 @@ fun apps_StatefulSetUpdateStrategy.rollingUpdate(block: apps_RollingUpdateStatef
 
     this.rollingUpdate!!.block()
 }
-

@@ -26,13 +26,11 @@ import io.fabric8.kubernetes.api.model.autoscaling.v2beta2.PodsMetricStatus as v
 import io.fabric8.kubernetes.api.model.autoscaling.v2beta2.ResourceMetricSource as v2beta2_ResourceMetricSource
 import io.fabric8.kubernetes.api.model.autoscaling.v2beta2.ResourceMetricStatus as v2beta2_ResourceMetricStatus
 
-
 fun newContainerResourceMetricSource(block: v2beta2_ContainerResourceMetricSource.() -> Unit = {}): v2beta2_ContainerResourceMetricSource {
     val instance = v2beta2_ContainerResourceMetricSource()
     instance.block()
     return instance
 }
-
 
 fun newContainerResourceMetricStatus(block: v2beta2_ContainerResourceMetricStatus.() -> Unit = {}): v2beta2_ContainerResourceMetricStatus {
     val instance = v2beta2_ContainerResourceMetricStatus()
@@ -40,13 +38,11 @@ fun newContainerResourceMetricStatus(block: v2beta2_ContainerResourceMetricStatu
     return instance
 }
 
-
 fun newCrossVersionObjectReference(block: v2beta2_CrossVersionObjectReference.() -> Unit = {}): v2beta2_CrossVersionObjectReference {
     val instance = v2beta2_CrossVersionObjectReference()
     instance.block()
     return instance
 }
-
 
 fun newExternalMetricSource(block: v2beta2_ExternalMetricSource.() -> Unit = {}): v2beta2_ExternalMetricSource {
     val instance = v2beta2_ExternalMetricSource()
@@ -54,13 +50,11 @@ fun newExternalMetricSource(block: v2beta2_ExternalMetricSource.() -> Unit = {})
     return instance
 }
 
-
 fun newExternalMetricStatus(block: v2beta2_ExternalMetricStatus.() -> Unit = {}): v2beta2_ExternalMetricStatus {
     val instance = v2beta2_ExternalMetricStatus()
     instance.block()
     return instance
 }
-
 
 fun newHPAScalingPolicy(block: v2beta2_HPAScalingPolicy.() -> Unit = {}): v2beta2_HPAScalingPolicy {
     val instance = v2beta2_HPAScalingPolicy()
@@ -68,13 +62,11 @@ fun newHPAScalingPolicy(block: v2beta2_HPAScalingPolicy.() -> Unit = {}): v2beta
     return instance
 }
 
-
 fun newHPAScalingRules(block: v2beta2_HPAScalingRules.() -> Unit = {}): v2beta2_HPAScalingRules {
     val instance = v2beta2_HPAScalingRules()
     instance.block()
     return instance
 }
-
 
 fun newHorizontalPodAutoscaler(block: v2beta2_HorizontalPodAutoscaler.() -> Unit = {}): v2beta2_HorizontalPodAutoscaler {
     val instance = v2beta2_HorizontalPodAutoscaler()
@@ -82,13 +74,11 @@ fun newHorizontalPodAutoscaler(block: v2beta2_HorizontalPodAutoscaler.() -> Unit
     return instance
 }
 
-
 fun newHorizontalPodAutoscalerBehavior(block: v2beta2_HorizontalPodAutoscalerBehavior.() -> Unit = {}): v2beta2_HorizontalPodAutoscalerBehavior {
     val instance = v2beta2_HorizontalPodAutoscalerBehavior()
     instance.block()
     return instance
 }
-
 
 fun newHorizontalPodAutoscalerCondition(block: v2beta2_HorizontalPodAutoscalerCondition.() -> Unit = {}): v2beta2_HorizontalPodAutoscalerCondition {
     val instance = v2beta2_HorizontalPodAutoscalerCondition()
@@ -96,13 +86,11 @@ fun newHorizontalPodAutoscalerCondition(block: v2beta2_HorizontalPodAutoscalerCo
     return instance
 }
 
-
 fun newHorizontalPodAutoscalerList(block: v2beta2_HorizontalPodAutoscalerList.() -> Unit = {}): v2beta2_HorizontalPodAutoscalerList {
     val instance = v2beta2_HorizontalPodAutoscalerList()
     instance.block()
     return instance
 }
-
 
 fun newHorizontalPodAutoscalerSpec(block: v2beta2_HorizontalPodAutoscalerSpec.() -> Unit = {}): v2beta2_HorizontalPodAutoscalerSpec {
     val instance = v2beta2_HorizontalPodAutoscalerSpec()
@@ -110,13 +98,11 @@ fun newHorizontalPodAutoscalerSpec(block: v2beta2_HorizontalPodAutoscalerSpec.()
     return instance
 }
 
-
 fun newHorizontalPodAutoscalerStatus(block: v2beta2_HorizontalPodAutoscalerStatus.() -> Unit = {}): v2beta2_HorizontalPodAutoscalerStatus {
     val instance = v2beta2_HorizontalPodAutoscalerStatus()
     instance.block()
     return instance
 }
-
 
 fun newMetricIdentifier(block: v2beta2_MetricIdentifier.() -> Unit = {}): v2beta2_MetricIdentifier {
     val instance = v2beta2_MetricIdentifier()
@@ -124,13 +110,11 @@ fun newMetricIdentifier(block: v2beta2_MetricIdentifier.() -> Unit = {}): v2beta
     return instance
 }
 
-
 fun newMetricSpec(block: v2beta2_MetricSpec.() -> Unit = {}): v2beta2_MetricSpec {
     val instance = v2beta2_MetricSpec()
     instance.block()
     return instance
 }
-
 
 fun newMetricStatus(block: v2beta2_MetricStatus.() -> Unit = {}): v2beta2_MetricStatus {
     val instance = v2beta2_MetricStatus()
@@ -138,13 +122,11 @@ fun newMetricStatus(block: v2beta2_MetricStatus.() -> Unit = {}): v2beta2_Metric
     return instance
 }
 
-
 fun newMetricTarget(block: v2beta2_MetricTarget.() -> Unit = {}): v2beta2_MetricTarget {
     val instance = v2beta2_MetricTarget()
     instance.block()
     return instance
 }
-
 
 fun newMetricValueStatus(block: v2beta2_MetricValueStatus.() -> Unit = {}): v2beta2_MetricValueStatus {
     val instance = v2beta2_MetricValueStatus()
@@ -152,13 +134,11 @@ fun newMetricValueStatus(block: v2beta2_MetricValueStatus.() -> Unit = {}): v2be
     return instance
 }
 
-
 fun newObjectMetricSource(block: v2beta2_ObjectMetricSource.() -> Unit = {}): v2beta2_ObjectMetricSource {
     val instance = v2beta2_ObjectMetricSource()
     instance.block()
     return instance
 }
-
 
 fun newObjectMetricStatus(block: v2beta2_ObjectMetricStatus.() -> Unit = {}): v2beta2_ObjectMetricStatus {
     val instance = v2beta2_ObjectMetricStatus()
@@ -166,13 +146,11 @@ fun newObjectMetricStatus(block: v2beta2_ObjectMetricStatus.() -> Unit = {}): v2
     return instance
 }
 
-
 fun newPodsMetricSource(block: v2beta2_PodsMetricSource.() -> Unit = {}): v2beta2_PodsMetricSource {
     val instance = v2beta2_PodsMetricSource()
     instance.block()
     return instance
 }
-
 
 fun newPodsMetricStatus(block: v2beta2_PodsMetricStatus.() -> Unit = {}): v2beta2_PodsMetricStatus {
     val instance = v2beta2_PodsMetricStatus()
@@ -180,17 +158,14 @@ fun newPodsMetricStatus(block: v2beta2_PodsMetricStatus.() -> Unit = {}): v2beta
     return instance
 }
 
-
 fun newResourceMetricSource(block: v2beta2_ResourceMetricSource.() -> Unit = {}): v2beta2_ResourceMetricSource {
     val instance = v2beta2_ResourceMetricSource()
     instance.block()
     return instance
 }
 
-
 fun newResourceMetricStatus(block: v2beta2_ResourceMetricStatus.() -> Unit = {}): v2beta2_ResourceMetricStatus {
     val instance = v2beta2_ResourceMetricStatus()
     instance.block()
     return instance
 }
-

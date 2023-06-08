@@ -6,7 +6,6 @@ import io.fabric8.kubernetes.api.model.storage.v1beta1.CSIDriverSpec as v1beta1_
 import io.fabric8.kubernetes.api.model.storage.v1beta1.CSINode as v1beta1_CSINode
 import io.fabric8.kubernetes.api.model.storage.v1beta1.CSINodeSpec as v1beta1_CSINodeSpec
 
-
 fun v1beta1_CSIDriver.spec(block: v1beta1_CSIDriverSpec.() -> Unit = {}) {
     if (this.spec == null) {
         this.spec = v1beta1_CSIDriverSpec()
@@ -15,7 +14,6 @@ fun v1beta1_CSIDriver.spec(block: v1beta1_CSIDriverSpec.() -> Unit = {}) {
     this.spec!!.block()
 }
 
-
 fun v1beta1_CSINode.spec(block: v1beta1_CSINodeSpec.() -> Unit = {}) {
     if (this.spec == null) {
         this.spec = v1beta1_CSINodeSpec()
@@ -23,4 +21,3 @@ fun v1beta1_CSINode.spec(block: v1beta1_CSINodeSpec.() -> Unit = {}) {
 
     this.spec!!.block()
 }
-

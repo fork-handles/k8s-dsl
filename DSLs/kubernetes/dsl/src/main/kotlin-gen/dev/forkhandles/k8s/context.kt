@@ -4,7 +4,6 @@ package dev.forkhandles.k8s
 import io.fabric8.kubernetes.api.model.Context as model_Context
 import io.fabric8.kubernetes.api.model.NamedContext as model_NamedContext
 
-
 fun model_NamedContext.context(block: model_Context.() -> Unit = {}) {
     if (this.context == null) {
         this.context = model_Context()
@@ -12,4 +11,3 @@ fun model_NamedContext.context(block: model_Context.() -> Unit = {}) {
 
     this.context!!.block()
 }
-

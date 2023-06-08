@@ -5,7 +5,6 @@ import io.fabric8.kubernetes.api.model.PersistentVolumeSpec as model_PersistentV
 import io.fabric8.kubernetes.api.model.PhotonPersistentDiskVolumeSource as model_PhotonPersistentDiskVolumeSource
 import io.fabric8.kubernetes.api.model.Volume as model_Volume
 
-
 fun model_PersistentVolumeSpec.photonPersistentDisk(block: model_PhotonPersistentDiskVolumeSource.() -> Unit = {}) {
     if (this.photonPersistentDisk == null) {
         this.photonPersistentDisk = model_PhotonPersistentDiskVolumeSource()
@@ -14,7 +13,6 @@ fun model_PersistentVolumeSpec.photonPersistentDisk(block: model_PhotonPersisten
     this.photonPersistentDisk!!.block()
 }
 
-
 fun model_Volume.photonPersistentDisk(block: model_PhotonPersistentDiskVolumeSource.() -> Unit = {}) {
     if (this.photonPersistentDisk == null) {
         this.photonPersistentDisk = model_PhotonPersistentDiskVolumeSource()
@@ -22,4 +20,3 @@ fun model_Volume.photonPersistentDisk(block: model_PhotonPersistentDiskVolumeSou
 
     this.photonPersistentDisk!!.block()
 }
-

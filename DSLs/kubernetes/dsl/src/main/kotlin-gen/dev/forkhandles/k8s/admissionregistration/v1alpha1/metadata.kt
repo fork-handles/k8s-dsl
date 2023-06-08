@@ -8,7 +8,6 @@ import io.fabric8.kubernetes.api.model.admissionregistration.v1alpha1.Validating
 import io.fabric8.kubernetes.api.model.admissionregistration.v1alpha1.ValidatingAdmissionPolicyBindingList as v1alpha1_ValidatingAdmissionPolicyBindingList
 import io.fabric8.kubernetes.api.model.admissionregistration.v1alpha1.ValidatingAdmissionPolicyList as v1alpha1_ValidatingAdmissionPolicyList
 
-
 fun v1alpha1_ValidatingAdmissionPolicy.metadata(block: model_ObjectMeta.() -> Unit = {}) {
     if (this.metadata == null) {
         this.metadata = model_ObjectMeta()
@@ -16,7 +15,6 @@ fun v1alpha1_ValidatingAdmissionPolicy.metadata(block: model_ObjectMeta.() -> Un
 
     this.metadata!!.block()
 }
-
 
 fun v1alpha1_ValidatingAdmissionPolicyBinding.metadata(block: model_ObjectMeta.() -> Unit = {}) {
     if (this.metadata == null) {
@@ -26,7 +24,6 @@ fun v1alpha1_ValidatingAdmissionPolicyBinding.metadata(block: model_ObjectMeta.(
     this.metadata!!.block()
 }
 
-
 fun v1alpha1_ValidatingAdmissionPolicyBindingList.metadata(block: model_ListMeta.() -> Unit = {}) {
     if (this.metadata == null) {
         this.metadata = model_ListMeta()
@@ -35,7 +32,6 @@ fun v1alpha1_ValidatingAdmissionPolicyBindingList.metadata(block: model_ListMeta
     this.metadata!!.block()
 }
 
-
 fun v1alpha1_ValidatingAdmissionPolicyList.metadata(block: model_ListMeta.() -> Unit = {}) {
     if (this.metadata == null) {
         this.metadata = model_ListMeta()
@@ -43,4 +39,3 @@ fun v1alpha1_ValidatingAdmissionPolicyList.metadata(block: model_ListMeta.() -> 
 
     this.metadata!!.block()
 }
-

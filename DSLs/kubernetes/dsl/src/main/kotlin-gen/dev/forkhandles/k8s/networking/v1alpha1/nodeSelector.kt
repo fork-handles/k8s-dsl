@@ -4,7 +4,6 @@ package dev.forkhandles.k8s.networking.v1alpha1
 import io.fabric8.kubernetes.api.model.NodeSelector as model_NodeSelector
 import io.fabric8.kubernetes.api.model.networking.v1alpha1.ClusterCIDRSpec as v1alpha1_ClusterCIDRSpec
 
-
 fun v1alpha1_ClusterCIDRSpec.nodeSelector(block: model_NodeSelector.() -> Unit = {}) {
     if (this.nodeSelector == null) {
         this.nodeSelector = model_NodeSelector()
@@ -12,4 +11,3 @@ fun v1alpha1_ClusterCIDRSpec.nodeSelector(block: model_NodeSelector.() -> Unit =
 
     this.nodeSelector!!.block()
 }
-

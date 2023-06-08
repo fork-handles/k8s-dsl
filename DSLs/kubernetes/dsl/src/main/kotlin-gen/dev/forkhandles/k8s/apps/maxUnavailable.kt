@@ -6,7 +6,6 @@ import io.fabric8.kubernetes.api.model.apps.RollingUpdateDaemonSet as apps_Rolli
 import io.fabric8.kubernetes.api.model.apps.RollingUpdateDeployment as apps_RollingUpdateDeployment
 import io.fabric8.kubernetes.api.model.apps.RollingUpdateStatefulSetStrategy as apps_RollingUpdateStatefulSetStrategy
 
-
 fun apps_RollingUpdateDaemonSet.maxUnavailable(block: model_IntOrString.() -> Unit = {}) {
     if (this.maxUnavailable == null) {
         this.maxUnavailable = model_IntOrString()
@@ -14,7 +13,6 @@ fun apps_RollingUpdateDaemonSet.maxUnavailable(block: model_IntOrString.() -> Un
 
     this.maxUnavailable!!.block()
 }
-
 
 fun apps_RollingUpdateDeployment.maxUnavailable(block: model_IntOrString.() -> Unit = {}) {
     if (this.maxUnavailable == null) {
@@ -24,7 +22,6 @@ fun apps_RollingUpdateDeployment.maxUnavailable(block: model_IntOrString.() -> U
     this.maxUnavailable!!.block()
 }
 
-
 fun apps_RollingUpdateStatefulSetStrategy.maxUnavailable(block: model_IntOrString.() -> Unit = {}) {
     if (this.maxUnavailable == null) {
         this.maxUnavailable = model_IntOrString()
@@ -32,4 +29,3 @@ fun apps_RollingUpdateStatefulSetStrategy.maxUnavailable(block: model_IntOrStrin
 
     this.maxUnavailable!!.block()
 }
-

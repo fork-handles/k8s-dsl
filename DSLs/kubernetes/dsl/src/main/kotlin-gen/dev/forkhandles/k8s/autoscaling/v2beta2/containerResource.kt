@@ -6,7 +6,6 @@ import io.fabric8.kubernetes.api.model.autoscaling.v2beta2.ContainerResourceMetr
 import io.fabric8.kubernetes.api.model.autoscaling.v2beta2.MetricSpec as v2beta2_MetricSpec
 import io.fabric8.kubernetes.api.model.autoscaling.v2beta2.MetricStatus as v2beta2_MetricStatus
 
-
 fun v2beta2_MetricSpec.containerResource(block: v2beta2_ContainerResourceMetricSource.() -> Unit = {}) {
     if (this.containerResource == null) {
         this.containerResource = v2beta2_ContainerResourceMetricSource()
@@ -15,7 +14,6 @@ fun v2beta2_MetricSpec.containerResource(block: v2beta2_ContainerResourceMetricS
     this.containerResource!!.block()
 }
 
-
 fun v2beta2_MetricStatus.containerResource(block: v2beta2_ContainerResourceMetricStatus.() -> Unit = {}) {
     if (this.containerResource == null) {
         this.containerResource = v2beta2_ContainerResourceMetricStatus()
@@ -23,4 +21,3 @@ fun v2beta2_MetricStatus.containerResource(block: v2beta2_ContainerResourceMetri
 
     this.containerResource!!.block()
 }
-

@@ -8,7 +8,6 @@ import io.fabric8.kubernetes.api.model.autoscaling.v2beta2.ObjectMetricSource as
 import io.fabric8.kubernetes.api.model.autoscaling.v2beta2.PodsMetricSource as v2beta2_PodsMetricSource
 import io.fabric8.kubernetes.api.model.autoscaling.v2beta2.ResourceMetricSource as v2beta2_ResourceMetricSource
 
-
 fun v2beta2_ContainerResourceMetricSource.target(block: v2beta2_MetricTarget.() -> Unit = {}) {
     if (this.target == null) {
         this.target = v2beta2_MetricTarget()
@@ -16,7 +15,6 @@ fun v2beta2_ContainerResourceMetricSource.target(block: v2beta2_MetricTarget.() 
 
     this.target!!.block()
 }
-
 
 fun v2beta2_ExternalMetricSource.target(block: v2beta2_MetricTarget.() -> Unit = {}) {
     if (this.target == null) {
@@ -26,7 +24,6 @@ fun v2beta2_ExternalMetricSource.target(block: v2beta2_MetricTarget.() -> Unit =
     this.target!!.block()
 }
 
-
 fun v2beta2_ObjectMetricSource.target(block: v2beta2_MetricTarget.() -> Unit = {}) {
     if (this.target == null) {
         this.target = v2beta2_MetricTarget()
@@ -34,7 +31,6 @@ fun v2beta2_ObjectMetricSource.target(block: v2beta2_MetricTarget.() -> Unit = {
 
     this.target!!.block()
 }
-
 
 fun v2beta2_PodsMetricSource.target(block: v2beta2_MetricTarget.() -> Unit = {}) {
     if (this.target == null) {
@@ -44,7 +40,6 @@ fun v2beta2_PodsMetricSource.target(block: v2beta2_MetricTarget.() -> Unit = {})
     this.target!!.block()
 }
 
-
 fun v2beta2_ResourceMetricSource.target(block: v2beta2_MetricTarget.() -> Unit = {}) {
     if (this.target == null) {
         this.target = v2beta2_MetricTarget()
@@ -52,4 +47,3 @@ fun v2beta2_ResourceMetricSource.target(block: v2beta2_MetricTarget.() -> Unit =
 
     this.target!!.block()
 }
-

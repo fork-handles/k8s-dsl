@@ -14,7 +14,6 @@ import io.fabric8.kubernetes.api.model.storage.StorageClassList as storage_Stora
 import io.fabric8.kubernetes.api.model.storage.VolumeAttachment as storage_VolumeAttachment
 import io.fabric8.kubernetes.api.model.storage.VolumeAttachmentList as storage_VolumeAttachmentList
 
-
 fun storage_CSIDriver.metadata(block: model_ObjectMeta.() -> Unit = {}) {
     if (this.metadata == null) {
         this.metadata = model_ObjectMeta()
@@ -22,7 +21,6 @@ fun storage_CSIDriver.metadata(block: model_ObjectMeta.() -> Unit = {}) {
 
     this.metadata!!.block()
 }
-
 
 fun storage_CSIDriverList.metadata(block: model_ListMeta.() -> Unit = {}) {
     if (this.metadata == null) {
@@ -32,7 +30,6 @@ fun storage_CSIDriverList.metadata(block: model_ListMeta.() -> Unit = {}) {
     this.metadata!!.block()
 }
 
-
 fun storage_CSINode.metadata(block: model_ObjectMeta.() -> Unit = {}) {
     if (this.metadata == null) {
         this.metadata = model_ObjectMeta()
@@ -40,7 +37,6 @@ fun storage_CSINode.metadata(block: model_ObjectMeta.() -> Unit = {}) {
 
     this.metadata!!.block()
 }
-
 
 fun storage_CSINodeList.metadata(block: model_ListMeta.() -> Unit = {}) {
     if (this.metadata == null) {
@@ -50,7 +46,6 @@ fun storage_CSINodeList.metadata(block: model_ListMeta.() -> Unit = {}) {
     this.metadata!!.block()
 }
 
-
 fun storage_CSIStorageCapacity.metadata(block: model_ObjectMeta.() -> Unit = {}) {
     if (this.metadata == null) {
         this.metadata = model_ObjectMeta()
@@ -58,7 +53,6 @@ fun storage_CSIStorageCapacity.metadata(block: model_ObjectMeta.() -> Unit = {})
 
     this.metadata!!.block()
 }
-
 
 fun storage_CSIStorageCapacityList.metadata(block: model_ListMeta.() -> Unit = {}) {
     if (this.metadata == null) {
@@ -68,7 +62,6 @@ fun storage_CSIStorageCapacityList.metadata(block: model_ListMeta.() -> Unit = {
     this.metadata!!.block()
 }
 
-
 fun storage_StorageClass.metadata(block: model_ObjectMeta.() -> Unit = {}) {
     if (this.metadata == null) {
         this.metadata = model_ObjectMeta()
@@ -76,7 +69,6 @@ fun storage_StorageClass.metadata(block: model_ObjectMeta.() -> Unit = {}) {
 
     this.metadata!!.block()
 }
-
 
 fun storage_StorageClassList.metadata(block: model_ListMeta.() -> Unit = {}) {
     if (this.metadata == null) {
@@ -86,7 +78,6 @@ fun storage_StorageClassList.metadata(block: model_ListMeta.() -> Unit = {}) {
     this.metadata!!.block()
 }
 
-
 fun storage_VolumeAttachment.metadata(block: model_ObjectMeta.() -> Unit = {}) {
     if (this.metadata == null) {
         this.metadata = model_ObjectMeta()
@@ -95,7 +86,6 @@ fun storage_VolumeAttachment.metadata(block: model_ObjectMeta.() -> Unit = {}) {
     this.metadata!!.block()
 }
 
-
 fun storage_VolumeAttachmentList.metadata(block: model_ListMeta.() -> Unit = {}) {
     if (this.metadata == null) {
         this.metadata = model_ListMeta()
@@ -103,4 +93,3 @@ fun storage_VolumeAttachmentList.metadata(block: model_ListMeta.() -> Unit = {})
 
     this.metadata!!.block()
 }
-

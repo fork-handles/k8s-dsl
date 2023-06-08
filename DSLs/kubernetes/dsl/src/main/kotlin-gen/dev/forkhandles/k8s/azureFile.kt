@@ -6,7 +6,6 @@ import io.fabric8.kubernetes.api.model.AzureFileVolumeSource as model_AzureFileV
 import io.fabric8.kubernetes.api.model.PersistentVolumeSpec as model_PersistentVolumeSpec
 import io.fabric8.kubernetes.api.model.Volume as model_Volume
 
-
 fun model_PersistentVolumeSpec.azureFile(block: model_AzureFilePersistentVolumeSource.() -> Unit = {}) {
     if (this.azureFile == null) {
         this.azureFile = model_AzureFilePersistentVolumeSource()
@@ -15,7 +14,6 @@ fun model_PersistentVolumeSpec.azureFile(block: model_AzureFilePersistentVolumeS
     this.azureFile!!.block()
 }
 
-
 fun model_Volume.azureFile(block: model_AzureFileVolumeSource.() -> Unit = {}) {
     if (this.azureFile == null) {
         this.azureFile = model_AzureFileVolumeSource()
@@ -23,4 +21,3 @@ fun model_Volume.azureFile(block: model_AzureFileVolumeSource.() -> Unit = {}) {
 
     this.azureFile!!.block()
 }
-

@@ -6,7 +6,6 @@ import io.fabric8.kubernetes.api.model.admissionregistration.v1alpha1.Validating
 import io.fabric8.kubernetes.api.model.admissionregistration.v1alpha1.ValidatingAdmissionPolicyBindingSpec as v1alpha1_ValidatingAdmissionPolicyBindingSpec
 import io.fabric8.kubernetes.api.model.admissionregistration.v1alpha1.ValidatingAdmissionPolicySpec as v1alpha1_ValidatingAdmissionPolicySpec
 
-
 fun v1alpha1_ValidatingAdmissionPolicy.spec(block: v1alpha1_ValidatingAdmissionPolicySpec.() -> Unit = {}) {
     if (this.spec == null) {
         this.spec = v1alpha1_ValidatingAdmissionPolicySpec()
@@ -15,7 +14,6 @@ fun v1alpha1_ValidatingAdmissionPolicy.spec(block: v1alpha1_ValidatingAdmissionP
     this.spec!!.block()
 }
 
-
 fun v1alpha1_ValidatingAdmissionPolicyBinding.spec(block: v1alpha1_ValidatingAdmissionPolicyBindingSpec.() -> Unit = {}) {
     if (this.spec == null) {
         this.spec = v1alpha1_ValidatingAdmissionPolicyBindingSpec()
@@ -23,4 +21,3 @@ fun v1alpha1_ValidatingAdmissionPolicyBinding.spec(block: v1alpha1_ValidatingAdm
 
     this.spec!!.block()
 }
-

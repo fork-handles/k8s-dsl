@@ -6,7 +6,6 @@ import io.fabric8.kubernetes.api.model.EphemeralContainer as model_EphemeralCont
 import io.fabric8.kubernetes.api.model.PersistentVolumeClaimSpec as model_PersistentVolumeClaimSpec
 import io.fabric8.kubernetes.api.model.ResourceRequirements as model_ResourceRequirements
 
-
 fun model_Container.resources(block: model_ResourceRequirements.() -> Unit = {}) {
     if (this.resources == null) {
         this.resources = model_ResourceRequirements()
@@ -14,7 +13,6 @@ fun model_Container.resources(block: model_ResourceRequirements.() -> Unit = {})
 
     this.resources!!.block()
 }
-
 
 fun model_EphemeralContainer.resources(block: model_ResourceRequirements.() -> Unit = {}) {
     if (this.resources == null) {
@@ -24,7 +22,6 @@ fun model_EphemeralContainer.resources(block: model_ResourceRequirements.() -> U
     this.resources!!.block()
 }
 
-
 fun model_PersistentVolumeClaimSpec.resources(block: model_ResourceRequirements.() -> Unit = {}) {
     if (this.resources == null) {
         this.resources = model_ResourceRequirements()
@@ -32,4 +29,3 @@ fun model_PersistentVolumeClaimSpec.resources(block: model_ResourceRequirements.
 
     this.resources!!.block()
 }
-

@@ -9,13 +9,11 @@ import io.fabric8.kubernetes.api.model.discovery.v1beta1.EndpointSlice as v1beta
 import io.fabric8.kubernetes.api.model.discovery.v1beta1.EndpointSliceList as v1beta1_EndpointSliceList
 import io.fabric8.kubernetes.api.model.discovery.v1beta1.ForZone as v1beta1_ForZone
 
-
 fun newEndpoint(block: v1beta1_Endpoint.() -> Unit = {}): v1beta1_Endpoint {
     val instance = v1beta1_Endpoint()
     instance.block()
     return instance
 }
-
 
 fun newEndpointConditions(block: v1beta1_EndpointConditions.() -> Unit = {}): v1beta1_EndpointConditions {
     val instance = v1beta1_EndpointConditions()
@@ -23,13 +21,11 @@ fun newEndpointConditions(block: v1beta1_EndpointConditions.() -> Unit = {}): v1
     return instance
 }
 
-
 fun newEndpointHints(block: v1beta1_EndpointHints.() -> Unit = {}): v1beta1_EndpointHints {
     val instance = v1beta1_EndpointHints()
     instance.block()
     return instance
 }
-
 
 fun newEndpointPort(block: v1beta1_EndpointPort.() -> Unit = {}): v1beta1_EndpointPort {
     val instance = v1beta1_EndpointPort()
@@ -37,13 +33,11 @@ fun newEndpointPort(block: v1beta1_EndpointPort.() -> Unit = {}): v1beta1_Endpoi
     return instance
 }
 
-
 fun newEndpointSlice(block: v1beta1_EndpointSlice.() -> Unit = {}): v1beta1_EndpointSlice {
     val instance = v1beta1_EndpointSlice()
     instance.block()
     return instance
 }
-
 
 fun newEndpointSliceList(block: v1beta1_EndpointSliceList.() -> Unit = {}): v1beta1_EndpointSliceList {
     val instance = v1beta1_EndpointSliceList()
@@ -51,10 +45,8 @@ fun newEndpointSliceList(block: v1beta1_EndpointSliceList.() -> Unit = {}): v1be
     return instance
 }
 
-
 fun newForZone(block: v1beta1_ForZone.() -> Unit = {}): v1beta1_ForZone {
     val instance = v1beta1_ForZone()
     instance.block()
     return instance
 }
-

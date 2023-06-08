@@ -13,13 +13,11 @@ import io.fabric8.kubernetes.api.model.storage.v1beta1.CSIStorageCapacityList as
 import io.fabric8.kubernetes.api.model.storage.v1beta1.TokenRequest as v1beta1_TokenRequest
 import io.fabric8.kubernetes.api.model.storage.v1beta1.VolumeNodeResources as v1beta1_VolumeNodeResources
 
-
 fun newCSIDriver(block: v1beta1_CSIDriver.() -> Unit = {}): v1beta1_CSIDriver {
     val instance = v1beta1_CSIDriver()
     instance.block()
     return instance
 }
-
 
 fun newCSIDriverList(block: v1beta1_CSIDriverList.() -> Unit = {}): v1beta1_CSIDriverList {
     val instance = v1beta1_CSIDriverList()
@@ -27,13 +25,11 @@ fun newCSIDriverList(block: v1beta1_CSIDriverList.() -> Unit = {}): v1beta1_CSID
     return instance
 }
 
-
 fun newCSIDriverSpec(block: v1beta1_CSIDriverSpec.() -> Unit = {}): v1beta1_CSIDriverSpec {
     val instance = v1beta1_CSIDriverSpec()
     instance.block()
     return instance
 }
-
 
 fun newCSINode(block: v1beta1_CSINode.() -> Unit = {}): v1beta1_CSINode {
     val instance = v1beta1_CSINode()
@@ -41,13 +37,11 @@ fun newCSINode(block: v1beta1_CSINode.() -> Unit = {}): v1beta1_CSINode {
     return instance
 }
 
-
 fun newCSINodeDriver(block: v1beta1_CSINodeDriver.() -> Unit = {}): v1beta1_CSINodeDriver {
     val instance = v1beta1_CSINodeDriver()
     instance.block()
     return instance
 }
-
 
 fun newCSINodeList(block: v1beta1_CSINodeList.() -> Unit = {}): v1beta1_CSINodeList {
     val instance = v1beta1_CSINodeList()
@@ -55,13 +49,11 @@ fun newCSINodeList(block: v1beta1_CSINodeList.() -> Unit = {}): v1beta1_CSINodeL
     return instance
 }
 
-
 fun newCSINodeSpec(block: v1beta1_CSINodeSpec.() -> Unit = {}): v1beta1_CSINodeSpec {
     val instance = v1beta1_CSINodeSpec()
     instance.block()
     return instance
 }
-
 
 fun newCSIStorageCapacity(block: v1beta1_CSIStorageCapacity.() -> Unit = {}): v1beta1_CSIStorageCapacity {
     val instance = v1beta1_CSIStorageCapacity()
@@ -69,13 +61,11 @@ fun newCSIStorageCapacity(block: v1beta1_CSIStorageCapacity.() -> Unit = {}): v1
     return instance
 }
 
-
 fun newCSIStorageCapacityList(block: v1beta1_CSIStorageCapacityList.() -> Unit = {}): v1beta1_CSIStorageCapacityList {
     val instance = v1beta1_CSIStorageCapacityList()
     instance.block()
     return instance
 }
-
 
 fun newTokenRequest(block: v1beta1_TokenRequest.() -> Unit = {}): v1beta1_TokenRequest {
     val instance = v1beta1_TokenRequest()
@@ -83,10 +73,8 @@ fun newTokenRequest(block: v1beta1_TokenRequest.() -> Unit = {}): v1beta1_TokenR
     return instance
 }
 
-
 fun newVolumeNodeResources(block: v1beta1_VolumeNodeResources.() -> Unit = {}): v1beta1_VolumeNodeResources {
     val instance = v1beta1_VolumeNodeResources()
     instance.block()
     return instance
 }
-

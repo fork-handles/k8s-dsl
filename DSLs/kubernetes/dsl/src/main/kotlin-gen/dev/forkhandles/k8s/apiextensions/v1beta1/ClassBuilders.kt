@@ -23,13 +23,11 @@ import io.fabric8.kubernetes.api.model.apiextensions.v1beta1.ServiceReference as
 import io.fabric8.kubernetes.api.model.apiextensions.v1beta1.ValidationRule as v1beta1_ValidationRule
 import io.fabric8.kubernetes.api.model.apiextensions.v1beta1.WebhookClientConfig as v1beta1_WebhookClientConfig
 
-
 fun newCustomResourceColumnDefinition(block: v1beta1_CustomResourceColumnDefinition.() -> Unit = {}): v1beta1_CustomResourceColumnDefinition {
     val instance = v1beta1_CustomResourceColumnDefinition()
     instance.block()
     return instance
 }
-
 
 fun newCustomResourceConversion(block: v1beta1_CustomResourceConversion.() -> Unit = {}): v1beta1_CustomResourceConversion {
     val instance = v1beta1_CustomResourceConversion()
@@ -37,13 +35,11 @@ fun newCustomResourceConversion(block: v1beta1_CustomResourceConversion.() -> Un
     return instance
 }
 
-
 fun newCustomResourceDefinition(block: v1beta1_CustomResourceDefinition.() -> Unit = {}): v1beta1_CustomResourceDefinition {
     val instance = v1beta1_CustomResourceDefinition()
     instance.block()
     return instance
 }
-
 
 fun newCustomResourceDefinitionCondition(block: v1beta1_CustomResourceDefinitionCondition.() -> Unit = {}): v1beta1_CustomResourceDefinitionCondition {
     val instance = v1beta1_CustomResourceDefinitionCondition()
@@ -51,13 +47,11 @@ fun newCustomResourceDefinitionCondition(block: v1beta1_CustomResourceDefinition
     return instance
 }
 
-
 fun newCustomResourceDefinitionList(block: v1beta1_CustomResourceDefinitionList.() -> Unit = {}): v1beta1_CustomResourceDefinitionList {
     val instance = v1beta1_CustomResourceDefinitionList()
     instance.block()
     return instance
 }
-
 
 fun newCustomResourceDefinitionNames(block: v1beta1_CustomResourceDefinitionNames.() -> Unit = {}): v1beta1_CustomResourceDefinitionNames {
     val instance = v1beta1_CustomResourceDefinitionNames()
@@ -65,13 +59,11 @@ fun newCustomResourceDefinitionNames(block: v1beta1_CustomResourceDefinitionName
     return instance
 }
 
-
 fun newCustomResourceDefinitionSpec(block: v1beta1_CustomResourceDefinitionSpec.() -> Unit = {}): v1beta1_CustomResourceDefinitionSpec {
     val instance = v1beta1_CustomResourceDefinitionSpec()
     instance.block()
     return instance
 }
-
 
 fun newCustomResourceDefinitionStatus(block: v1beta1_CustomResourceDefinitionStatus.() -> Unit = {}): v1beta1_CustomResourceDefinitionStatus {
     val instance = v1beta1_CustomResourceDefinitionStatus()
@@ -79,13 +71,11 @@ fun newCustomResourceDefinitionStatus(block: v1beta1_CustomResourceDefinitionSta
     return instance
 }
 
-
 fun newCustomResourceDefinitionVersion(block: v1beta1_CustomResourceDefinitionVersion.() -> Unit = {}): v1beta1_CustomResourceDefinitionVersion {
     val instance = v1beta1_CustomResourceDefinitionVersion()
     instance.block()
     return instance
 }
-
 
 fun newCustomResourceSubresourceScale(block: v1beta1_CustomResourceSubresourceScale.() -> Unit = {}): v1beta1_CustomResourceSubresourceScale {
     val instance = v1beta1_CustomResourceSubresourceScale()
@@ -93,13 +83,11 @@ fun newCustomResourceSubresourceScale(block: v1beta1_CustomResourceSubresourceSc
     return instance
 }
 
-
 fun newCustomResourceSubresourceStatus(block: v1beta1_CustomResourceSubresourceStatus.() -> Unit = {}): v1beta1_CustomResourceSubresourceStatus {
     val instance = v1beta1_CustomResourceSubresourceStatus()
     instance.block()
     return instance
 }
-
 
 fun newCustomResourceSubresources(block: v1beta1_CustomResourceSubresources.() -> Unit = {}): v1beta1_CustomResourceSubresources {
     val instance = v1beta1_CustomResourceSubresources()
@@ -107,13 +95,11 @@ fun newCustomResourceSubresources(block: v1beta1_CustomResourceSubresources.() -
     return instance
 }
 
-
 fun newCustomResourceValidation(block: v1beta1_CustomResourceValidation.() -> Unit = {}): v1beta1_CustomResourceValidation {
     val instance = v1beta1_CustomResourceValidation()
     instance.block()
     return instance
 }
-
 
 fun newExternalDocumentation(block: v1beta1_ExternalDocumentation.() -> Unit = {}): v1beta1_ExternalDocumentation {
     val instance = v1beta1_ExternalDocumentation()
@@ -121,13 +107,11 @@ fun newExternalDocumentation(block: v1beta1_ExternalDocumentation.() -> Unit = {
     return instance
 }
 
-
 fun newJSONSchemaProps(block: v1beta1_JSONSchemaProps.() -> Unit = {}): v1beta1_JSONSchemaProps {
     val instance = v1beta1_JSONSchemaProps()
     instance.block()
     return instance
 }
-
 
 fun newJSONSchemaPropsOrArray(block: v1beta1_JSONSchemaPropsOrArray.() -> Unit = {}): v1beta1_JSONSchemaPropsOrArray {
     val instance = v1beta1_JSONSchemaPropsOrArray()
@@ -135,13 +119,11 @@ fun newJSONSchemaPropsOrArray(block: v1beta1_JSONSchemaPropsOrArray.() -> Unit =
     return instance
 }
 
-
 fun newJSONSchemaPropsOrBool(block: v1beta1_JSONSchemaPropsOrBool.() -> Unit = {}): v1beta1_JSONSchemaPropsOrBool {
     val instance = v1beta1_JSONSchemaPropsOrBool()
     instance.block()
     return instance
 }
-
 
 fun newJSONSchemaPropsOrStringArray(block: v1beta1_JSONSchemaPropsOrStringArray.() -> Unit = {}): v1beta1_JSONSchemaPropsOrStringArray {
     val instance = v1beta1_JSONSchemaPropsOrStringArray()
@@ -149,13 +131,11 @@ fun newJSONSchemaPropsOrStringArray(block: v1beta1_JSONSchemaPropsOrStringArray.
     return instance
 }
 
-
 fun newServiceReference(block: v1beta1_ServiceReference.() -> Unit = {}): v1beta1_ServiceReference {
     val instance = v1beta1_ServiceReference()
     instance.block()
     return instance
 }
-
 
 fun newValidationRule(block: v1beta1_ValidationRule.() -> Unit = {}): v1beta1_ValidationRule {
     val instance = v1beta1_ValidationRule()
@@ -163,10 +143,8 @@ fun newValidationRule(block: v1beta1_ValidationRule.() -> Unit = {}): v1beta1_Va
     return instance
 }
 
-
 fun newWebhookClientConfig(block: v1beta1_WebhookClientConfig.() -> Unit = {}): v1beta1_WebhookClientConfig {
     val instance = v1beta1_WebhookClientConfig()
     instance.block()
     return instance
 }
-

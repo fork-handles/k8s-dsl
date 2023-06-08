@@ -8,7 +8,6 @@ import io.fabric8.kubernetes.api.model.apiextensions.v1beta1.JSONSchemaPropsOrAr
 import io.fabric8.kubernetes.api.model.apiextensions.v1beta1.JSONSchemaPropsOrBool as v1beta1_JSONSchemaPropsOrBool
 import io.fabric8.kubernetes.api.model.apiextensions.v1beta1.JSONSchemaPropsOrStringArray as v1beta1_JSONSchemaPropsOrStringArray
 
-
 fun v1beta1_CustomResourceDefinitionVersion.schema(block: v1beta1_CustomResourceValidation.() -> Unit = {}) {
     if (this.schema == null) {
         this.schema = v1beta1_CustomResourceValidation()
@@ -16,7 +15,6 @@ fun v1beta1_CustomResourceDefinitionVersion.schema(block: v1beta1_CustomResource
 
     this.schema!!.block()
 }
-
 
 fun v1beta1_JSONSchemaPropsOrArray.schema(block: v1beta1_JSONSchemaProps.() -> Unit = {}) {
     if (this.schema == null) {
@@ -26,7 +24,6 @@ fun v1beta1_JSONSchemaPropsOrArray.schema(block: v1beta1_JSONSchemaProps.() -> U
     this.schema!!.block()
 }
 
-
 fun v1beta1_JSONSchemaPropsOrBool.schema(block: v1beta1_JSONSchemaProps.() -> Unit = {}) {
     if (this.schema == null) {
         this.schema = v1beta1_JSONSchemaProps()
@@ -35,7 +32,6 @@ fun v1beta1_JSONSchemaPropsOrBool.schema(block: v1beta1_JSONSchemaProps.() -> Un
     this.schema!!.block()
 }
 
-
 fun v1beta1_JSONSchemaPropsOrStringArray.schema(block: v1beta1_JSONSchemaProps.() -> Unit = {}) {
     if (this.schema == null) {
         this.schema = v1beta1_JSONSchemaProps()
@@ -43,4 +39,3 @@ fun v1beta1_JSONSchemaPropsOrStringArray.schema(block: v1beta1_JSONSchemaProps.(
 
     this.schema!!.block()
 }
-

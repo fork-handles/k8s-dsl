@@ -13,13 +13,11 @@ import io.fabric8.kubernetes.api.model.admissionregistration.v1alpha1.Validating
 import io.fabric8.kubernetes.api.model.admissionregistration.v1alpha1.ValidatingAdmissionPolicySpec as v1alpha1_ValidatingAdmissionPolicySpec
 import io.fabric8.kubernetes.api.model.admissionregistration.v1alpha1.Validation as v1alpha1_Validation
 
-
 fun newMatchResources(block: v1alpha1_MatchResources.() -> Unit = {}): v1alpha1_MatchResources {
     val instance = v1alpha1_MatchResources()
     instance.block()
     return instance
 }
-
 
 fun newNamedRuleWithOperations(block: v1alpha1_NamedRuleWithOperations.() -> Unit = {}): v1alpha1_NamedRuleWithOperations {
     val instance = v1alpha1_NamedRuleWithOperations()
@@ -27,13 +25,11 @@ fun newNamedRuleWithOperations(block: v1alpha1_NamedRuleWithOperations.() -> Uni
     return instance
 }
 
-
 fun newParamKind(block: v1alpha1_ParamKind.() -> Unit = {}): v1alpha1_ParamKind {
     val instance = v1alpha1_ParamKind()
     instance.block()
     return instance
 }
-
 
 fun newParamRef(block: v1alpha1_ParamRef.() -> Unit = {}): v1alpha1_ParamRef {
     val instance = v1alpha1_ParamRef()
@@ -41,13 +37,11 @@ fun newParamRef(block: v1alpha1_ParamRef.() -> Unit = {}): v1alpha1_ParamRef {
     return instance
 }
 
-
 fun newValidatingAdmissionPolicy(block: v1alpha1_ValidatingAdmissionPolicy.() -> Unit = {}): v1alpha1_ValidatingAdmissionPolicy {
     val instance = v1alpha1_ValidatingAdmissionPolicy()
     instance.block()
     return instance
 }
-
 
 fun newValidatingAdmissionPolicyBinding(block: v1alpha1_ValidatingAdmissionPolicyBinding.() -> Unit = {}): v1alpha1_ValidatingAdmissionPolicyBinding {
     val instance = v1alpha1_ValidatingAdmissionPolicyBinding()
@@ -55,13 +49,11 @@ fun newValidatingAdmissionPolicyBinding(block: v1alpha1_ValidatingAdmissionPolic
     return instance
 }
 
-
 fun newValidatingAdmissionPolicyBindingList(block: v1alpha1_ValidatingAdmissionPolicyBindingList.() -> Unit = {}): v1alpha1_ValidatingAdmissionPolicyBindingList {
     val instance = v1alpha1_ValidatingAdmissionPolicyBindingList()
     instance.block()
     return instance
 }
-
 
 fun newValidatingAdmissionPolicyBindingSpec(block: v1alpha1_ValidatingAdmissionPolicyBindingSpec.() -> Unit = {}): v1alpha1_ValidatingAdmissionPolicyBindingSpec {
     val instance = v1alpha1_ValidatingAdmissionPolicyBindingSpec()
@@ -69,13 +61,11 @@ fun newValidatingAdmissionPolicyBindingSpec(block: v1alpha1_ValidatingAdmissionP
     return instance
 }
 
-
 fun newValidatingAdmissionPolicyList(block: v1alpha1_ValidatingAdmissionPolicyList.() -> Unit = {}): v1alpha1_ValidatingAdmissionPolicyList {
     val instance = v1alpha1_ValidatingAdmissionPolicyList()
     instance.block()
     return instance
 }
-
 
 fun newValidatingAdmissionPolicySpec(block: v1alpha1_ValidatingAdmissionPolicySpec.() -> Unit = {}): v1alpha1_ValidatingAdmissionPolicySpec {
     val instance = v1alpha1_ValidatingAdmissionPolicySpec()
@@ -83,10 +73,8 @@ fun newValidatingAdmissionPolicySpec(block: v1alpha1_ValidatingAdmissionPolicySp
     return instance
 }
 
-
 fun newValidation(block: v1alpha1_Validation.() -> Unit = {}): v1alpha1_Validation {
     val instance = v1alpha1_Validation()
     instance.block()
     return instance
 }
-

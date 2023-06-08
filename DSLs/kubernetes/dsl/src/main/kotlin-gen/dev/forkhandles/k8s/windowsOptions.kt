@@ -5,7 +5,6 @@ import io.fabric8.kubernetes.api.model.PodSecurityContext as model_PodSecurityCo
 import io.fabric8.kubernetes.api.model.SecurityContext as model_SecurityContext
 import io.fabric8.kubernetes.api.model.WindowsSecurityContextOptions as model_WindowsSecurityContextOptions
 
-
 fun model_PodSecurityContext.windowsOptions(block: model_WindowsSecurityContextOptions.() -> Unit = {}) {
     if (this.windowsOptions == null) {
         this.windowsOptions = model_WindowsSecurityContextOptions()
@@ -14,7 +13,6 @@ fun model_PodSecurityContext.windowsOptions(block: model_WindowsSecurityContextO
     this.windowsOptions!!.block()
 }
 
-
 fun model_SecurityContext.windowsOptions(block: model_WindowsSecurityContextOptions.() -> Unit = {}) {
     if (this.windowsOptions == null) {
         this.windowsOptions = model_WindowsSecurityContextOptions()
@@ -22,4 +20,3 @@ fun model_SecurityContext.windowsOptions(block: model_WindowsSecurityContextOpti
 
     this.windowsOptions!!.block()
 }
-

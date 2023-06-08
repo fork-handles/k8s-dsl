@@ -4,7 +4,6 @@ package dev.forkhandles.k8s.extensions
 import io.fabric8.kubernetes.api.model.extensions.HTTPIngressRuleValue as extensions_HTTPIngressRuleValue
 import io.fabric8.kubernetes.api.model.extensions.IngressRule as extensions_IngressRule
 
-
 fun extensions_IngressRule.http(block: extensions_HTTPIngressRuleValue.() -> Unit = {}) {
     if (this.http == null) {
         this.http = extensions_HTTPIngressRuleValue()
@@ -12,4 +11,3 @@ fun extensions_IngressRule.http(block: extensions_HTTPIngressRuleValue.() -> Uni
 
     this.http!!.block()
 }
-

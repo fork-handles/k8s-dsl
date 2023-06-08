@@ -5,7 +5,6 @@ import io.fabric8.kubernetes.api.model.PersistentVolumeSpec as model_PersistentV
 import io.fabric8.kubernetes.api.model.QuobyteVolumeSource as model_QuobyteVolumeSource
 import io.fabric8.kubernetes.api.model.Volume as model_Volume
 
-
 fun model_PersistentVolumeSpec.quobyte(block: model_QuobyteVolumeSource.() -> Unit = {}) {
     if (this.quobyte == null) {
         this.quobyte = model_QuobyteVolumeSource()
@@ -14,7 +13,6 @@ fun model_PersistentVolumeSpec.quobyte(block: model_QuobyteVolumeSource.() -> Un
     this.quobyte!!.block()
 }
 
-
 fun model_Volume.quobyte(block: model_QuobyteVolumeSource.() -> Unit = {}) {
     if (this.quobyte == null) {
         this.quobyte = model_QuobyteVolumeSource()
@@ -22,4 +20,3 @@ fun model_Volume.quobyte(block: model_QuobyteVolumeSource.() -> Unit = {}) {
 
     this.quobyte!!.block()
 }
-

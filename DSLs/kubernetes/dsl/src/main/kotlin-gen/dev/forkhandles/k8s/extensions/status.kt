@@ -12,7 +12,6 @@ import io.fabric8.kubernetes.api.model.extensions.NetworkPolicyStatus as extensi
 import io.fabric8.kubernetes.api.model.extensions.ReplicaSet as extensions_ReplicaSet
 import io.fabric8.kubernetes.api.model.extensions.ReplicaSetStatus as extensions_ReplicaSetStatus
 
-
 fun extensions_DaemonSet.status(block: extensions_DaemonSetStatus.() -> Unit = {}) {
     if (this.status == null) {
         this.status = extensions_DaemonSetStatus()
@@ -20,7 +19,6 @@ fun extensions_DaemonSet.status(block: extensions_DaemonSetStatus.() -> Unit = {
 
     this.status!!.block()
 }
-
 
 fun extensions_Deployment.status(block: extensions_DeploymentStatus.() -> Unit = {}) {
     if (this.status == null) {
@@ -30,7 +28,6 @@ fun extensions_Deployment.status(block: extensions_DeploymentStatus.() -> Unit =
     this.status!!.block()
 }
 
-
 fun extensions_Ingress.status(block: extensions_IngressStatus.() -> Unit = {}) {
     if (this.status == null) {
         this.status = extensions_IngressStatus()
@@ -38,7 +35,6 @@ fun extensions_Ingress.status(block: extensions_IngressStatus.() -> Unit = {}) {
 
     this.status!!.block()
 }
-
 
 fun extensions_NetworkPolicy.status(block: extensions_NetworkPolicyStatus.() -> Unit = {}) {
     if (this.status == null) {
@@ -48,7 +44,6 @@ fun extensions_NetworkPolicy.status(block: extensions_NetworkPolicyStatus.() -> 
     this.status!!.block()
 }
 
-
 fun extensions_ReplicaSet.status(block: extensions_ReplicaSetStatus.() -> Unit = {}) {
     if (this.status == null) {
         this.status = extensions_ReplicaSetStatus()
@@ -56,4 +51,3 @@ fun extensions_ReplicaSet.status(block: extensions_ReplicaSetStatus.() -> Unit =
 
     this.status!!.block()
 }
-

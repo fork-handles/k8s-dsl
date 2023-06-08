@@ -6,7 +6,6 @@ import io.fabric8.kubernetes.api.model.apiextensions.v1beta1.CustomResourceDefin
 import io.fabric8.kubernetes.api.model.apiextensions.v1beta1.CustomResourceSubresourceStatus as v1beta1_CustomResourceSubresourceStatus
 import io.fabric8.kubernetes.api.model.apiextensions.v1beta1.CustomResourceSubresources as v1beta1_CustomResourceSubresources
 
-
 fun v1beta1_CustomResourceDefinition.status(block: v1beta1_CustomResourceDefinitionStatus.() -> Unit = {}) {
     if (this.status == null) {
         this.status = v1beta1_CustomResourceDefinitionStatus()
@@ -15,7 +14,6 @@ fun v1beta1_CustomResourceDefinition.status(block: v1beta1_CustomResourceDefinit
     this.status!!.block()
 }
 
-
 fun v1beta1_CustomResourceSubresources.status(block: v1beta1_CustomResourceSubresourceStatus.() -> Unit = {}) {
     if (this.status == null) {
         this.status = v1beta1_CustomResourceSubresourceStatus()
@@ -23,4 +21,3 @@ fun v1beta1_CustomResourceSubresources.status(block: v1beta1_CustomResourceSubre
 
     this.status!!.block()
 }
-

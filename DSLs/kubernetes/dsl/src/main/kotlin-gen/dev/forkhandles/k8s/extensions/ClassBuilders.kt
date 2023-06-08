@@ -44,13 +44,11 @@ import io.fabric8.kubernetes.api.model.extensions.RollbackConfig as extensions_R
 import io.fabric8.kubernetes.api.model.extensions.RollingUpdateDaemonSet as extensions_RollingUpdateDaemonSet
 import io.fabric8.kubernetes.api.model.extensions.RollingUpdateDeployment as extensions_RollingUpdateDeployment
 
-
 fun newDaemonSet(block: extensions_DaemonSet.() -> Unit = {}): extensions_DaemonSet {
     val instance = extensions_DaemonSet()
     instance.block()
     return instance
 }
-
 
 fun newDaemonSetCondition(block: extensions_DaemonSetCondition.() -> Unit = {}): extensions_DaemonSetCondition {
     val instance = extensions_DaemonSetCondition()
@@ -58,13 +56,11 @@ fun newDaemonSetCondition(block: extensions_DaemonSetCondition.() -> Unit = {}):
     return instance
 }
 
-
 fun newDaemonSetList(block: extensions_DaemonSetList.() -> Unit = {}): extensions_DaemonSetList {
     val instance = extensions_DaemonSetList()
     instance.block()
     return instance
 }
-
 
 fun newDaemonSetSpec(block: extensions_DaemonSetSpec.() -> Unit = {}): extensions_DaemonSetSpec {
     val instance = extensions_DaemonSetSpec()
@@ -72,13 +68,11 @@ fun newDaemonSetSpec(block: extensions_DaemonSetSpec.() -> Unit = {}): extension
     return instance
 }
 
-
 fun newDaemonSetStatus(block: extensions_DaemonSetStatus.() -> Unit = {}): extensions_DaemonSetStatus {
     val instance = extensions_DaemonSetStatus()
     instance.block()
     return instance
 }
-
 
 fun newDaemonSetUpdateStrategy(block: extensions_DaemonSetUpdateStrategy.() -> Unit = {}): extensions_DaemonSetUpdateStrategy {
     val instance = extensions_DaemonSetUpdateStrategy()
@@ -86,13 +80,11 @@ fun newDaemonSetUpdateStrategy(block: extensions_DaemonSetUpdateStrategy.() -> U
     return instance
 }
 
-
 fun newDeployment(block: extensions_Deployment.() -> Unit = {}): extensions_Deployment {
     val instance = extensions_Deployment()
     instance.block()
     return instance
 }
-
 
 fun newDeploymentCondition(block: extensions_DeploymentCondition.() -> Unit = {}): extensions_DeploymentCondition {
     val instance = extensions_DeploymentCondition()
@@ -100,13 +92,11 @@ fun newDeploymentCondition(block: extensions_DeploymentCondition.() -> Unit = {}
     return instance
 }
 
-
 fun newDeploymentList(block: extensions_DeploymentList.() -> Unit = {}): extensions_DeploymentList {
     val instance = extensions_DeploymentList()
     instance.block()
     return instance
 }
-
 
 fun newDeploymentRollback(block: extensions_DeploymentRollback.() -> Unit = {}): extensions_DeploymentRollback {
     val instance = extensions_DeploymentRollback()
@@ -114,13 +104,11 @@ fun newDeploymentRollback(block: extensions_DeploymentRollback.() -> Unit = {}):
     return instance
 }
 
-
 fun newDeploymentSpec(block: extensions_DeploymentSpec.() -> Unit = {}): extensions_DeploymentSpec {
     val instance = extensions_DeploymentSpec()
     instance.block()
     return instance
 }
-
 
 fun newDeploymentStatus(block: extensions_DeploymentStatus.() -> Unit = {}): extensions_DeploymentStatus {
     val instance = extensions_DeploymentStatus()
@@ -128,13 +116,11 @@ fun newDeploymentStatus(block: extensions_DeploymentStatus.() -> Unit = {}): ext
     return instance
 }
 
-
 fun newDeploymentStrategy(block: extensions_DeploymentStrategy.() -> Unit = {}): extensions_DeploymentStrategy {
     val instance = extensions_DeploymentStrategy()
     instance.block()
     return instance
 }
-
 
 fun newHTTPIngressPath(block: extensions_HTTPIngressPath.() -> Unit = {}): extensions_HTTPIngressPath {
     val instance = extensions_HTTPIngressPath()
@@ -142,13 +128,11 @@ fun newHTTPIngressPath(block: extensions_HTTPIngressPath.() -> Unit = {}): exten
     return instance
 }
 
-
 fun newHTTPIngressRuleValue(block: extensions_HTTPIngressRuleValue.() -> Unit = {}): extensions_HTTPIngressRuleValue {
     val instance = extensions_HTTPIngressRuleValue()
     instance.block()
     return instance
 }
-
 
 fun newIPBlock(block: extensions_IPBlock.() -> Unit = {}): extensions_IPBlock {
     val instance = extensions_IPBlock()
@@ -156,13 +140,11 @@ fun newIPBlock(block: extensions_IPBlock.() -> Unit = {}): extensions_IPBlock {
     return instance
 }
 
-
 fun newIngress(block: extensions_Ingress.() -> Unit = {}): extensions_Ingress {
     val instance = extensions_Ingress()
     instance.block()
     return instance
 }
-
 
 fun newIngressBackend(block: extensions_IngressBackend.() -> Unit = {}): extensions_IngressBackend {
     val instance = extensions_IngressBackend()
@@ -170,13 +152,11 @@ fun newIngressBackend(block: extensions_IngressBackend.() -> Unit = {}): extensi
     return instance
 }
 
-
 fun newIngressList(block: extensions_IngressList.() -> Unit = {}): extensions_IngressList {
     val instance = extensions_IngressList()
     instance.block()
     return instance
 }
-
 
 fun newIngressLoadBalancerIngress(block: extensions_IngressLoadBalancerIngress.() -> Unit = {}): extensions_IngressLoadBalancerIngress {
     val instance = extensions_IngressLoadBalancerIngress()
@@ -184,13 +164,11 @@ fun newIngressLoadBalancerIngress(block: extensions_IngressLoadBalancerIngress.(
     return instance
 }
 
-
 fun newIngressLoadBalancerStatus(block: extensions_IngressLoadBalancerStatus.() -> Unit = {}): extensions_IngressLoadBalancerStatus {
     val instance = extensions_IngressLoadBalancerStatus()
     instance.block()
     return instance
 }
-
 
 fun newIngressPortStatus(block: extensions_IngressPortStatus.() -> Unit = {}): extensions_IngressPortStatus {
     val instance = extensions_IngressPortStatus()
@@ -198,13 +176,11 @@ fun newIngressPortStatus(block: extensions_IngressPortStatus.() -> Unit = {}): e
     return instance
 }
 
-
 fun newIngressRule(block: extensions_IngressRule.() -> Unit = {}): extensions_IngressRule {
     val instance = extensions_IngressRule()
     instance.block()
     return instance
 }
-
 
 fun newIngressSpec(block: extensions_IngressSpec.() -> Unit = {}): extensions_IngressSpec {
     val instance = extensions_IngressSpec()
@@ -212,13 +188,11 @@ fun newIngressSpec(block: extensions_IngressSpec.() -> Unit = {}): extensions_In
     return instance
 }
 
-
 fun newIngressStatus(block: extensions_IngressStatus.() -> Unit = {}): extensions_IngressStatus {
     val instance = extensions_IngressStatus()
     instance.block()
     return instance
 }
-
 
 fun newIngressTLS(block: extensions_IngressTLS.() -> Unit = {}): extensions_IngressTLS {
     val instance = extensions_IngressTLS()
@@ -226,13 +200,11 @@ fun newIngressTLS(block: extensions_IngressTLS.() -> Unit = {}): extensions_Ingr
     return instance
 }
 
-
 fun newNetworkPolicy(block: extensions_NetworkPolicy.() -> Unit = {}): extensions_NetworkPolicy {
     val instance = extensions_NetworkPolicy()
     instance.block()
     return instance
 }
-
 
 fun newNetworkPolicyEgressRule(block: extensions_NetworkPolicyEgressRule.() -> Unit = {}): extensions_NetworkPolicyEgressRule {
     val instance = extensions_NetworkPolicyEgressRule()
@@ -240,13 +212,11 @@ fun newNetworkPolicyEgressRule(block: extensions_NetworkPolicyEgressRule.() -> U
     return instance
 }
 
-
 fun newNetworkPolicyIngressRule(block: extensions_NetworkPolicyIngressRule.() -> Unit = {}): extensions_NetworkPolicyIngressRule {
     val instance = extensions_NetworkPolicyIngressRule()
     instance.block()
     return instance
 }
-
 
 fun newNetworkPolicyList(block: extensions_NetworkPolicyList.() -> Unit = {}): extensions_NetworkPolicyList {
     val instance = extensions_NetworkPolicyList()
@@ -254,13 +224,11 @@ fun newNetworkPolicyList(block: extensions_NetworkPolicyList.() -> Unit = {}): e
     return instance
 }
 
-
 fun newNetworkPolicyPeer(block: extensions_NetworkPolicyPeer.() -> Unit = {}): extensions_NetworkPolicyPeer {
     val instance = extensions_NetworkPolicyPeer()
     instance.block()
     return instance
 }
-
 
 fun newNetworkPolicyPort(block: extensions_NetworkPolicyPort.() -> Unit = {}): extensions_NetworkPolicyPort {
     val instance = extensions_NetworkPolicyPort()
@@ -268,13 +236,11 @@ fun newNetworkPolicyPort(block: extensions_NetworkPolicyPort.() -> Unit = {}): e
     return instance
 }
 
-
 fun newNetworkPolicySpec(block: extensions_NetworkPolicySpec.() -> Unit = {}): extensions_NetworkPolicySpec {
     val instance = extensions_NetworkPolicySpec()
     instance.block()
     return instance
 }
-
 
 fun newNetworkPolicyStatus(block: extensions_NetworkPolicyStatus.() -> Unit = {}): extensions_NetworkPolicyStatus {
     val instance = extensions_NetworkPolicyStatus()
@@ -282,13 +248,11 @@ fun newNetworkPolicyStatus(block: extensions_NetworkPolicyStatus.() -> Unit = {}
     return instance
 }
 
-
 fun newReplicaSet(block: extensions_ReplicaSet.() -> Unit = {}): extensions_ReplicaSet {
     val instance = extensions_ReplicaSet()
     instance.block()
     return instance
 }
-
 
 fun newReplicaSetCondition(block: extensions_ReplicaSetCondition.() -> Unit = {}): extensions_ReplicaSetCondition {
     val instance = extensions_ReplicaSetCondition()
@@ -296,13 +260,11 @@ fun newReplicaSetCondition(block: extensions_ReplicaSetCondition.() -> Unit = {}
     return instance
 }
 
-
 fun newReplicaSetList(block: extensions_ReplicaSetList.() -> Unit = {}): extensions_ReplicaSetList {
     val instance = extensions_ReplicaSetList()
     instance.block()
     return instance
 }
-
 
 fun newReplicaSetSpec(block: extensions_ReplicaSetSpec.() -> Unit = {}): extensions_ReplicaSetSpec {
     val instance = extensions_ReplicaSetSpec()
@@ -310,13 +272,11 @@ fun newReplicaSetSpec(block: extensions_ReplicaSetSpec.() -> Unit = {}): extensi
     return instance
 }
 
-
 fun newReplicaSetStatus(block: extensions_ReplicaSetStatus.() -> Unit = {}): extensions_ReplicaSetStatus {
     val instance = extensions_ReplicaSetStatus()
     instance.block()
     return instance
 }
-
 
 fun newRollbackConfig(block: extensions_RollbackConfig.() -> Unit = {}): extensions_RollbackConfig {
     val instance = extensions_RollbackConfig()
@@ -324,17 +284,14 @@ fun newRollbackConfig(block: extensions_RollbackConfig.() -> Unit = {}): extensi
     return instance
 }
 
-
 fun newRollingUpdateDaemonSet(block: extensions_RollingUpdateDaemonSet.() -> Unit = {}): extensions_RollingUpdateDaemonSet {
     val instance = extensions_RollingUpdateDaemonSet()
     instance.block()
     return instance
 }
 
-
 fun newRollingUpdateDeployment(block: extensions_RollingUpdateDeployment.() -> Unit = {}): extensions_RollingUpdateDeployment {
     val instance = extensions_RollingUpdateDeployment()
     instance.block()
     return instance
 }
-

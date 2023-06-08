@@ -7,7 +7,6 @@ import io.fabric8.kubernetes.api.model.PodSecurityContext as model_PodSecurityCo
 import io.fabric8.kubernetes.api.model.PodSpec as model_PodSpec
 import io.fabric8.kubernetes.api.model.SecurityContext as model_SecurityContext
 
-
 fun model_Container.securityContext(block: model_SecurityContext.() -> Unit = {}) {
     if (this.securityContext == null) {
         this.securityContext = model_SecurityContext()
@@ -15,7 +14,6 @@ fun model_Container.securityContext(block: model_SecurityContext.() -> Unit = {}
 
     this.securityContext!!.block()
 }
-
 
 fun model_EphemeralContainer.securityContext(block: model_SecurityContext.() -> Unit = {}) {
     if (this.securityContext == null) {
@@ -25,7 +23,6 @@ fun model_EphemeralContainer.securityContext(block: model_SecurityContext.() -> 
     this.securityContext!!.block()
 }
 
-
 fun model_PodSpec.securityContext(block: model_PodSecurityContext.() -> Unit = {}) {
     if (this.securityContext == null) {
         this.securityContext = model_PodSecurityContext()
@@ -33,4 +30,3 @@ fun model_PodSpec.securityContext(block: model_PodSecurityContext.() -> Unit = {
 
     this.securityContext!!.block()
 }
-

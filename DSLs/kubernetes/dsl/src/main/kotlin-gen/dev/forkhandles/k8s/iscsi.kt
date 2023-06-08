@@ -6,7 +6,6 @@ import io.fabric8.kubernetes.api.model.ISCSIVolumeSource as model_ISCSIVolumeSou
 import io.fabric8.kubernetes.api.model.PersistentVolumeSpec as model_PersistentVolumeSpec
 import io.fabric8.kubernetes.api.model.Volume as model_Volume
 
-
 fun model_PersistentVolumeSpec.iscsi(block: model_ISCSIPersistentVolumeSource.() -> Unit = {}) {
     if (this.iscsi == null) {
         this.iscsi = model_ISCSIPersistentVolumeSource()
@@ -15,7 +14,6 @@ fun model_PersistentVolumeSpec.iscsi(block: model_ISCSIPersistentVolumeSource.()
     this.iscsi!!.block()
 }
 
-
 fun model_Volume.iscsi(block: model_ISCSIVolumeSource.() -> Unit = {}) {
     if (this.iscsi == null) {
         this.iscsi = model_ISCSIVolumeSource()
@@ -23,4 +21,3 @@ fun model_Volume.iscsi(block: model_ISCSIVolumeSource.() -> Unit = {}) {
 
     this.iscsi!!.block()
 }
-

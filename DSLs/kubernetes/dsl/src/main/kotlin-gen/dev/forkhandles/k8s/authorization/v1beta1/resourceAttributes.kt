@@ -5,7 +5,6 @@ import io.fabric8.kubernetes.api.model.authorization.v1beta1.ResourceAttributes 
 import io.fabric8.kubernetes.api.model.authorization.v1beta1.SelfSubjectAccessReviewSpec as v1beta1_SelfSubjectAccessReviewSpec
 import io.fabric8.kubernetes.api.model.authorization.v1beta1.SubjectAccessReviewSpec as v1beta1_SubjectAccessReviewSpec
 
-
 fun v1beta1_SelfSubjectAccessReviewSpec.resourceAttributes(block: v1beta1_ResourceAttributes.() -> Unit = {}) {
     if (this.resourceAttributes == null) {
         this.resourceAttributes = v1beta1_ResourceAttributes()
@@ -14,7 +13,6 @@ fun v1beta1_SelfSubjectAccessReviewSpec.resourceAttributes(block: v1beta1_Resour
     this.resourceAttributes!!.block()
 }
 
-
 fun v1beta1_SubjectAccessReviewSpec.resourceAttributes(block: v1beta1_ResourceAttributes.() -> Unit = {}) {
     if (this.resourceAttributes == null) {
         this.resourceAttributes = v1beta1_ResourceAttributes()
@@ -22,4 +20,3 @@ fun v1beta1_SubjectAccessReviewSpec.resourceAttributes(block: v1beta1_ResourceAt
 
     this.resourceAttributes!!.block()
 }
-

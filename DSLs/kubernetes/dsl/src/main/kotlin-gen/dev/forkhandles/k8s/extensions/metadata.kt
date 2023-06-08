@@ -14,7 +14,6 @@ import io.fabric8.kubernetes.api.model.extensions.NetworkPolicyList as extension
 import io.fabric8.kubernetes.api.model.extensions.ReplicaSet as extensions_ReplicaSet
 import io.fabric8.kubernetes.api.model.extensions.ReplicaSetList as extensions_ReplicaSetList
 
-
 fun extensions_DaemonSet.metadata(block: model_ObjectMeta.() -> Unit = {}) {
     if (this.metadata == null) {
         this.metadata = model_ObjectMeta()
@@ -22,7 +21,6 @@ fun extensions_DaemonSet.metadata(block: model_ObjectMeta.() -> Unit = {}) {
 
     this.metadata!!.block()
 }
-
 
 fun extensions_DaemonSetList.metadata(block: model_ListMeta.() -> Unit = {}) {
     if (this.metadata == null) {
@@ -32,7 +30,6 @@ fun extensions_DaemonSetList.metadata(block: model_ListMeta.() -> Unit = {}) {
     this.metadata!!.block()
 }
 
-
 fun extensions_Deployment.metadata(block: model_ObjectMeta.() -> Unit = {}) {
     if (this.metadata == null) {
         this.metadata = model_ObjectMeta()
@@ -40,7 +37,6 @@ fun extensions_Deployment.metadata(block: model_ObjectMeta.() -> Unit = {}) {
 
     this.metadata!!.block()
 }
-
 
 fun extensions_DeploymentList.metadata(block: model_ListMeta.() -> Unit = {}) {
     if (this.metadata == null) {
@@ -50,7 +46,6 @@ fun extensions_DeploymentList.metadata(block: model_ListMeta.() -> Unit = {}) {
     this.metadata!!.block()
 }
 
-
 fun extensions_Ingress.metadata(block: model_ObjectMeta.() -> Unit = {}) {
     if (this.metadata == null) {
         this.metadata = model_ObjectMeta()
@@ -58,7 +53,6 @@ fun extensions_Ingress.metadata(block: model_ObjectMeta.() -> Unit = {}) {
 
     this.metadata!!.block()
 }
-
 
 fun extensions_IngressList.metadata(block: model_ListMeta.() -> Unit = {}) {
     if (this.metadata == null) {
@@ -68,7 +62,6 @@ fun extensions_IngressList.metadata(block: model_ListMeta.() -> Unit = {}) {
     this.metadata!!.block()
 }
 
-
 fun extensions_NetworkPolicy.metadata(block: model_ObjectMeta.() -> Unit = {}) {
     if (this.metadata == null) {
         this.metadata = model_ObjectMeta()
@@ -76,7 +69,6 @@ fun extensions_NetworkPolicy.metadata(block: model_ObjectMeta.() -> Unit = {}) {
 
     this.metadata!!.block()
 }
-
 
 fun extensions_NetworkPolicyList.metadata(block: model_ListMeta.() -> Unit = {}) {
     if (this.metadata == null) {
@@ -86,7 +78,6 @@ fun extensions_NetworkPolicyList.metadata(block: model_ListMeta.() -> Unit = {})
     this.metadata!!.block()
 }
 
-
 fun extensions_ReplicaSet.metadata(block: model_ObjectMeta.() -> Unit = {}) {
     if (this.metadata == null) {
         this.metadata = model_ObjectMeta()
@@ -95,7 +86,6 @@ fun extensions_ReplicaSet.metadata(block: model_ObjectMeta.() -> Unit = {}) {
     this.metadata!!.block()
 }
 
-
 fun extensions_ReplicaSetList.metadata(block: model_ListMeta.() -> Unit = {}) {
     if (this.metadata == null) {
         this.metadata = model_ListMeta()
@@ -103,4 +93,3 @@ fun extensions_ReplicaSetList.metadata(block: model_ListMeta.() -> Unit = {}) {
 
     this.metadata!!.block()
 }
-

@@ -9,7 +9,6 @@ import io.fabric8.kubernetes.api.model.policy.v1beta1.PodDisruptionBudgetList as
 import io.fabric8.kubernetes.api.model.policy.v1beta1.PodSecurityPolicy as v1beta1_PodSecurityPolicy
 import io.fabric8.kubernetes.api.model.policy.v1beta1.PodSecurityPolicyList as v1beta1_PodSecurityPolicyList
 
-
 fun v1beta1_Eviction.metadata(block: model_ObjectMeta.() -> Unit = {}) {
     if (this.metadata == null) {
         this.metadata = model_ObjectMeta()
@@ -17,7 +16,6 @@ fun v1beta1_Eviction.metadata(block: model_ObjectMeta.() -> Unit = {}) {
 
     this.metadata!!.block()
 }
-
 
 fun v1beta1_PodDisruptionBudget.metadata(block: model_ObjectMeta.() -> Unit = {}) {
     if (this.metadata == null) {
@@ -27,7 +25,6 @@ fun v1beta1_PodDisruptionBudget.metadata(block: model_ObjectMeta.() -> Unit = {}
     this.metadata!!.block()
 }
 
-
 fun v1beta1_PodDisruptionBudgetList.metadata(block: model_ListMeta.() -> Unit = {}) {
     if (this.metadata == null) {
         this.metadata = model_ListMeta()
@@ -35,7 +32,6 @@ fun v1beta1_PodDisruptionBudgetList.metadata(block: model_ListMeta.() -> Unit = 
 
     this.metadata!!.block()
 }
-
 
 fun v1beta1_PodSecurityPolicy.metadata(block: model_ObjectMeta.() -> Unit = {}) {
     if (this.metadata == null) {
@@ -45,7 +41,6 @@ fun v1beta1_PodSecurityPolicy.metadata(block: model_ObjectMeta.() -> Unit = {}) 
     this.metadata!!.block()
 }
 
-
 fun v1beta1_PodSecurityPolicyList.metadata(block: model_ListMeta.() -> Unit = {}) {
     if (this.metadata == null) {
         this.metadata = model_ListMeta()
@@ -53,4 +48,3 @@ fun v1beta1_PodSecurityPolicyList.metadata(block: model_ListMeta.() -> Unit = {}
 
     this.metadata!!.block()
 }
-

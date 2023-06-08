@@ -6,7 +6,6 @@ import io.fabric8.kubernetes.api.model.ObjectMeta as model_ObjectMeta
 import io.fabric8.kubernetes.api.model.coordination.v1.Lease as v1_Lease
 import io.fabric8.kubernetes.api.model.coordination.v1.LeaseList as v1_LeaseList
 
-
 fun v1_Lease.metadata(block: model_ObjectMeta.() -> Unit = {}) {
     if (this.metadata == null) {
         this.metadata = model_ObjectMeta()
@@ -15,7 +14,6 @@ fun v1_Lease.metadata(block: model_ObjectMeta.() -> Unit = {}) {
     this.metadata!!.block()
 }
 
-
 fun v1_LeaseList.metadata(block: model_ListMeta.() -> Unit = {}) {
     if (this.metadata == null) {
         this.metadata = model_ListMeta()
@@ -23,4 +21,3 @@ fun v1_LeaseList.metadata(block: model_ListMeta.() -> Unit = {}) {
 
     this.metadata!!.block()
 }
-

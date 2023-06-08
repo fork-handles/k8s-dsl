@@ -8,7 +8,6 @@ import io.fabric8.kubernetes.api.model.networking.v1.IngressSpec as v1_IngressSp
 import io.fabric8.kubernetes.api.model.networking.v1.NetworkPolicy as v1_NetworkPolicy
 import io.fabric8.kubernetes.api.model.networking.v1.NetworkPolicySpec as v1_NetworkPolicySpec
 
-
 fun v1_Ingress.spec(block: v1_IngressSpec.() -> Unit = {}) {
     if (this.spec == null) {
         this.spec = v1_IngressSpec()
@@ -16,7 +15,6 @@ fun v1_Ingress.spec(block: v1_IngressSpec.() -> Unit = {}) {
 
     this.spec!!.block()
 }
-
 
 fun v1_IngressClass.spec(block: v1_IngressClassSpec.() -> Unit = {}) {
     if (this.spec == null) {
@@ -26,7 +24,6 @@ fun v1_IngressClass.spec(block: v1_IngressClassSpec.() -> Unit = {}) {
     this.spec!!.block()
 }
 
-
 fun v1_NetworkPolicy.spec(block: v1_NetworkPolicySpec.() -> Unit = {}) {
     if (this.spec == null) {
         this.spec = v1_NetworkPolicySpec()
@@ -34,4 +31,3 @@ fun v1_NetworkPolicy.spec(block: v1_NetworkPolicySpec.() -> Unit = {}) {
 
     this.spec!!.block()
 }
-

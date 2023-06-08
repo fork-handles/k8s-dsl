@@ -10,13 +10,11 @@ import io.fabric8.kubernetes.api.model.admissionregistration.v1beta1.ValidatingW
 import io.fabric8.kubernetes.api.model.admissionregistration.v1beta1.ValidatingWebhookConfigurationList as v1beta1_ValidatingWebhookConfigurationList
 import io.fabric8.kubernetes.api.model.admissionregistration.v1beta1.WebhookClientConfig as v1beta1_WebhookClientConfig
 
-
 fun newMutatingWebhook(block: v1beta1_MutatingWebhook.() -> Unit = {}): v1beta1_MutatingWebhook {
     val instance = v1beta1_MutatingWebhook()
     instance.block()
     return instance
 }
-
 
 fun newMutatingWebhookConfiguration(block: v1beta1_MutatingWebhookConfiguration.() -> Unit = {}): v1beta1_MutatingWebhookConfiguration {
     val instance = v1beta1_MutatingWebhookConfiguration()
@@ -24,13 +22,11 @@ fun newMutatingWebhookConfiguration(block: v1beta1_MutatingWebhookConfiguration.
     return instance
 }
 
-
 fun newMutatingWebhookConfigurationList(block: v1beta1_MutatingWebhookConfigurationList.() -> Unit = {}): v1beta1_MutatingWebhookConfigurationList {
     val instance = v1beta1_MutatingWebhookConfigurationList()
     instance.block()
     return instance
 }
-
 
 fun newServiceReference(block: v1beta1_ServiceReference.() -> Unit = {}): v1beta1_ServiceReference {
     val instance = v1beta1_ServiceReference()
@@ -38,13 +34,11 @@ fun newServiceReference(block: v1beta1_ServiceReference.() -> Unit = {}): v1beta
     return instance
 }
 
-
 fun newValidatingWebhook(block: v1beta1_ValidatingWebhook.() -> Unit = {}): v1beta1_ValidatingWebhook {
     val instance = v1beta1_ValidatingWebhook()
     instance.block()
     return instance
 }
-
 
 fun newValidatingWebhookConfiguration(block: v1beta1_ValidatingWebhookConfiguration.() -> Unit = {}): v1beta1_ValidatingWebhookConfiguration {
     val instance = v1beta1_ValidatingWebhookConfiguration()
@@ -52,17 +46,14 @@ fun newValidatingWebhookConfiguration(block: v1beta1_ValidatingWebhookConfigurat
     return instance
 }
 
-
 fun newValidatingWebhookConfigurationList(block: v1beta1_ValidatingWebhookConfigurationList.() -> Unit = {}): v1beta1_ValidatingWebhookConfigurationList {
     val instance = v1beta1_ValidatingWebhookConfigurationList()
     instance.block()
     return instance
 }
 
-
 fun newWebhookClientConfig(block: v1beta1_WebhookClientConfig.() -> Unit = {}): v1beta1_WebhookClientConfig {
     val instance = v1beta1_WebhookClientConfig()
     instance.block()
     return instance
 }
-

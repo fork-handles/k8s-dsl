@@ -7,13 +7,11 @@ import io.fabric8.kubernetes.api.model.batch.v1beta1.CronJobSpec as v1beta1_Cron
 import io.fabric8.kubernetes.api.model.batch.v1beta1.CronJobStatus as v1beta1_CronJobStatus
 import io.fabric8.kubernetes.api.model.batch.v1beta1.JobTemplateSpec as v1beta1_JobTemplateSpec
 
-
 fun newCronJob(block: v1beta1_CronJob.() -> Unit = {}): v1beta1_CronJob {
     val instance = v1beta1_CronJob()
     instance.block()
     return instance
 }
-
 
 fun newCronJobList(block: v1beta1_CronJobList.() -> Unit = {}): v1beta1_CronJobList {
     val instance = v1beta1_CronJobList()
@@ -21,13 +19,11 @@ fun newCronJobList(block: v1beta1_CronJobList.() -> Unit = {}): v1beta1_CronJobL
     return instance
 }
 
-
 fun newCronJobSpec(block: v1beta1_CronJobSpec.() -> Unit = {}): v1beta1_CronJobSpec {
     val instance = v1beta1_CronJobSpec()
     instance.block()
     return instance
 }
-
 
 fun newCronJobStatus(block: v1beta1_CronJobStatus.() -> Unit = {}): v1beta1_CronJobStatus {
     val instance = v1beta1_CronJobStatus()
@@ -35,10 +31,8 @@ fun newCronJobStatus(block: v1beta1_CronJobStatus.() -> Unit = {}): v1beta1_Cron
     return instance
 }
 
-
 fun newJobTemplateSpec(block: v1beta1_JobTemplateSpec.() -> Unit = {}): v1beta1_JobTemplateSpec {
     val instance = v1beta1_JobTemplateSpec()
     instance.block()
     return instance
 }
-

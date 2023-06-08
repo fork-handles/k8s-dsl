@@ -7,7 +7,6 @@ import io.fabric8.kubernetes.api.model.apps.DeploymentSpec as apps_DeploymentSpe
 import io.fabric8.kubernetes.api.model.apps.ReplicaSetSpec as apps_ReplicaSetSpec
 import io.fabric8.kubernetes.api.model.apps.StatefulSetSpec as apps_StatefulSetSpec
 
-
 fun apps_DaemonSetSpec.template(block: model_PodTemplateSpec.() -> Unit = {}) {
     if (this.template == null) {
         this.template = model_PodTemplateSpec()
@@ -15,7 +14,6 @@ fun apps_DaemonSetSpec.template(block: model_PodTemplateSpec.() -> Unit = {}) {
 
     this.template!!.block()
 }
-
 
 fun apps_DeploymentSpec.template(block: model_PodTemplateSpec.() -> Unit = {}) {
     if (this.template == null) {
@@ -25,7 +23,6 @@ fun apps_DeploymentSpec.template(block: model_PodTemplateSpec.() -> Unit = {}) {
     this.template!!.block()
 }
 
-
 fun apps_ReplicaSetSpec.template(block: model_PodTemplateSpec.() -> Unit = {}) {
     if (this.template == null) {
         this.template = model_PodTemplateSpec()
@@ -34,7 +31,6 @@ fun apps_ReplicaSetSpec.template(block: model_PodTemplateSpec.() -> Unit = {}) {
     this.template!!.block()
 }
 
-
 fun apps_StatefulSetSpec.template(block: model_PodTemplateSpec.() -> Unit = {}) {
     if (this.template == null) {
         this.template = model_PodTemplateSpec()
@@ -42,4 +38,3 @@ fun apps_StatefulSetSpec.template(block: model_PodTemplateSpec.() -> Unit = {}) 
 
     this.template!!.block()
 }
-

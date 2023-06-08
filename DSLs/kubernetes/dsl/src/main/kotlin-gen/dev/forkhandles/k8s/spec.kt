@@ -24,7 +24,6 @@ import io.fabric8.kubernetes.api.model.ResourceQuotaSpec as model_ResourceQuotaS
 import io.fabric8.kubernetes.api.model.Service as model_Service
 import io.fabric8.kubernetes.api.model.ServiceSpec as model_ServiceSpec
 
-
 fun model_APIService.spec(block: model_APIServiceSpec.() -> Unit = {}) {
     if (this.spec == null) {
         this.spec = model_APIServiceSpec()
@@ -32,7 +31,6 @@ fun model_APIService.spec(block: model_APIServiceSpec.() -> Unit = {}) {
 
     this.spec!!.block()
 }
-
 
 fun model_LimitRange.spec(block: model_LimitRangeSpec.() -> Unit = {}) {
     if (this.spec == null) {
@@ -42,7 +40,6 @@ fun model_LimitRange.spec(block: model_LimitRangeSpec.() -> Unit = {}) {
     this.spec!!.block()
 }
 
-
 fun model_Namespace.spec(block: model_NamespaceSpec.() -> Unit = {}) {
     if (this.spec == null) {
         this.spec = model_NamespaceSpec()
@@ -50,7 +47,6 @@ fun model_Namespace.spec(block: model_NamespaceSpec.() -> Unit = {}) {
 
     this.spec!!.block()
 }
-
 
 fun model_Node.spec(block: model_NodeSpec.() -> Unit = {}) {
     if (this.spec == null) {
@@ -60,7 +56,6 @@ fun model_Node.spec(block: model_NodeSpec.() -> Unit = {}) {
     this.spec!!.block()
 }
 
-
 fun model_PersistentVolume.spec(block: model_PersistentVolumeSpec.() -> Unit = {}) {
     if (this.spec == null) {
         this.spec = model_PersistentVolumeSpec()
@@ -68,7 +63,6 @@ fun model_PersistentVolume.spec(block: model_PersistentVolumeSpec.() -> Unit = {
 
     this.spec!!.block()
 }
-
 
 fun model_PersistentVolumeClaim.spec(block: model_PersistentVolumeClaimSpec.() -> Unit = {}) {
     if (this.spec == null) {
@@ -78,7 +72,6 @@ fun model_PersistentVolumeClaim.spec(block: model_PersistentVolumeClaimSpec.() -
     this.spec!!.block()
 }
 
-
 fun model_PersistentVolumeClaimTemplate.spec(block: model_PersistentVolumeClaimSpec.() -> Unit = {}) {
     if (this.spec == null) {
         this.spec = model_PersistentVolumeClaimSpec()
@@ -86,7 +79,6 @@ fun model_PersistentVolumeClaimTemplate.spec(block: model_PersistentVolumeClaimS
 
     this.spec!!.block()
 }
-
 
 fun model_Pod.spec(block: model_PodSpec.() -> Unit = {}) {
     if (this.spec == null) {
@@ -96,7 +88,6 @@ fun model_Pod.spec(block: model_PodSpec.() -> Unit = {}) {
     this.spec!!.block()
 }
 
-
 fun model_PodTemplateSpec.spec(block: model_PodSpec.() -> Unit = {}) {
     if (this.spec == null) {
         this.spec = model_PodSpec()
@@ -104,7 +95,6 @@ fun model_PodTemplateSpec.spec(block: model_PodSpec.() -> Unit = {}) {
 
     this.spec!!.block()
 }
-
 
 fun model_ReplicationController.spec(block: model_ReplicationControllerSpec.() -> Unit = {}) {
     if (this.spec == null) {
@@ -114,7 +104,6 @@ fun model_ReplicationController.spec(block: model_ReplicationControllerSpec.() -
     this.spec!!.block()
 }
 
-
 fun model_ResourceQuota.spec(block: model_ResourceQuotaSpec.() -> Unit = {}) {
     if (this.spec == null) {
         this.spec = model_ResourceQuotaSpec()
@@ -123,7 +112,6 @@ fun model_ResourceQuota.spec(block: model_ResourceQuotaSpec.() -> Unit = {}) {
     this.spec!!.block()
 }
 
-
 fun model_Service.spec(block: model_ServiceSpec.() -> Unit = {}) {
     if (this.spec == null) {
         this.spec = model_ServiceSpec()
@@ -131,4 +119,3 @@ fun model_Service.spec(block: model_ServiceSpec.() -> Unit = {}) {
 
     this.spec!!.block()
 }
-

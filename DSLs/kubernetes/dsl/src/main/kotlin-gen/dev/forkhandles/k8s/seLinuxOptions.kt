@@ -5,7 +5,6 @@ import io.fabric8.kubernetes.api.model.PodSecurityContext as model_PodSecurityCo
 import io.fabric8.kubernetes.api.model.SELinuxOptions as model_SELinuxOptions
 import io.fabric8.kubernetes.api.model.SecurityContext as model_SecurityContext
 
-
 fun model_PodSecurityContext.seLinuxOptions(block: model_SELinuxOptions.() -> Unit = {}) {
     if (this.seLinuxOptions == null) {
         this.seLinuxOptions = model_SELinuxOptions()
@@ -14,7 +13,6 @@ fun model_PodSecurityContext.seLinuxOptions(block: model_SELinuxOptions.() -> Un
     this.seLinuxOptions!!.block()
 }
 
-
 fun model_SecurityContext.seLinuxOptions(block: model_SELinuxOptions.() -> Unit = {}) {
     if (this.seLinuxOptions == null) {
         this.seLinuxOptions = model_SELinuxOptions()
@@ -22,4 +20,3 @@ fun model_SecurityContext.seLinuxOptions(block: model_SELinuxOptions.() -> Unit 
 
     this.seLinuxOptions!!.block()
 }
-
