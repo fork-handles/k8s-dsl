@@ -39,7 +39,6 @@ ${
             allClasses.map { "import ${it.qualifiedName} as ${it.uniqueSimpleAlias}" }.toSet().sorted()
                 .joinToString("\n")
         }
-
 ${
             clazzToProperties.map { (clazz, property) -> extensionFunctionTemplate(clazz, property) }.joinToString("\n")
         }
@@ -64,7 +63,7 @@ fun${if (generics.isEmpty()) "" else " "}${genericsTemplate(generics)} $clazzDec
         }
     this.$propertyName!!.block()
 }
-"""
+""".trimEnd()
     }
 
     private fun initializer(property: KMutableProperty<*>, returnClass: KClass<*>): String {

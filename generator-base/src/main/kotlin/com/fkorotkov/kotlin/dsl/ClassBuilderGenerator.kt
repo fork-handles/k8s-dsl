@@ -29,7 +29,6 @@ ${
             allClasses.map { "import ${it.qualifiedName} as ${it.uniqueSimpleAlias}" }.toSet().sorted()
                 .joinToString("\n")
         }
-
 ${
             allClasses.joinToString("\n") { classBuilderTemplate(it) }
         }
@@ -43,6 +42,6 @@ fun new${clazz.simpleName}(block: ${clazz.uniqueSimpleAlias}.() -> Unit = {}): $
     instance.block()
     return instance
 }
-"""
+""".trimEnd()
     }
 }
