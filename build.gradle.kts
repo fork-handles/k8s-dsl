@@ -1,15 +1,17 @@
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat.FULL
+import org.gradle.internal.impldep.org.bouncycastle.cms.RecipientId.password
 import org.gradle.jvm.toolchain.JvmVendorSpec.ADOPTIUM
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_1_8
 import org.jetbrains.kotlin.gradle.dsl.KotlinJvmCompilerOptions
 import org.jetbrains.kotlin.gradle.dsl.KotlinVersion.KOTLIN_1_8
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompilationTask
+import java.time.Duration
 
 plugins {
     java
     jacoco
     kotlin("jvm")
-    id("io.github.gradle-nexus.publish-plugin")
+    id("io.github.gradle-nexus.publish-plugin") version "1.3.0"
 }
 
 kotlin {
@@ -64,5 +66,21 @@ subprojects {
                 csv.required.set(false)
             }
         }
+    }
+}
+
+val nexusUsername: String? by project
+val nexusPassword: String? by project
+
+nexusPublishing {
+    repositories {
+        sonatype {
+            username.set(nexusUsername)
+            password.set(nexusPassword)
+        }
+    }
+    transitionCheckOptions {
+        maxRetries.set(150)
+        delayBetween.set(Duration.ofSeconds(5))
     }
 }
