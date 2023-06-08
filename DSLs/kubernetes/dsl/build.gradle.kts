@@ -63,7 +63,7 @@ publishing {
     publications {
         create<MavenPublication>("mavenJava") {
             artifactId = "k8s-dsl"
-            version = "current_k8s_dsl_version"
+            version = project.version as String
             pom.withXml {
                 asNode().appendNode("name", artifactId)
                 asNode().appendNode("description", description)
