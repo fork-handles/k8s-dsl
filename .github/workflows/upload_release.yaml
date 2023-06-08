@@ -21,7 +21,7 @@ jobs:
           cache: gradle
       - name: Upload to Sonatype
         run: |
-          ./gradlew publishToSonatype closeAndReleaseSonatypeStagingRepository \
+          ./gradlew k8s-dsl:publishToSonatype k8s-dsl:closeAndReleaseSonatypeStagingRepository \
           -Psign=true \
           -PreleaseVersion="${{ steps.tagName.outputs.tag }}" \
           -PsigningKey="${{ secrets.SIGNING_KEY }}" \
