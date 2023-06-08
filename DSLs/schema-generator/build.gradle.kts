@@ -3,7 +3,7 @@ plugins {
     kotlin("jvm")
 }
 
-application.mainClass.set("com.fkorotkov.kubernetes.GeneratorKt")
+application.mainClass.set("dev.forkhandles.k8s.GeneratorKt")
 
 dependencies {
     implementation(project(":generator-base"))
