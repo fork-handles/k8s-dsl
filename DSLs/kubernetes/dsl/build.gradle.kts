@@ -64,6 +64,8 @@ publishing {
         create<MavenPublication>("mavenJava") {
             artifactId = "k8s-dsl"
             version = project.version as String
+            group = project.group
+            description = project.description
             pom.withXml {
                 asNode().appendNode("name", artifactId)
                 asNode().appendNode("description", description)
