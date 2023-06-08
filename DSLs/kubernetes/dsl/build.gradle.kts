@@ -57,7 +57,7 @@ if (enableSigning) { // when added it expects signing keys to be configured
 
 version = project.properties["releaseVersion"] ?: "LOCAL"
 group = "dev.forkhandles"
-description = "Kotlin DSL for Kubernetes configs"
+description = "Kotlin DSL for Kubernetes manifests"
 
 publishing {
     publications {
