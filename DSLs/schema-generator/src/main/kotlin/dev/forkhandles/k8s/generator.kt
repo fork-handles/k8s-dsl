@@ -85,7 +85,7 @@ fun createSchema(crd: CRDDefinition, schemeName: String): Schema {
 
     result.definitions = TreeMap(typeDefinitionRegistry)
     result.properties = TreeMap(typeDefinitionRegistry.map { (name, definition) ->
-        name.decapitalize() to RefPropertyDefinition().apply {
+        name.decapitalise() to RefPropertyDefinition().apply {
             ref = "#/definitions/$name"
             javaType = "com.fkorotkov.kubernetes.$schemeName.$name"
         }
@@ -114,7 +114,7 @@ fun generateTypes(
     // object is always KubernetesResource
     result.javaInterfaces = listOf("io.fabric8.kubernetes.api.model.KubernetesResource")
     result.properties = schema.properties.mapValues { (name, openAPISchema) ->
-        val typeName = name.capitalize()
+        val typeName = name.capitalise()
         when (openAPISchema.type) {
             "object" -> {
                 generateTypes(registry, packagePrefix, typeName, openAPISchema)

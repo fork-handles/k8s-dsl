@@ -2,6 +2,7 @@ package com.fkorotkov.kotlin.dsl
 
 import com.fkorotkov.kotlin.dsl.crd.CRDDefinition
 import com.fkorotkov.kotlin.dsl.crd.OpenAPIV3Schema
+import dev.forkhandles.k8s.capitalise
 import java.io.File
 
 object CRDGenerator {
@@ -70,7 +71,7 @@ class $name {
                 val (className, classDefaultValue) = generateClass(
                     outputFolder,
                     outputPackage,
-                    fieldName.capitalize(),
+                    fieldName.capitalise(),
                     fieldSchema
                 )
                 val optionalMark = if (schema.required.contains(fieldName)) "" else "?"
