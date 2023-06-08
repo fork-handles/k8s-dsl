@@ -61,7 +61,7 @@ fun${if (generics.isEmpty()) "" else " "}${genericsTemplate(generics)} $clazzDec
                 returnClass
             )
         }
-    this.$propertyName.block()
+    $propertyName.block()
 }
 """.trimEnd()
     }
@@ -70,8 +70,8 @@ fun${if (generics.isEmpty()) "" else " "}${genericsTemplate(generics)} $clazzDec
         if (returnClass.isAbstract) return ""
         val propertyName = sanitizePropertyName(property.name)
         return """
-    if (this.$propertyName == null) {
-        this.$propertyName = ${returnClass.uniqueSimpleAlias}()
+    if ($propertyName == null) {
+        $propertyName = ${returnClass.uniqueSimpleAlias}()
     }
 """
     }
