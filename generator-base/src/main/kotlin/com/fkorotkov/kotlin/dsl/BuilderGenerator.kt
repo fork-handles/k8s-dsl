@@ -61,7 +61,7 @@ fun${if (generics.isEmpty()) "" else " "}${genericsTemplate(generics)} $clazzDec
                 returnClass
             )
         }
-    this.$propertyName!!.block()
+    this.$propertyName.block()
 }
 """.trimEnd()
     }
