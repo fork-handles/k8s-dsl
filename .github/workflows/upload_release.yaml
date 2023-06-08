@@ -23,7 +23,7 @@ jobs:
         run:
           ./gradlew
               :DSLs:kubernetes:dsl:publishToSonatype
-              :DSLs:kubernetes:dsl:closeAndReleaseSonatypeStagingRepository
+              closeAndReleaseSonatypeStagingRepository
             -Psign=true
             -PreleaseVersion="${{ steps.tagName.outputs.tag }}"
             -PsigningKey="${{ secrets.SIGNING_KEY }}"
