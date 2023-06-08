@@ -3,7 +3,7 @@ _targets:
 
 # updates all libraries declared in dependencies.json
 @versions:
-  ./gradlew updateLibraries
+  ./gradlew refreshVersionsMigrate --mode=VersionsPropertiesOnly && ./gradlew refreshVersions
 
 # generates the latest k8s DSL from fabric8
 @generate:
