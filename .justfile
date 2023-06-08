@@ -1,7 +1,7 @@
 _targets:
   @just --list --unsorted --list-heading $'Available targets:\n' --list-prefix "  "
 
-# updates all libraries declared in dependencies.json
+# upgrades dependencies across all Gradle projects
 @versions:
   ./gradlew refreshVersionsMigrate --mode=VersionsPropertiesOnly && ./gradlew refreshVersions
 
