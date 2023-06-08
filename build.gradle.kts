@@ -31,17 +31,19 @@ subprojects {
 //    sourceCompatibility = 1.8
 //    targetCompatibility = 1.8
 
-    tasks.named<Test>("test").configure {
-        testLogging {
-            exceptionFormat = FULL
+    tasks {
+        named<Test>("test").configure {
+            testLogging {
+                exceptionFormat = FULL
+            }
         }
-    }
 
-    tasks.named<JacocoReport>("jacocoTestReport").configure {
-        group = "Reporting"
-        reports {
-            xml.required.set(true)
-            csv.required.set(false)
+        named<JacocoReport>("jacocoTestReport").configure {
+            group = "Reporting"
+            reports {
+                xml.required.set(true)
+                csv.required.set(false)
+            }
         }
     }
 }
