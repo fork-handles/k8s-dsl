@@ -1,4 +1,9 @@
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat.FULL
+import org.gradle.jvm.toolchain.JvmVendorSpec.ADOPTIUM
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_1_8
+import org.jetbrains.kotlin.gradle.dsl.KotlinJvmCompilerOptions
+import org.jetbrains.kotlin.gradle.dsl.KotlinVersion.KOTLIN_1_8
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompilationTask
 
 plugins {
     java
@@ -9,7 +14,7 @@ plugins {
 kotlin {
     jvmToolchain {
         languageVersion.set(JavaLanguageVersion.of(17))
-        vendor.set(JvmVendorSpec.ADOPTIUM)
+        vendor.set(ADOPTIUM)
     }
 }
 
@@ -28,10 +33,21 @@ subprojects {
     apply(plugin = "java")
     apply(plugin = "jacoco")
 
-//    sourceCompatibility = 1.8
-//    targetCompatibility = 1.8
-
     tasks {
+        withType<KotlinCompilationTask<KotlinJvmCompilerOptions>>().configureEach {
+            compilerOptions {
+                jvmTarget.set(JVM_1_8)
+                apiVersion.set(KOTLIN_1_8)
+                languageVersion.set(KOTLIN_1_8)
+                freeCompilerArgs.addAll("-Xjsr305=strict", "-progressive")
+            }
+        }
+
+        withType<JavaCompile>().configureEach {
+            options.release.set(8)
+            options.compilerArgs.addAll(arrayOf("-Xlint:all", "-Werror"))
+        }
+
         named<Test>("test").configure {
             testLogging {
                 exceptionFormat = FULL
