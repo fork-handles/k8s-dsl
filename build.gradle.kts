@@ -67,6 +67,13 @@ subprojects {
                 csv.required.set(false)
             }
         }
+
+        register("listProjects") {
+            doLast {
+                subprojects
+                    .forEach { System.err.println(it.name) }
+            }
+        }
     }
 }
 
