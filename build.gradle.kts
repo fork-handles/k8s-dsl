@@ -36,6 +36,7 @@ subprojects {
 
     apply(plugin = "java")
     apply(plugin = "jacoco")
+    apply(plugin = "maven-publish") // required to upload to sonatype
 
     tasks {
         withType<KotlinCompilationTask<KotlinJvmCompilerOptions>>().configureEach {
