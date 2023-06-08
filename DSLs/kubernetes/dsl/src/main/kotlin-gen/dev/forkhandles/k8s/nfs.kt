@@ -6,17 +6,17 @@ import io.fabric8.kubernetes.api.model.PersistentVolumeSpec as model_PersistentV
 import io.fabric8.kubernetes.api.model.Volume as model_Volume
 
 fun model_PersistentVolumeSpec.nfs(block: model_NFSVolumeSource.() -> Unit = {}) {
-    if (this.nfs == null) {
-        this.nfs = model_NFSVolumeSource()
+    if (nfs == null) {
+        nfs = model_NFSVolumeSource()
     }
 
-    this.nfs!!.block()
+    nfs.block()
 }
 
 fun model_Volume.nfs(block: model_NFSVolumeSource.() -> Unit = {}) {
-    if (this.nfs == null) {
-        this.nfs = model_NFSVolumeSource()
+    if (nfs == null) {
+        nfs = model_NFSVolumeSource()
     }
 
-    this.nfs!!.block()
+    nfs.block()
 }

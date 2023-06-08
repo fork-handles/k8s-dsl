@@ -9,33 +9,33 @@ import io.fabric8.kubernetes.api.model.authorization.v1.SubjectAccessReviewStatu
 import io.fabric8.kubernetes.api.model.authorization.v1.SubjectRulesReviewStatus as v1_SubjectRulesReviewStatus
 
 fun v1_LocalSubjectAccessReview.status(block: v1_SubjectAccessReviewStatus.() -> Unit = {}) {
-    if (this.status == null) {
-        this.status = v1_SubjectAccessReviewStatus()
+    if (status == null) {
+        status = v1_SubjectAccessReviewStatus()
     }
 
-    this.status!!.block()
+    status.block()
 }
 
 fun v1_SelfSubjectAccessReview.status(block: v1_SubjectAccessReviewStatus.() -> Unit = {}) {
-    if (this.status == null) {
-        this.status = v1_SubjectAccessReviewStatus()
+    if (status == null) {
+        status = v1_SubjectAccessReviewStatus()
     }
 
-    this.status!!.block()
+    status.block()
 }
 
 fun v1_SelfSubjectRulesReview.status(block: v1_SubjectRulesReviewStatus.() -> Unit = {}) {
-    if (this.status == null) {
-        this.status = v1_SubjectRulesReviewStatus()
+    if (status == null) {
+        status = v1_SubjectRulesReviewStatus()
     }
 
-    this.status!!.block()
+    status.block()
 }
 
 fun v1_SubjectAccessReview.status(block: v1_SubjectAccessReviewStatus.() -> Unit = {}) {
-    if (this.status == null) {
-        this.status = v1_SubjectAccessReviewStatus()
+    if (status == null) {
+        status = v1_SubjectAccessReviewStatus()
     }
 
-    this.status!!.block()
+    status.block()
 }

@@ -25,97 +25,97 @@ import io.fabric8.kubernetes.api.model.Service as model_Service
 import io.fabric8.kubernetes.api.model.ServiceSpec as model_ServiceSpec
 
 fun model_APIService.spec(block: model_APIServiceSpec.() -> Unit = {}) {
-    if (this.spec == null) {
-        this.spec = model_APIServiceSpec()
+    if (spec == null) {
+        spec = model_APIServiceSpec()
     }
 
-    this.spec!!.block()
+    spec.block()
 }
 
 fun model_LimitRange.spec(block: model_LimitRangeSpec.() -> Unit = {}) {
-    if (this.spec == null) {
-        this.spec = model_LimitRangeSpec()
+    if (spec == null) {
+        spec = model_LimitRangeSpec()
     }
 
-    this.spec!!.block()
+    spec.block()
 }
 
 fun model_Namespace.spec(block: model_NamespaceSpec.() -> Unit = {}) {
-    if (this.spec == null) {
-        this.spec = model_NamespaceSpec()
+    if (spec == null) {
+        spec = model_NamespaceSpec()
     }
 
-    this.spec!!.block()
+    spec.block()
 }
 
 fun model_Node.spec(block: model_NodeSpec.() -> Unit = {}) {
-    if (this.spec == null) {
-        this.spec = model_NodeSpec()
+    if (spec == null) {
+        spec = model_NodeSpec()
     }
 
-    this.spec!!.block()
+    spec.block()
 }
 
 fun model_PersistentVolume.spec(block: model_PersistentVolumeSpec.() -> Unit = {}) {
-    if (this.spec == null) {
-        this.spec = model_PersistentVolumeSpec()
+    if (spec == null) {
+        spec = model_PersistentVolumeSpec()
     }
 
-    this.spec!!.block()
+    spec.block()
 }
 
 fun model_PersistentVolumeClaim.spec(block: model_PersistentVolumeClaimSpec.() -> Unit = {}) {
-    if (this.spec == null) {
-        this.spec = model_PersistentVolumeClaimSpec()
+    if (spec == null) {
+        spec = model_PersistentVolumeClaimSpec()
     }
 
-    this.spec!!.block()
+    spec.block()
 }
 
 fun model_PersistentVolumeClaimTemplate.spec(block: model_PersistentVolumeClaimSpec.() -> Unit = {}) {
-    if (this.spec == null) {
-        this.spec = model_PersistentVolumeClaimSpec()
+    if (spec == null) {
+        spec = model_PersistentVolumeClaimSpec()
     }
 
-    this.spec!!.block()
+    spec.block()
 }
 
 fun model_Pod.spec(block: model_PodSpec.() -> Unit = {}) {
-    if (this.spec == null) {
-        this.spec = model_PodSpec()
+    if (spec == null) {
+        spec = model_PodSpec()
     }
 
-    this.spec!!.block()
+    spec.block()
 }
 
 fun model_PodTemplateSpec.spec(block: model_PodSpec.() -> Unit = {}) {
-    if (this.spec == null) {
-        this.spec = model_PodSpec()
+    if (spec == null) {
+        spec = model_PodSpec()
     }
 
-    this.spec!!.block()
+    spec.block()
 }
 
 fun model_ReplicationController.spec(block: model_ReplicationControllerSpec.() -> Unit = {}) {
-    if (this.spec == null) {
-        this.spec = model_ReplicationControllerSpec()
+    if (spec == null) {
+        spec = model_ReplicationControllerSpec()
     }
 
-    this.spec!!.block()
+    spec.block()
 }
 
 fun model_ResourceQuota.spec(block: model_ResourceQuotaSpec.() -> Unit = {}) {
-    if (this.spec == null) {
-        this.spec = model_ResourceQuotaSpec()
+    if (spec == null) {
+        spec = model_ResourceQuotaSpec()
     }
 
-    this.spec!!.block()
+    spec.block()
 }
 
 fun model_Service.spec(block: model_ServiceSpec.() -> Unit = {}) {
-    if (this.spec == null) {
-        this.spec = model_ServiceSpec()
+    if (spec == null) {
+        spec = model_ServiceSpec()
     }
 
-    this.spec!!.block()
+    spec.block()
 }

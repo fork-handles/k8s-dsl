@@ -15,81 +15,81 @@ import io.fabric8.kubernetes.api.model.storage.VolumeAttachment as storage_Volum
 import io.fabric8.kubernetes.api.model.storage.VolumeAttachmentList as storage_VolumeAttachmentList
 
 fun storage_CSIDriver.metadata(block: model_ObjectMeta.() -> Unit = {}) {
-    if (this.metadata == null) {
-        this.metadata = model_ObjectMeta()
+    if (metadata == null) {
+        metadata = model_ObjectMeta()
     }
 
-    this.metadata!!.block()
+    metadata.block()
 }
 
 fun storage_CSIDriverList.metadata(block: model_ListMeta.() -> Unit = {}) {
-    if (this.metadata == null) {
-        this.metadata = model_ListMeta()
+    if (metadata == null) {
+        metadata = model_ListMeta()
     }
 
-    this.metadata!!.block()
+    metadata.block()
 }
 
 fun storage_CSINode.metadata(block: model_ObjectMeta.() -> Unit = {}) {
-    if (this.metadata == null) {
-        this.metadata = model_ObjectMeta()
+    if (metadata == null) {
+        metadata = model_ObjectMeta()
     }
 
-    this.metadata!!.block()
+    metadata.block()
 }
 
 fun storage_CSINodeList.metadata(block: model_ListMeta.() -> Unit = {}) {
-    if (this.metadata == null) {
-        this.metadata = model_ListMeta()
+    if (metadata == null) {
+        metadata = model_ListMeta()
     }
 
-    this.metadata!!.block()
+    metadata.block()
 }
 
 fun storage_CSIStorageCapacity.metadata(block: model_ObjectMeta.() -> Unit = {}) {
-    if (this.metadata == null) {
-        this.metadata = model_ObjectMeta()
+    if (metadata == null) {
+        metadata = model_ObjectMeta()
     }
 
-    this.metadata!!.block()
+    metadata.block()
 }
 
 fun storage_CSIStorageCapacityList.metadata(block: model_ListMeta.() -> Unit = {}) {
-    if (this.metadata == null) {
-        this.metadata = model_ListMeta()
+    if (metadata == null) {
+        metadata = model_ListMeta()
     }
 
-    this.metadata!!.block()
+    metadata.block()
 }
 
 fun storage_StorageClass.metadata(block: model_ObjectMeta.() -> Unit = {}) {
-    if (this.metadata == null) {
-        this.metadata = model_ObjectMeta()
+    if (metadata == null) {
+        metadata = model_ObjectMeta()
     }
 
-    this.metadata!!.block()
+    metadata.block()
 }
 
 fun storage_StorageClassList.metadata(block: model_ListMeta.() -> Unit = {}) {
-    if (this.metadata == null) {
-        this.metadata = model_ListMeta()
+    if (metadata == null) {
+        metadata = model_ListMeta()
     }
 
-    this.metadata!!.block()
+    metadata.block()
 }
 
 fun storage_VolumeAttachment.metadata(block: model_ObjectMeta.() -> Unit = {}) {
-    if (this.metadata == null) {
-        this.metadata = model_ObjectMeta()
+    if (metadata == null) {
+        metadata = model_ObjectMeta()
     }
 
-    this.metadata!!.block()
+    metadata.block()
 }
 
 fun storage_VolumeAttachmentList.metadata(block: model_ListMeta.() -> Unit = {}) {
-    if (this.metadata == null) {
-        this.metadata = model_ListMeta()
+    if (metadata == null) {
+        metadata = model_ListMeta()
     }
 
-    this.metadata!!.block()
+    metadata.block()
 }

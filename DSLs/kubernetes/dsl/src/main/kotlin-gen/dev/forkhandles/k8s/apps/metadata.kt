@@ -15,81 +15,81 @@ import io.fabric8.kubernetes.api.model.apps.StatefulSet as apps_StatefulSet
 import io.fabric8.kubernetes.api.model.apps.StatefulSetList as apps_StatefulSetList
 
 fun apps_ControllerRevision.metadata(block: model_ObjectMeta.() -> Unit = {}) {
-    if (this.metadata == null) {
-        this.metadata = model_ObjectMeta()
+    if (metadata == null) {
+        metadata = model_ObjectMeta()
     }
 
-    this.metadata!!.block()
+    metadata.block()
 }
 
 fun apps_ControllerRevisionList.metadata(block: model_ListMeta.() -> Unit = {}) {
-    if (this.metadata == null) {
-        this.metadata = model_ListMeta()
+    if (metadata == null) {
+        metadata = model_ListMeta()
     }
 
-    this.metadata!!.block()
+    metadata.block()
 }
 
 fun apps_DaemonSet.metadata(block: model_ObjectMeta.() -> Unit = {}) {
-    if (this.metadata == null) {
-        this.metadata = model_ObjectMeta()
+    if (metadata == null) {
+        metadata = model_ObjectMeta()
     }
 
-    this.metadata!!.block()
+    metadata.block()
 }
 
 fun apps_DaemonSetList.metadata(block: model_ListMeta.() -> Unit = {}) {
-    if (this.metadata == null) {
-        this.metadata = model_ListMeta()
+    if (metadata == null) {
+        metadata = model_ListMeta()
     }
 
-    this.metadata!!.block()
+    metadata.block()
 }
 
 fun apps_Deployment.metadata(block: model_ObjectMeta.() -> Unit = {}) {
-    if (this.metadata == null) {
-        this.metadata = model_ObjectMeta()
+    if (metadata == null) {
+        metadata = model_ObjectMeta()
     }
 
-    this.metadata!!.block()
+    metadata.block()
 }
 
 fun apps_DeploymentList.metadata(block: model_ListMeta.() -> Unit = {}) {
-    if (this.metadata == null) {
-        this.metadata = model_ListMeta()
+    if (metadata == null) {
+        metadata = model_ListMeta()
     }
 
-    this.metadata!!.block()
+    metadata.block()
 }
 
 fun apps_ReplicaSet.metadata(block: model_ObjectMeta.() -> Unit = {}) {
-    if (this.metadata == null) {
-        this.metadata = model_ObjectMeta()
+    if (metadata == null) {
+        metadata = model_ObjectMeta()
     }
 
-    this.metadata!!.block()
+    metadata.block()
 }
 
 fun apps_ReplicaSetList.metadata(block: model_ListMeta.() -> Unit = {}) {
-    if (this.metadata == null) {
-        this.metadata = model_ListMeta()
+    if (metadata == null) {
+        metadata = model_ListMeta()
     }
 
-    this.metadata!!.block()
+    metadata.block()
 }
 
 fun apps_StatefulSet.metadata(block: model_ObjectMeta.() -> Unit = {}) {
-    if (this.metadata == null) {
-        this.metadata = model_ObjectMeta()
+    if (metadata == null) {
+        metadata = model_ObjectMeta()
     }
 
-    this.metadata!!.block()
+    metadata.block()
 }
 
 fun apps_StatefulSetList.metadata(block: model_ListMeta.() -> Unit = {}) {
-    if (this.metadata == null) {
-        this.metadata = model_ListMeta()
+    if (metadata == null) {
+        metadata = model_ListMeta()
     }
 
-    this.metadata!!.block()
+    metadata.block()
 }

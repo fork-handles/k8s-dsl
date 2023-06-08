@@ -7,17 +7,17 @@ import io.fabric8.kubernetes.api.model.StorageOSVolumeSource as model_StorageOSV
 import io.fabric8.kubernetes.api.model.Volume as model_Volume
 
 fun model_PersistentVolumeSpec.storageos(block: model_StorageOSPersistentVolumeSource.() -> Unit = {}) {
-    if (this.storageos == null) {
-        this.storageos = model_StorageOSPersistentVolumeSource()
+    if (storageos == null) {
+        storageos = model_StorageOSPersistentVolumeSource()
     }
 
-    this.storageos!!.block()
+    storageos.block()
 }
 
 fun model_Volume.storageos(block: model_StorageOSVolumeSource.() -> Unit = {}) {
-    if (this.storageos == null) {
-        this.storageos = model_StorageOSVolumeSource()
+    if (storageos == null) {
+        storageos = model_StorageOSVolumeSource()
     }
 
-    this.storageos!!.block()
+    storageos.block()
 }

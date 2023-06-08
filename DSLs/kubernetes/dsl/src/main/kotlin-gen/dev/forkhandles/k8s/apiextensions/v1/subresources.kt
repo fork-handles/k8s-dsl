@@ -5,9 +5,9 @@ import io.fabric8.kubernetes.api.model.apiextensions.v1.CustomResourceDefinition
 import io.fabric8.kubernetes.api.model.apiextensions.v1.CustomResourceSubresources as v1_CustomResourceSubresources
 
 fun v1_CustomResourceDefinitionVersion.subresources(block: v1_CustomResourceSubresources.() -> Unit = {}) {
-    if (this.subresources == null) {
-        this.subresources = v1_CustomResourceSubresources()
+    if (subresources == null) {
+        subresources = v1_CustomResourceSubresources()
     }
 
-    this.subresources!!.block()
+    subresources.block()
 }

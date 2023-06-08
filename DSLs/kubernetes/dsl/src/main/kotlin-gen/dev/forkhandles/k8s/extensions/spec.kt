@@ -13,41 +13,41 @@ import io.fabric8.kubernetes.api.model.extensions.ReplicaSet as extensions_Repli
 import io.fabric8.kubernetes.api.model.extensions.ReplicaSetSpec as extensions_ReplicaSetSpec
 
 fun extensions_DaemonSet.spec(block: extensions_DaemonSetSpec.() -> Unit = {}) {
-    if (this.spec == null) {
-        this.spec = extensions_DaemonSetSpec()
+    if (spec == null) {
+        spec = extensions_DaemonSetSpec()
     }
 
-    this.spec!!.block()
+    spec.block()
 }
 
 fun extensions_Deployment.spec(block: extensions_DeploymentSpec.() -> Unit = {}) {
-    if (this.spec == null) {
-        this.spec = extensions_DeploymentSpec()
+    if (spec == null) {
+        spec = extensions_DeploymentSpec()
     }
 
-    this.spec!!.block()
+    spec.block()
 }
 
 fun extensions_Ingress.spec(block: extensions_IngressSpec.() -> Unit = {}) {
-    if (this.spec == null) {
-        this.spec = extensions_IngressSpec()
+    if (spec == null) {
+        spec = extensions_IngressSpec()
     }
 
-    this.spec!!.block()
+    spec.block()
 }
 
 fun extensions_NetworkPolicy.spec(block: extensions_NetworkPolicySpec.() -> Unit = {}) {
-    if (this.spec == null) {
-        this.spec = extensions_NetworkPolicySpec()
+    if (spec == null) {
+        spec = extensions_NetworkPolicySpec()
     }
 
-    this.spec!!.block()
+    spec.block()
 }
 
 fun extensions_ReplicaSet.spec(block: extensions_ReplicaSetSpec.() -> Unit = {}) {
-    if (this.spec == null) {
-        this.spec = extensions_ReplicaSetSpec()
+    if (spec == null) {
+        spec = extensions_ReplicaSetSpec()
     }
 
-    this.spec!!.block()
+    spec.block()
 }

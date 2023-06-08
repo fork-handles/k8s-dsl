@@ -5,5 +5,5 @@ import io.fabric8.kubernetes.api.model.KubernetesResource as model_KubernetesRes
 import io.fabric8.kubernetes.api.model.admission.v1.AdmissionRequest as v1_AdmissionRequest
 
 fun v1_AdmissionRequest.`object`(block: model_KubernetesResource.() -> Unit = {}) {
-    this.`object`!!.block()
+    `object`.block()
 }

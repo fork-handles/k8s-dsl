@@ -11,33 +11,33 @@ import io.fabric8.kubernetes.api.model.apps.StatefulSet as apps_StatefulSet
 import io.fabric8.kubernetes.api.model.apps.StatefulSetStatus as apps_StatefulSetStatus
 
 fun apps_DaemonSet.status(block: apps_DaemonSetStatus.() -> Unit = {}) {
-    if (this.status == null) {
-        this.status = apps_DaemonSetStatus()
+    if (status == null) {
+        status = apps_DaemonSetStatus()
     }
 
-    this.status!!.block()
+    status.block()
 }
 
 fun apps_Deployment.status(block: apps_DeploymentStatus.() -> Unit = {}) {
-    if (this.status == null) {
-        this.status = apps_DeploymentStatus()
+    if (status == null) {
+        status = apps_DeploymentStatus()
     }
 
-    this.status!!.block()
+    status.block()
 }
 
 fun apps_ReplicaSet.status(block: apps_ReplicaSetStatus.() -> Unit = {}) {
-    if (this.status == null) {
-        this.status = apps_ReplicaSetStatus()
+    if (status == null) {
+        status = apps_ReplicaSetStatus()
     }
 
-    this.status!!.block()
+    status.block()
 }
 
 fun apps_StatefulSet.status(block: apps_StatefulSetStatus.() -> Unit = {}) {
-    if (this.status == null) {
-        this.status = apps_StatefulSetStatus()
+    if (status == null) {
+        status = apps_StatefulSetStatus()
     }
 
-    this.status!!.block()
+    status.block()
 }

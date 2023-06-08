@@ -5,9 +5,9 @@ import io.fabric8.kubernetes.api.model.authentication.UserInfo as authentication
 import io.fabric8.kubernetes.api.model.authentication.v1alpha1.SelfSubjectReviewStatus as v1alpha1_SelfSubjectReviewStatus
 
 fun v1alpha1_SelfSubjectReviewStatus.userInfo(block: authentication_UserInfo.() -> Unit = {}) {
-    if (this.userInfo == null) {
-        this.userInfo = authentication_UserInfo()
+    if (userInfo == null) {
+        userInfo = authentication_UserInfo()
     }
 
-    this.userInfo!!.block()
+    userInfo.block()
 }

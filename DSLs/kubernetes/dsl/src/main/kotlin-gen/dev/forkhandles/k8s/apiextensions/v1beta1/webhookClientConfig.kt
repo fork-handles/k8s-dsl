@@ -5,9 +5,9 @@ import io.fabric8.kubernetes.api.model.apiextensions.v1beta1.CustomResourceConve
 import io.fabric8.kubernetes.api.model.apiextensions.v1beta1.WebhookClientConfig as v1beta1_WebhookClientConfig
 
 fun v1beta1_CustomResourceConversion.webhookClientConfig(block: v1beta1_WebhookClientConfig.() -> Unit = {}) {
-    if (this.webhookClientConfig == null) {
-        this.webhookClientConfig = v1beta1_WebhookClientConfig()
+    if (webhookClientConfig == null) {
+        webhookClientConfig = v1beta1_WebhookClientConfig()
     }
 
-    this.webhookClientConfig!!.block()
+    webhookClientConfig.block()
 }

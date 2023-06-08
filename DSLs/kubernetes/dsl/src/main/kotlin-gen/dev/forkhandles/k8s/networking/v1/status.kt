@@ -7,17 +7,17 @@ import io.fabric8.kubernetes.api.model.networking.v1.NetworkPolicy as v1_Network
 import io.fabric8.kubernetes.api.model.networking.v1.NetworkPolicyStatus as v1_NetworkPolicyStatus
 
 fun v1_Ingress.status(block: v1_IngressStatus.() -> Unit = {}) {
-    if (this.status == null) {
-        this.status = v1_IngressStatus()
+    if (status == null) {
+        status = v1_IngressStatus()
     }
 
-    this.status!!.block()
+    status.block()
 }
 
 fun v1_NetworkPolicy.status(block: v1_NetworkPolicyStatus.() -> Unit = {}) {
-    if (this.status == null) {
-        this.status = v1_NetworkPolicyStatus()
+    if (status == null) {
+        status = v1_NetworkPolicyStatus()
     }
 
-    this.status!!.block()
+    status.block()
 }

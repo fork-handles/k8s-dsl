@@ -5,9 +5,9 @@ import io.fabric8.kubernetes.api.model.authentication.TokenReview as authenticat
 import io.fabric8.kubernetes.api.model.authentication.TokenReviewSpec as authentication_TokenReviewSpec
 
 fun authentication_TokenReview.spec(block: authentication_TokenReviewSpec.() -> Unit = {}) {
-    if (this.spec == null) {
-        this.spec = authentication_TokenReviewSpec()
+    if (spec == null) {
+        spec = authentication_TokenReviewSpec()
     }
 
-    this.spec!!.block()
+    spec.block()
 }

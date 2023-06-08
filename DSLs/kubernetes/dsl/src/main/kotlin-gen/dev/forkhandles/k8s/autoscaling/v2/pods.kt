@@ -7,17 +7,17 @@ import io.fabric8.kubernetes.api.model.autoscaling.v2.PodsMetricSource as v2_Pod
 import io.fabric8.kubernetes.api.model.autoscaling.v2.PodsMetricStatus as v2_PodsMetricStatus
 
 fun v2_MetricSpec.pods(block: v2_PodsMetricSource.() -> Unit = {}) {
-    if (this.pods == null) {
-        this.pods = v2_PodsMetricSource()
+    if (pods == null) {
+        pods = v2_PodsMetricSource()
     }
 
-    this.pods!!.block()
+    pods.block()
 }
 
 fun v2_MetricStatus.pods(block: v2_PodsMetricStatus.() -> Unit = {}) {
-    if (this.pods == null) {
-        this.pods = v2_PodsMetricStatus()
+    if (pods == null) {
+        pods = v2_PodsMetricStatus()
     }
 
-    this.pods!!.block()
+    pods.block()
 }

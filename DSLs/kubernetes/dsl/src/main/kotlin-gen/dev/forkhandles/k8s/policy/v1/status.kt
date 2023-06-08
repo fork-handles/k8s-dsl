@@ -5,9 +5,9 @@ import io.fabric8.kubernetes.api.model.policy.v1.PodDisruptionBudget as v1_PodDi
 import io.fabric8.kubernetes.api.model.policy.v1.PodDisruptionBudgetStatus as v1_PodDisruptionBudgetStatus
 
 fun v1_PodDisruptionBudget.status(block: v1_PodDisruptionBudgetStatus.() -> Unit = {}) {
-    if (this.status == null) {
-        this.status = v1_PodDisruptionBudgetStatus()
+    if (status == null) {
+        status = v1_PodDisruptionBudgetStatus()
     }
 
-    this.status!!.block()
+    status.block()
 }

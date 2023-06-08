@@ -10,49 +10,49 @@ import io.fabric8.kubernetes.api.model.autoscaling.v2beta2.PodsMetricSource as v
 import io.fabric8.kubernetes.api.model.autoscaling.v2beta2.PodsMetricStatus as v2beta2_PodsMetricStatus
 
 fun v2beta2_ExternalMetricSource.metric(block: v2beta2_MetricIdentifier.() -> Unit = {}) {
-    if (this.metric == null) {
-        this.metric = v2beta2_MetricIdentifier()
+    if (metric == null) {
+        metric = v2beta2_MetricIdentifier()
     }
 
-    this.metric!!.block()
+    metric.block()
 }
 
 fun v2beta2_ExternalMetricStatus.metric(block: v2beta2_MetricIdentifier.() -> Unit = {}) {
-    if (this.metric == null) {
-        this.metric = v2beta2_MetricIdentifier()
+    if (metric == null) {
+        metric = v2beta2_MetricIdentifier()
     }
 
-    this.metric!!.block()
+    metric.block()
 }
 
 fun v2beta2_ObjectMetricSource.metric(block: v2beta2_MetricIdentifier.() -> Unit = {}) {
-    if (this.metric == null) {
-        this.metric = v2beta2_MetricIdentifier()
+    if (metric == null) {
+        metric = v2beta2_MetricIdentifier()
     }
 
-    this.metric!!.block()
+    metric.block()
 }
 
 fun v2beta2_ObjectMetricStatus.metric(block: v2beta2_MetricIdentifier.() -> Unit = {}) {
-    if (this.metric == null) {
-        this.metric = v2beta2_MetricIdentifier()
+    if (metric == null) {
+        metric = v2beta2_MetricIdentifier()
     }
 
-    this.metric!!.block()
+    metric.block()
 }
 
 fun v2beta2_PodsMetricSource.metric(block: v2beta2_MetricIdentifier.() -> Unit = {}) {
-    if (this.metric == null) {
-        this.metric = v2beta2_MetricIdentifier()
+    if (metric == null) {
+        metric = v2beta2_MetricIdentifier()
     }
 
-    this.metric!!.block()
+    metric.block()
 }
 
 fun v2beta2_PodsMetricStatus.metric(block: v2beta2_MetricIdentifier.() -> Unit = {}) {
-    if (this.metric == null) {
-        this.metric = v2beta2_MetricIdentifier()
+    if (metric == null) {
+        metric = v2beta2_MetricIdentifier()
     }
 
-    this.metric!!.block()
+    metric.block()
 }

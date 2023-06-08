@@ -7,17 +7,17 @@ import io.fabric8.kubernetes.api.model.RBDVolumeSource as model_RBDVolumeSource
 import io.fabric8.kubernetes.api.model.Volume as model_Volume
 
 fun model_PersistentVolumeSpec.rbd(block: model_RBDPersistentVolumeSource.() -> Unit = {}) {
-    if (this.rbd == null) {
-        this.rbd = model_RBDPersistentVolumeSource()
+    if (rbd == null) {
+        rbd = model_RBDPersistentVolumeSource()
     }
 
-    this.rbd!!.block()
+    rbd.block()
 }
 
 fun model_Volume.rbd(block: model_RBDVolumeSource.() -> Unit = {}) {
-    if (this.rbd == null) {
-        this.rbd = model_RBDVolumeSource()
+    if (rbd == null) {
+        rbd = model_RBDVolumeSource()
     }
 
-    this.rbd!!.block()
+    rbd.block()
 }

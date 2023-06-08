@@ -7,17 +7,17 @@ import io.fabric8.kubernetes.api.model.PersistentVolumeSpec as model_PersistentV
 import io.fabric8.kubernetes.api.model.Volume as model_Volume
 
 fun model_PersistentVolumeSpec.flexVolume(block: model_FlexPersistentVolumeSource.() -> Unit = {}) {
-    if (this.flexVolume == null) {
-        this.flexVolume = model_FlexPersistentVolumeSource()
+    if (flexVolume == null) {
+        flexVolume = model_FlexPersistentVolumeSource()
     }
 
-    this.flexVolume!!.block()
+    flexVolume.block()
 }
 
 fun model_Volume.flexVolume(block: model_FlexVolumeSource.() -> Unit = {}) {
-    if (this.flexVolume == null) {
-        this.flexVolume = model_FlexVolumeSource()
+    if (flexVolume == null) {
+        flexVolume = model_FlexVolumeSource()
     }
 
-    this.flexVolume!!.block()
+    flexVolume.block()
 }

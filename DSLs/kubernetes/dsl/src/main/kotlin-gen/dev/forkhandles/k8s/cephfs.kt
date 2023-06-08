@@ -7,17 +7,17 @@ import io.fabric8.kubernetes.api.model.PersistentVolumeSpec as model_PersistentV
 import io.fabric8.kubernetes.api.model.Volume as model_Volume
 
 fun model_PersistentVolumeSpec.cephfs(block: model_CephFSPersistentVolumeSource.() -> Unit = {}) {
-    if (this.cephfs == null) {
-        this.cephfs = model_CephFSPersistentVolumeSource()
+    if (cephfs == null) {
+        cephfs = model_CephFSPersistentVolumeSource()
     }
 
-    this.cephfs!!.block()
+    cephfs.block()
 }
 
 fun model_Volume.cephfs(block: model_CephFSVolumeSource.() -> Unit = {}) {
-    if (this.cephfs == null) {
-        this.cephfs = model_CephFSVolumeSource()
+    if (cephfs == null) {
+        cephfs = model_CephFSVolumeSource()
     }
 
-    this.cephfs!!.block()
+    cephfs.block()
 }

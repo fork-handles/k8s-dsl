@@ -7,17 +7,17 @@ import io.fabric8.kubernetes.api.model.policy.v1beta1.PodSecurityPolicy as v1bet
 import io.fabric8.kubernetes.api.model.policy.v1beta1.PodSecurityPolicySpec as v1beta1_PodSecurityPolicySpec
 
 fun v1beta1_PodDisruptionBudget.spec(block: v1beta1_PodDisruptionBudgetSpec.() -> Unit = {}) {
-    if (this.spec == null) {
-        this.spec = v1beta1_PodDisruptionBudgetSpec()
+    if (spec == null) {
+        spec = v1beta1_PodDisruptionBudgetSpec()
     }
 
-    this.spec!!.block()
+    spec.block()
 }
 
 fun v1beta1_PodSecurityPolicy.spec(block: v1beta1_PodSecurityPolicySpec.() -> Unit = {}) {
-    if (this.spec == null) {
-        this.spec = v1beta1_PodSecurityPolicySpec()
+    if (spec == null) {
+        spec = v1beta1_PodSecurityPolicySpec()
     }
 
-    this.spec!!.block()
+    spec.block()
 }

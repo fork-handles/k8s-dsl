@@ -6,17 +6,17 @@ import io.fabric8.kubernetes.api.model.PersistentVolumeSpec as model_PersistentV
 import io.fabric8.kubernetes.api.model.Volume as model_Volume
 
 fun model_PersistentVolumeSpec.azureDisk(block: model_AzureDiskVolumeSource.() -> Unit = {}) {
-    if (this.azureDisk == null) {
-        this.azureDisk = model_AzureDiskVolumeSource()
+    if (azureDisk == null) {
+        azureDisk = model_AzureDiskVolumeSource()
     }
 
-    this.azureDisk!!.block()
+    azureDisk.block()
 }
 
 fun model_Volume.azureDisk(block: model_AzureDiskVolumeSource.() -> Unit = {}) {
-    if (this.azureDisk == null) {
-        this.azureDisk = model_AzureDiskVolumeSource()
+    if (azureDisk == null) {
+        azureDisk = model_AzureDiskVolumeSource()
     }
 
-    this.azureDisk!!.block()
+    azureDisk.block()
 }

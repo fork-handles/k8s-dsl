@@ -6,17 +6,17 @@ import io.fabric8.kubernetes.api.model.extensions.RollingUpdateDaemonSet as exte
 import io.fabric8.kubernetes.api.model.extensions.RollingUpdateDeployment as extensions_RollingUpdateDeployment
 
 fun extensions_RollingUpdateDaemonSet.maxUnavailable(block: model_IntOrString.() -> Unit = {}) {
-    if (this.maxUnavailable == null) {
-        this.maxUnavailable = model_IntOrString()
+    if (maxUnavailable == null) {
+        maxUnavailable = model_IntOrString()
     }
 
-    this.maxUnavailable!!.block()
+    maxUnavailable.block()
 }
 
 fun extensions_RollingUpdateDeployment.maxUnavailable(block: model_IntOrString.() -> Unit = {}) {
-    if (this.maxUnavailable == null) {
-        this.maxUnavailable = model_IntOrString()
+    if (maxUnavailable == null) {
+        maxUnavailable = model_IntOrString()
     }
 
-    this.maxUnavailable!!.block()
+    maxUnavailable.block()
 }

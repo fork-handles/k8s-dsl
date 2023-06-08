@@ -7,17 +7,17 @@ import io.fabric8.kubernetes.api.model.PersistentVolumeSpec as model_PersistentV
 import io.fabric8.kubernetes.api.model.Volume as model_Volume
 
 fun model_PersistentVolumeSpec.csi(block: model_CSIPersistentVolumeSource.() -> Unit = {}) {
-    if (this.csi == null) {
-        this.csi = model_CSIPersistentVolumeSource()
+    if (csi == null) {
+        csi = model_CSIPersistentVolumeSource()
     }
 
-    this.csi!!.block()
+    csi.block()
 }
 
 fun model_Volume.csi(block: model_CSIVolumeSource.() -> Unit = {}) {
-    if (this.csi == null) {
-        this.csi = model_CSIVolumeSource()
+    if (csi == null) {
+        csi = model_CSIVolumeSource()
     }
 
-    this.csi!!.block()
+    csi.block()
 }

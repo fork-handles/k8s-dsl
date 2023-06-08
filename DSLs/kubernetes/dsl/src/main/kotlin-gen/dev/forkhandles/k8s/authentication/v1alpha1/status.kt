@@ -5,9 +5,9 @@ import io.fabric8.kubernetes.api.model.authentication.v1alpha1.SelfSubjectReview
 import io.fabric8.kubernetes.api.model.authentication.v1alpha1.SelfSubjectReviewStatus as v1alpha1_SelfSubjectReviewStatus
 
 fun v1alpha1_SelfSubjectReview.status(block: v1alpha1_SelfSubjectReviewStatus.() -> Unit = {}) {
-    if (this.status == null) {
-        this.status = v1alpha1_SelfSubjectReviewStatus()
+    if (status == null) {
+        status = v1alpha1_SelfSubjectReviewStatus()
     }
 
-    this.status!!.block()
+    status.block()
 }

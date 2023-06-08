@@ -7,17 +7,17 @@ import io.fabric8.kubernetes.api.model.apiextensions.v1beta1.CustomResourceSubre
 import io.fabric8.kubernetes.api.model.apiextensions.v1beta1.CustomResourceSubresources as v1beta1_CustomResourceSubresources
 
 fun v1beta1_CustomResourceDefinition.status(block: v1beta1_CustomResourceDefinitionStatus.() -> Unit = {}) {
-    if (this.status == null) {
-        this.status = v1beta1_CustomResourceDefinitionStatus()
+    if (status == null) {
+        status = v1beta1_CustomResourceDefinitionStatus()
     }
 
-    this.status!!.block()
+    status.block()
 }
 
 fun v1beta1_CustomResourceSubresources.status(block: v1beta1_CustomResourceSubresourceStatus.() -> Unit = {}) {
-    if (this.status == null) {
-        this.status = v1beta1_CustomResourceSubresourceStatus()
+    if (status == null) {
+        status = v1beta1_CustomResourceSubresourceStatus()
     }
 
-    this.status!!.block()
+    status.block()
 }

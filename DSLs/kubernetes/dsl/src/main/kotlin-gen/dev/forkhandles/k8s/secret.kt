@@ -7,17 +7,17 @@ import io.fabric8.kubernetes.api.model.Volume as model_Volume
 import io.fabric8.kubernetes.api.model.VolumeProjection as model_VolumeProjection
 
 fun model_Volume.secret(block: model_SecretVolumeSource.() -> Unit = {}) {
-    if (this.secret == null) {
-        this.secret = model_SecretVolumeSource()
+    if (secret == null) {
+        secret = model_SecretVolumeSource()
     }
 
-    this.secret!!.block()
+    secret.block()
 }
 
 fun model_VolumeProjection.secret(block: model_SecretProjection.() -> Unit = {}) {
-    if (this.secret == null) {
-        this.secret = model_SecretProjection()
+    if (secret == null) {
+        secret = model_SecretProjection()
     }
 
-    this.secret!!.block()
+    secret.block()
 }

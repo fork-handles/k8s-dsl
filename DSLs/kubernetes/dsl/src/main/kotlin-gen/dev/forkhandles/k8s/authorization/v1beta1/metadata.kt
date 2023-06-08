@@ -8,33 +8,33 @@ import io.fabric8.kubernetes.api.model.authorization.v1beta1.SelfSubjectRulesRev
 import io.fabric8.kubernetes.api.model.authorization.v1beta1.SubjectAccessReview as v1beta1_SubjectAccessReview
 
 fun v1beta1_LocalSubjectAccessReview.metadata(block: model_ObjectMeta.() -> Unit = {}) {
-    if (this.metadata == null) {
-        this.metadata = model_ObjectMeta()
+    if (metadata == null) {
+        metadata = model_ObjectMeta()
     }
 
-    this.metadata!!.block()
+    metadata.block()
 }
 
 fun v1beta1_SelfSubjectAccessReview.metadata(block: model_ObjectMeta.() -> Unit = {}) {
-    if (this.metadata == null) {
-        this.metadata = model_ObjectMeta()
+    if (metadata == null) {
+        metadata = model_ObjectMeta()
     }
 
-    this.metadata!!.block()
+    metadata.block()
 }
 
 fun v1beta1_SelfSubjectRulesReview.metadata(block: model_ObjectMeta.() -> Unit = {}) {
-    if (this.metadata == null) {
-        this.metadata = model_ObjectMeta()
+    if (metadata == null) {
+        metadata = model_ObjectMeta()
     }
 
-    this.metadata!!.block()
+    metadata.block()
 }
 
 fun v1beta1_SubjectAccessReview.metadata(block: model_ObjectMeta.() -> Unit = {}) {
-    if (this.metadata == null) {
-        this.metadata = model_ObjectMeta()
+    if (metadata == null) {
+        metadata = model_ObjectMeta()
     }
 
-    this.metadata!!.block()
+    metadata.block()
 }

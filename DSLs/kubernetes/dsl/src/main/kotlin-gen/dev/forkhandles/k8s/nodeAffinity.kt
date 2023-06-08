@@ -7,17 +7,17 @@ import io.fabric8.kubernetes.api.model.PersistentVolumeSpec as model_PersistentV
 import io.fabric8.kubernetes.api.model.VolumeNodeAffinity as model_VolumeNodeAffinity
 
 fun model_Affinity.nodeAffinity(block: model_NodeAffinity.() -> Unit = {}) {
-    if (this.nodeAffinity == null) {
-        this.nodeAffinity = model_NodeAffinity()
+    if (nodeAffinity == null) {
+        nodeAffinity = model_NodeAffinity()
     }
 
-    this.nodeAffinity!!.block()
+    nodeAffinity.block()
 }
 
 fun model_PersistentVolumeSpec.nodeAffinity(block: model_VolumeNodeAffinity.() -> Unit = {}) {
-    if (this.nodeAffinity == null) {
-        this.nodeAffinity = model_VolumeNodeAffinity()
+    if (nodeAffinity == null) {
+        nodeAffinity = model_VolumeNodeAffinity()
     }
 
-    this.nodeAffinity!!.block()
+    nodeAffinity.block()
 }

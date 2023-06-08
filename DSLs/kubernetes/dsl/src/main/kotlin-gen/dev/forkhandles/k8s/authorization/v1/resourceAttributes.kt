@@ -6,17 +6,17 @@ import io.fabric8.kubernetes.api.model.authorization.v1.SelfSubjectAccessReviewS
 import io.fabric8.kubernetes.api.model.authorization.v1.SubjectAccessReviewSpec as v1_SubjectAccessReviewSpec
 
 fun v1_SelfSubjectAccessReviewSpec.resourceAttributes(block: v1_ResourceAttributes.() -> Unit = {}) {
-    if (this.resourceAttributes == null) {
-        this.resourceAttributes = v1_ResourceAttributes()
+    if (resourceAttributes == null) {
+        resourceAttributes = v1_ResourceAttributes()
     }
 
-    this.resourceAttributes!!.block()
+    resourceAttributes.block()
 }
 
 fun v1_SubjectAccessReviewSpec.resourceAttributes(block: v1_ResourceAttributes.() -> Unit = {}) {
-    if (this.resourceAttributes == null) {
-        this.resourceAttributes = v1_ResourceAttributes()
+    if (resourceAttributes == null) {
+        resourceAttributes = v1_ResourceAttributes()
     }
 
-    this.resourceAttributes!!.block()
+    resourceAttributes.block()
 }

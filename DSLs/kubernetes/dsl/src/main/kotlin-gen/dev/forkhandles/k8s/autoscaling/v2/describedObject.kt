@@ -6,17 +6,17 @@ import io.fabric8.kubernetes.api.model.autoscaling.v2.ObjectMetricSource as v2_O
 import io.fabric8.kubernetes.api.model.autoscaling.v2.ObjectMetricStatus as v2_ObjectMetricStatus
 
 fun v2_ObjectMetricSource.describedObject(block: v2_CrossVersionObjectReference.() -> Unit = {}) {
-    if (this.describedObject == null) {
-        this.describedObject = v2_CrossVersionObjectReference()
+    if (describedObject == null) {
+        describedObject = v2_CrossVersionObjectReference()
     }
 
-    this.describedObject!!.block()
+    describedObject.block()
 }
 
 fun v2_ObjectMetricStatus.describedObject(block: v2_CrossVersionObjectReference.() -> Unit = {}) {
-    if (this.describedObject == null) {
-        this.describedObject = v2_CrossVersionObjectReference()
+    if (describedObject == null) {
+        describedObject = v2_CrossVersionObjectReference()
     }
 
-    this.describedObject!!.block()
+    describedObject.block()
 }

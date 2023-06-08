@@ -9,33 +9,33 @@ import io.fabric8.kubernetes.api.model.admissionregistration.v1beta1.ValidatingW
 import io.fabric8.kubernetes.api.model.admissionregistration.v1beta1.ValidatingWebhookConfigurationList as v1beta1_ValidatingWebhookConfigurationList
 
 fun v1beta1_MutatingWebhookConfiguration.metadata(block: model_ObjectMeta.() -> Unit = {}) {
-    if (this.metadata == null) {
-        this.metadata = model_ObjectMeta()
+    if (metadata == null) {
+        metadata = model_ObjectMeta()
     }
 
-    this.metadata!!.block()
+    metadata.block()
 }
 
 fun v1beta1_MutatingWebhookConfigurationList.metadata(block: model_ListMeta.() -> Unit = {}) {
-    if (this.metadata == null) {
-        this.metadata = model_ListMeta()
+    if (metadata == null) {
+        metadata = model_ListMeta()
     }
 
-    this.metadata!!.block()
+    metadata.block()
 }
 
 fun v1beta1_ValidatingWebhookConfiguration.metadata(block: model_ObjectMeta.() -> Unit = {}) {
-    if (this.metadata == null) {
-        this.metadata = model_ObjectMeta()
+    if (metadata == null) {
+        metadata = model_ObjectMeta()
     }
 
-    this.metadata!!.block()
+    metadata.block()
 }
 
 fun v1beta1_ValidatingWebhookConfigurationList.metadata(block: model_ListMeta.() -> Unit = {}) {
-    if (this.metadata == null) {
-        this.metadata = model_ListMeta()
+    if (metadata == null) {
+        metadata = model_ListMeta()
     }
 
-    this.metadata!!.block()
+    metadata.block()
 }

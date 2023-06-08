@@ -5,9 +5,9 @@ import io.fabric8.kubernetes.api.model.apiextensions.v1.CustomResourceSubresourc
 import io.fabric8.kubernetes.api.model.apiextensions.v1.CustomResourceSubresources as v1_CustomResourceSubresources
 
 fun v1_CustomResourceSubresources.scale(block: v1_CustomResourceSubresourceScale.() -> Unit = {}) {
-    if (this.scale == null) {
-        this.scale = v1_CustomResourceSubresourceScale()
+    if (scale == null) {
+        scale = v1_CustomResourceSubresourceScale()
     }
 
-    this.scale!!.block()
+    scale.block()
 }

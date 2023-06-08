@@ -5,9 +5,9 @@ import io.fabric8.kubernetes.api.model.apiextensions.v1.JSONSchemaProps as v1_JS
 import io.fabric8.kubernetes.api.model.apiextensions.v1.JSONSchemaPropsOrBool as v1_JSONSchemaPropsOrBool
 
 fun v1_JSONSchemaProps.additionalProperties(block: v1_JSONSchemaPropsOrBool.() -> Unit = {}) {
-    if (this.additionalProperties == null) {
-        this.additionalProperties = v1_JSONSchemaPropsOrBool()
+    if (additionalProperties == null) {
+        additionalProperties = v1_JSONSchemaPropsOrBool()
     }
 
-    this.additionalProperties!!.block()
+    additionalProperties.block()
 }

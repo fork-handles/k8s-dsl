@@ -8,25 +8,25 @@ import io.fabric8.kubernetes.api.model.LifecycleHandler as model_LifecycleHandle
 import io.fabric8.kubernetes.api.model.Probe as model_Probe
 
 fun model_AuthInfo.exec(block: model_ExecConfig.() -> Unit = {}) {
-    if (this.exec == null) {
-        this.exec = model_ExecConfig()
+    if (exec == null) {
+        exec = model_ExecConfig()
     }
 
-    this.exec!!.block()
+    exec.block()
 }
 
 fun model_LifecycleHandler.exec(block: model_ExecAction.() -> Unit = {}) {
-    if (this.exec == null) {
-        this.exec = model_ExecAction()
+    if (exec == null) {
+        exec = model_ExecAction()
     }
 
-    this.exec!!.block()
+    exec.block()
 }
 
 fun model_Probe.exec(block: model_ExecAction.() -> Unit = {}) {
-    if (this.exec == null) {
-        this.exec = model_ExecAction()
+    if (exec == null) {
+        exec = model_ExecAction()
     }
 
-    this.exec!!.block()
+    exec.block()
 }

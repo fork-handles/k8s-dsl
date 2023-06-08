@@ -7,25 +7,25 @@ import io.fabric8.kubernetes.api.model.extensions.DeploymentSpec as extensions_D
 import io.fabric8.kubernetes.api.model.extensions.ReplicaSetSpec as extensions_ReplicaSetSpec
 
 fun extensions_DaemonSetSpec.selector(block: model_LabelSelector.() -> Unit = {}) {
-    if (this.selector == null) {
-        this.selector = model_LabelSelector()
+    if (selector == null) {
+        selector = model_LabelSelector()
     }
 
-    this.selector!!.block()
+    selector.block()
 }
 
 fun extensions_DeploymentSpec.selector(block: model_LabelSelector.() -> Unit = {}) {
-    if (this.selector == null) {
-        this.selector = model_LabelSelector()
+    if (selector == null) {
+        selector = model_LabelSelector()
     }
 
-    this.selector!!.block()
+    selector.block()
 }
 
 fun extensions_ReplicaSetSpec.selector(block: model_LabelSelector.() -> Unit = {}) {
-    if (this.selector == null) {
-        this.selector = model_LabelSelector()
+    if (selector == null) {
+        selector = model_LabelSelector()
     }
 
-    this.selector!!.block()
+    selector.block()
 }

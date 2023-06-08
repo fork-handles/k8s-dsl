@@ -6,17 +6,17 @@ import io.fabric8.kubernetes.api.model.admissionregistration.v1.ValidatingWebhoo
 import io.fabric8.kubernetes.api.model.admissionregistration.v1.WebhookClientConfig as v1_WebhookClientConfig
 
 fun v1_MutatingWebhook.clientConfig(block: v1_WebhookClientConfig.() -> Unit = {}) {
-    if (this.clientConfig == null) {
-        this.clientConfig = v1_WebhookClientConfig()
+    if (clientConfig == null) {
+        clientConfig = v1_WebhookClientConfig()
     }
 
-    this.clientConfig!!.block()
+    clientConfig.block()
 }
 
 fun v1_ValidatingWebhook.clientConfig(block: v1_WebhookClientConfig.() -> Unit = {}) {
-    if (this.clientConfig == null) {
-        this.clientConfig = v1_WebhookClientConfig()
+    if (clientConfig == null) {
+        clientConfig = v1_WebhookClientConfig()
     }
 
-    this.clientConfig!!.block()
+    clientConfig.block()
 }

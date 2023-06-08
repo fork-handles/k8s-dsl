@@ -6,17 +6,17 @@ import io.fabric8.kubernetes.api.model.PortworxVolumeSource as model_PortworxVol
 import io.fabric8.kubernetes.api.model.Volume as model_Volume
 
 fun model_PersistentVolumeSpec.portworxVolume(block: model_PortworxVolumeSource.() -> Unit = {}) {
-    if (this.portworxVolume == null) {
-        this.portworxVolume = model_PortworxVolumeSource()
+    if (portworxVolume == null) {
+        portworxVolume = model_PortworxVolumeSource()
     }
 
-    this.portworxVolume!!.block()
+    portworxVolume.block()
 }
 
 fun model_Volume.portworxVolume(block: model_PortworxVolumeSource.() -> Unit = {}) {
-    if (this.portworxVolume == null) {
-        this.portworxVolume = model_PortworxVolumeSource()
+    if (portworxVolume == null) {
+        portworxVolume = model_PortworxVolumeSource()
     }
 
-    this.portworxVolume!!.block()
+    portworxVolume.block()
 }

@@ -9,41 +9,41 @@ import io.fabric8.kubernetes.api.model.autoscaling.v2.PodsMetricStatus as v2_Pod
 import io.fabric8.kubernetes.api.model.autoscaling.v2.ResourceMetricStatus as v2_ResourceMetricStatus
 
 fun v2_ContainerResourceMetricStatus.current(block: v2_MetricValueStatus.() -> Unit = {}) {
-    if (this.current == null) {
-        this.current = v2_MetricValueStatus()
+    if (current == null) {
+        current = v2_MetricValueStatus()
     }
 
-    this.current!!.block()
+    current.block()
 }
 
 fun v2_ExternalMetricStatus.current(block: v2_MetricValueStatus.() -> Unit = {}) {
-    if (this.current == null) {
-        this.current = v2_MetricValueStatus()
+    if (current == null) {
+        current = v2_MetricValueStatus()
     }
 
-    this.current!!.block()
+    current.block()
 }
 
 fun v2_ObjectMetricStatus.current(block: v2_MetricValueStatus.() -> Unit = {}) {
-    if (this.current == null) {
-        this.current = v2_MetricValueStatus()
+    if (current == null) {
+        current = v2_MetricValueStatus()
     }
 
-    this.current!!.block()
+    current.block()
 }
 
 fun v2_PodsMetricStatus.current(block: v2_MetricValueStatus.() -> Unit = {}) {
-    if (this.current == null) {
-        this.current = v2_MetricValueStatus()
+    if (current == null) {
+        current = v2_MetricValueStatus()
     }
 
-    this.current!!.block()
+    current.block()
 }
 
 fun v2_ResourceMetricStatus.current(block: v2_MetricValueStatus.() -> Unit = {}) {
-    if (this.current == null) {
-        this.current = v2_MetricValueStatus()
+    if (current == null) {
+        current = v2_MetricValueStatus()
     }
 
-    this.current!!.block()
+    current.block()
 }

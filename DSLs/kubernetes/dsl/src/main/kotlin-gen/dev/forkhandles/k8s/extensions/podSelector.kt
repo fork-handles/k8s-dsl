@@ -6,17 +6,17 @@ import io.fabric8.kubernetes.api.model.extensions.NetworkPolicyPeer as extension
 import io.fabric8.kubernetes.api.model.extensions.NetworkPolicySpec as extensions_NetworkPolicySpec
 
 fun extensions_NetworkPolicyPeer.podSelector(block: model_LabelSelector.() -> Unit = {}) {
-    if (this.podSelector == null) {
-        this.podSelector = model_LabelSelector()
+    if (podSelector == null) {
+        podSelector = model_LabelSelector()
     }
 
-    this.podSelector!!.block()
+    podSelector.block()
 }
 
 fun extensions_NetworkPolicySpec.podSelector(block: model_LabelSelector.() -> Unit = {}) {
-    if (this.podSelector == null) {
-        this.podSelector = model_LabelSelector()
+    if (podSelector == null) {
+        podSelector = model_LabelSelector()
     }
 
-    this.podSelector!!.block()
+    podSelector.block()
 }

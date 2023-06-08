@@ -6,17 +6,17 @@ import io.fabric8.kubernetes.api.model.autoscaling.v2beta1.ExternalMetricStatus 
 import io.fabric8.kubernetes.api.model.autoscaling.v2beta1.ObjectMetricStatus as v2beta1_ObjectMetricStatus
 
 fun v2beta1_ExternalMetricStatus.currentValue(block: model_Quantity.() -> Unit = {}) {
-    if (this.currentValue == null) {
-        this.currentValue = model_Quantity()
+    if (currentValue == null) {
+        currentValue = model_Quantity()
     }
 
-    this.currentValue!!.block()
+    currentValue.block()
 }
 
 fun v2beta1_ObjectMetricStatus.currentValue(block: model_Quantity.() -> Unit = {}) {
-    if (this.currentValue == null) {
-        this.currentValue = model_Quantity()
+    if (currentValue == null) {
+        currentValue = model_Quantity()
     }
 
-    this.currentValue!!.block()
+    currentValue.block()
 }

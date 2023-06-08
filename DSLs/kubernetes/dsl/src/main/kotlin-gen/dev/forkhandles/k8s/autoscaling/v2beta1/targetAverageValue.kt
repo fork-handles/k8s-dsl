@@ -8,33 +8,33 @@ import io.fabric8.kubernetes.api.model.autoscaling.v2beta1.PodsMetricSource as v
 import io.fabric8.kubernetes.api.model.autoscaling.v2beta1.ResourceMetricSource as v2beta1_ResourceMetricSource
 
 fun v2beta1_ContainerResourceMetricSource.targetAverageValue(block: model_Quantity.() -> Unit = {}) {
-    if (this.targetAverageValue == null) {
-        this.targetAverageValue = model_Quantity()
+    if (targetAverageValue == null) {
+        targetAverageValue = model_Quantity()
     }
 
-    this.targetAverageValue!!.block()
+    targetAverageValue.block()
 }
 
 fun v2beta1_ExternalMetricSource.targetAverageValue(block: model_Quantity.() -> Unit = {}) {
-    if (this.targetAverageValue == null) {
-        this.targetAverageValue = model_Quantity()
+    if (targetAverageValue == null) {
+        targetAverageValue = model_Quantity()
     }
 
-    this.targetAverageValue!!.block()
+    targetAverageValue.block()
 }
 
 fun v2beta1_PodsMetricSource.targetAverageValue(block: model_Quantity.() -> Unit = {}) {
-    if (this.targetAverageValue == null) {
-        this.targetAverageValue = model_Quantity()
+    if (targetAverageValue == null) {
+        targetAverageValue = model_Quantity()
     }
 
-    this.targetAverageValue!!.block()
+    targetAverageValue.block()
 }
 
 fun v2beta1_ResourceMetricSource.targetAverageValue(block: model_Quantity.() -> Unit = {}) {
-    if (this.targetAverageValue == null) {
-        this.targetAverageValue = model_Quantity()
+    if (targetAverageValue == null) {
+        targetAverageValue = model_Quantity()
     }
 
-    this.targetAverageValue!!.block()
+    targetAverageValue.block()
 }

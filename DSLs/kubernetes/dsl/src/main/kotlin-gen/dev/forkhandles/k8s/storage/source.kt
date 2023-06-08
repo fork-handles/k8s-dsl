@@ -5,9 +5,9 @@ import io.fabric8.kubernetes.api.model.storage.VolumeAttachmentSource as storage
 import io.fabric8.kubernetes.api.model.storage.VolumeAttachmentSpec as storage_VolumeAttachmentSpec
 
 fun storage_VolumeAttachmentSpec.source(block: storage_VolumeAttachmentSource.() -> Unit = {}) {
-    if (this.source == null) {
-        this.source = storage_VolumeAttachmentSource()
+    if (source == null) {
+        source = storage_VolumeAttachmentSource()
     }
 
-    this.source!!.block()
+    source.block()
 }

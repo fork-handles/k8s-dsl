@@ -9,25 +9,25 @@ import io.fabric8.kubernetes.api.model.Volume as model_Volume
 import io.fabric8.kubernetes.api.model.VolumeProjection as model_VolumeProjection
 
 fun model_NodeConfigSource.configMap(block: model_ConfigMapNodeConfigSource.() -> Unit = {}) {
-    if (this.configMap == null) {
-        this.configMap = model_ConfigMapNodeConfigSource()
+    if (configMap == null) {
+        configMap = model_ConfigMapNodeConfigSource()
     }
 
-    this.configMap!!.block()
+    configMap.block()
 }
 
 fun model_Volume.configMap(block: model_ConfigMapVolumeSource.() -> Unit = {}) {
-    if (this.configMap == null) {
-        this.configMap = model_ConfigMapVolumeSource()
+    if (configMap == null) {
+        configMap = model_ConfigMapVolumeSource()
     }
 
-    this.configMap!!.block()
+    configMap.block()
 }
 
 fun model_VolumeProjection.configMap(block: model_ConfigMapProjection.() -> Unit = {}) {
-    if (this.configMap == null) {
-        this.configMap = model_ConfigMapProjection()
+    if (configMap == null) {
+        configMap = model_ConfigMapProjection()
     }
 
-    this.configMap!!.block()
+    configMap.block()
 }

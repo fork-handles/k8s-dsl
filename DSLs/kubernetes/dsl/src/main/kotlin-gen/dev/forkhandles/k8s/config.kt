@@ -5,9 +5,9 @@ import io.fabric8.kubernetes.api.model.NodeConfigStatus as model_NodeConfigStatu
 import io.fabric8.kubernetes.api.model.NodeStatus as model_NodeStatus
 
 fun model_NodeStatus.config(block: model_NodeConfigStatus.() -> Unit = {}) {
-    if (this.config == null) {
-        this.config = model_NodeConfigStatus()
+    if (config == null) {
+        config = model_NodeConfigStatus()
     }
 
-    this.config!!.block()
+    config.block()
 }

@@ -5,9 +5,9 @@ import io.fabric8.kubernetes.api.model.ServiceAccountTokenProjection as model_Se
 import io.fabric8.kubernetes.api.model.VolumeProjection as model_VolumeProjection
 
 fun model_VolumeProjection.serviceAccountToken(block: model_ServiceAccountTokenProjection.() -> Unit = {}) {
-    if (this.serviceAccountToken == null) {
-        this.serviceAccountToken = model_ServiceAccountTokenProjection()
+    if (serviceAccountToken == null) {
+        serviceAccountToken = model_ServiceAccountTokenProjection()
     }
 
-    this.serviceAccountToken!!.block()
+    serviceAccountToken.block()
 }

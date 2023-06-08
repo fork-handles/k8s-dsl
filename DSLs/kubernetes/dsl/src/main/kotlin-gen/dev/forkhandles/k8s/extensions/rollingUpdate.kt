@@ -7,17 +7,17 @@ import io.fabric8.kubernetes.api.model.extensions.RollingUpdateDaemonSet as exte
 import io.fabric8.kubernetes.api.model.extensions.RollingUpdateDeployment as extensions_RollingUpdateDeployment
 
 fun extensions_DaemonSetUpdateStrategy.rollingUpdate(block: extensions_RollingUpdateDaemonSet.() -> Unit = {}) {
-    if (this.rollingUpdate == null) {
-        this.rollingUpdate = extensions_RollingUpdateDaemonSet()
+    if (rollingUpdate == null) {
+        rollingUpdate = extensions_RollingUpdateDaemonSet()
     }
 
-    this.rollingUpdate!!.block()
+    rollingUpdate.block()
 }
 
 fun extensions_DeploymentStrategy.rollingUpdate(block: extensions_RollingUpdateDeployment.() -> Unit = {}) {
-    if (this.rollingUpdate == null) {
-        this.rollingUpdate = extensions_RollingUpdateDeployment()
+    if (rollingUpdate == null) {
+        rollingUpdate = extensions_RollingUpdateDeployment()
     }
 
-    this.rollingUpdate!!.block()
+    rollingUpdate.block()
 }

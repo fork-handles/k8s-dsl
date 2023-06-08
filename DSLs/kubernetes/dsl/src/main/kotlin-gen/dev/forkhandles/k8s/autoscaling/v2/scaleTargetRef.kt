@@ -5,9 +5,9 @@ import io.fabric8.kubernetes.api.model.autoscaling.v2.CrossVersionObjectReferenc
 import io.fabric8.kubernetes.api.model.autoscaling.v2.HorizontalPodAutoscalerSpec as v2_HorizontalPodAutoscalerSpec
 
 fun v2_HorizontalPodAutoscalerSpec.scaleTargetRef(block: v2_CrossVersionObjectReference.() -> Unit = {}) {
-    if (this.scaleTargetRef == null) {
-        this.scaleTargetRef = v2_CrossVersionObjectReference()
+    if (scaleTargetRef == null) {
+        scaleTargetRef = v2_CrossVersionObjectReference()
     }
 
-    this.scaleTargetRef!!.block()
+    scaleTargetRef.block()
 }

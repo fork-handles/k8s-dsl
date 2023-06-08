@@ -6,17 +6,17 @@ import io.fabric8.kubernetes.api.model.PersistentVolumeSpec as model_PersistentV
 import io.fabric8.kubernetes.api.model.Volume as model_Volume
 
 fun model_PersistentVolumeSpec.hostPath(block: model_HostPathVolumeSource.() -> Unit = {}) {
-    if (this.hostPath == null) {
-        this.hostPath = model_HostPathVolumeSource()
+    if (hostPath == null) {
+        hostPath = model_HostPathVolumeSource()
     }
 
-    this.hostPath!!.block()
+    hostPath.block()
 }
 
 fun model_Volume.hostPath(block: model_HostPathVolumeSource.() -> Unit = {}) {
-    if (this.hostPath == null) {
-        this.hostPath = model_HostPathVolumeSource()
+    if (hostPath == null) {
+        hostPath = model_HostPathVolumeSource()
     }
 
-    this.hostPath!!.block()
+    hostPath.block()
 }

@@ -8,33 +8,33 @@ import io.fabric8.kubernetes.api.model.apps.ReplicaSetSpec as apps_ReplicaSetSpe
 import io.fabric8.kubernetes.api.model.apps.StatefulSetSpec as apps_StatefulSetSpec
 
 fun apps_DaemonSetSpec.template(block: model_PodTemplateSpec.() -> Unit = {}) {
-    if (this.template == null) {
-        this.template = model_PodTemplateSpec()
+    if (template == null) {
+        template = model_PodTemplateSpec()
     }
 
-    this.template!!.block()
+    template.block()
 }
 
 fun apps_DeploymentSpec.template(block: model_PodTemplateSpec.() -> Unit = {}) {
-    if (this.template == null) {
-        this.template = model_PodTemplateSpec()
+    if (template == null) {
+        template = model_PodTemplateSpec()
     }
 
-    this.template!!.block()
+    template.block()
 }
 
 fun apps_ReplicaSetSpec.template(block: model_PodTemplateSpec.() -> Unit = {}) {
-    if (this.template == null) {
-        this.template = model_PodTemplateSpec()
+    if (template == null) {
+        template = model_PodTemplateSpec()
     }
 
-    this.template!!.block()
+    template.block()
 }
 
 fun apps_StatefulSetSpec.template(block: model_PodTemplateSpec.() -> Unit = {}) {
-    if (this.template == null) {
-        this.template = model_PodTemplateSpec()
+    if (template == null) {
+        template = model_PodTemplateSpec()
     }
 
-    this.template!!.block()
+    template.block()
 }

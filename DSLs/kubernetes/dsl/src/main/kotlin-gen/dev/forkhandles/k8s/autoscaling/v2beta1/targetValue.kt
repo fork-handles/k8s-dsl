@@ -6,17 +6,17 @@ import io.fabric8.kubernetes.api.model.autoscaling.v2beta1.ExternalMetricSource 
 import io.fabric8.kubernetes.api.model.autoscaling.v2beta1.ObjectMetricSource as v2beta1_ObjectMetricSource
 
 fun v2beta1_ExternalMetricSource.targetValue(block: model_Quantity.() -> Unit = {}) {
-    if (this.targetValue == null) {
-        this.targetValue = model_Quantity()
+    if (targetValue == null) {
+        targetValue = model_Quantity()
     }
 
-    this.targetValue!!.block()
+    targetValue.block()
 }
 
 fun v2beta1_ObjectMetricSource.targetValue(block: model_Quantity.() -> Unit = {}) {
-    if (this.targetValue == null) {
-        this.targetValue = model_Quantity()
+    if (targetValue == null) {
+        targetValue = model_Quantity()
     }
 
-    this.targetValue!!.block()
+    targetValue.block()
 }
