@@ -84,7 +84,7 @@ fun createSchema(crd: CRDDefinition, schemeName: String): Schema {
         crd.spec.names.kind
 
     result.definitions = TreeMap(typeDefinitionRegistry)
-    result.properties = TreeMap(typeDefinitionRegistry.map { (name, definition) ->
+    result.properties = TreeMap(typeDefinitionRegistry.map { (name, _) ->
         name.decapitalise() to RefPropertyDefinition().apply {
             ref = "#/definitions/$name"
             javaType = "com.fkorotkov.kubernetes.$schemeName.$name"
