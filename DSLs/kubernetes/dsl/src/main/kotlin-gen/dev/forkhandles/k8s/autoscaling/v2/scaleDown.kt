@@ -5,11 +5,11 @@ import io.fabric8.kubernetes.api.model.autoscaling.v2.HPAScalingRules as v2_HPAS
 import io.fabric8.kubernetes.api.model.autoscaling.v2.HorizontalPodAutoscalerBehavior as v2_HorizontalPodAutoscalerBehavior
 
 
-fun v2_HorizontalPodAutoscalerBehavior.`scaleDown`(block: v2_HPAScalingRules.() -> Unit = {}) {
-    if (this.`scaleDown` == null) {
-        this.`scaleDown` = v2_HPAScalingRules()
+fun v2_HorizontalPodAutoscalerBehavior.scaleDown(block: v2_HPAScalingRules.() -> Unit = {}) {
+    if (this.scaleDown == null) {
+        this.scaleDown = v2_HPAScalingRules()
     }
 
-    this.`scaleDown`.block()
+    this.scaleDown!!.block()
 }
 

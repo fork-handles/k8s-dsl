@@ -44,353 +44,353 @@ import io.fabric8.kubernetes.api.model.ServiceList as model_ServiceList
 import io.fabric8.kubernetes.api.model.Status as model_Status
 
 
-fun model_APIService.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ObjectMeta()
+fun model_APIService.metadata(block: model_ObjectMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ObjectMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
 
-fun model_APIServiceList.`metadata`(block: model_ListMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ListMeta()
+fun model_APIServiceList.metadata(block: model_ListMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ListMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
 
-fun model_Binding.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ObjectMeta()
+fun model_Binding.metadata(block: model_ObjectMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ObjectMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
 
-fun model_ComponentStatus.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ObjectMeta()
+fun model_ComponentStatus.metadata(block: model_ObjectMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ObjectMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
 
-fun model_ComponentStatusList.`metadata`(block: model_ListMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ListMeta()
+fun model_ComponentStatusList.metadata(block: model_ListMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ListMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
 
-fun model_ConfigMap.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ObjectMeta()
+fun model_ConfigMap.metadata(block: model_ObjectMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ObjectMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
 
-fun model_ConfigMapList.`metadata`(block: model_ListMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ListMeta()
+fun model_ConfigMapList.metadata(block: model_ListMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ListMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
 
-fun model_Endpoints.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ObjectMeta()
+fun model_Endpoints.metadata(block: model_ObjectMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ObjectMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
 
-fun model_EndpointsList.`metadata`(block: model_ListMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ListMeta()
+fun model_EndpointsList.metadata(block: model_ListMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ListMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
 
-fun model_Event.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ObjectMeta()
+fun model_Event.metadata(block: model_ObjectMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ObjectMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
 
-fun model_EventList.`metadata`(block: model_ListMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ListMeta()
+fun model_EventList.metadata(block: model_ListMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ListMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
 
-fun model_GenericKubernetesResource.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ObjectMeta()
+fun model_GenericKubernetesResource.metadata(block: model_ObjectMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ObjectMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
 
-fun model_LimitRange.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ObjectMeta()
+fun model_LimitRange.metadata(block: model_ObjectMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ObjectMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
 
-fun model_LimitRangeList.`metadata`(block: model_ListMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ListMeta()
+fun model_LimitRangeList.metadata(block: model_ListMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ListMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
 
-fun model_Namespace.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ObjectMeta()
+fun model_Namespace.metadata(block: model_ObjectMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ObjectMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
 
-fun model_NamespaceList.`metadata`(block: model_ListMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ListMeta()
+fun model_NamespaceList.metadata(block: model_ListMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ListMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
 
-fun model_Node.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ObjectMeta()
+fun model_Node.metadata(block: model_ObjectMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ObjectMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
 
-fun model_NodeList.`metadata`(block: model_ListMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ListMeta()
+fun model_NodeList.metadata(block: model_ListMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ListMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
 
-fun model_PersistentVolume.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ObjectMeta()
+fun model_PersistentVolume.metadata(block: model_ObjectMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ObjectMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
 
-fun model_PersistentVolumeClaim.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ObjectMeta()
+fun model_PersistentVolumeClaim.metadata(block: model_ObjectMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ObjectMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
 
-fun model_PersistentVolumeClaimList.`metadata`(block: model_ListMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ListMeta()
+fun model_PersistentVolumeClaimList.metadata(block: model_ListMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ListMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
 
-fun model_PersistentVolumeClaimTemplate.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ObjectMeta()
+fun model_PersistentVolumeClaimTemplate.metadata(block: model_ObjectMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ObjectMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
 
-fun model_PersistentVolumeList.`metadata`(block: model_ListMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ListMeta()
+fun model_PersistentVolumeList.metadata(block: model_ListMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ListMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
 
-fun model_Pod.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ObjectMeta()
+fun model_Pod.metadata(block: model_ObjectMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ObjectMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
 
-fun model_PodList.`metadata`(block: model_ListMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ListMeta()
+fun model_PodList.metadata(block: model_ListMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ListMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
 
-fun model_PodTemplate.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ObjectMeta()
+fun model_PodTemplate.metadata(block: model_ObjectMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ObjectMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
 
-fun model_PodTemplateList.`metadata`(block: model_ListMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ListMeta()
+fun model_PodTemplateList.metadata(block: model_ListMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ListMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
 
-fun model_PodTemplateSpec.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ObjectMeta()
+fun model_PodTemplateSpec.metadata(block: model_ObjectMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ObjectMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
 
-fun model_ReplicationController.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ObjectMeta()
+fun model_ReplicationController.metadata(block: model_ObjectMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ObjectMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
 
-fun model_ReplicationControllerList.`metadata`(block: model_ListMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ListMeta()
+fun model_ReplicationControllerList.metadata(block: model_ListMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ListMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
 
-fun model_ResourceQuota.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ObjectMeta()
+fun model_ResourceQuota.metadata(block: model_ObjectMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ObjectMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
 
-fun model_ResourceQuotaList.`metadata`(block: model_ListMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ListMeta()
+fun model_ResourceQuotaList.metadata(block: model_ListMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ListMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
 
-fun model_Secret.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ObjectMeta()
+fun model_Secret.metadata(block: model_ObjectMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ObjectMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
 
-fun model_SecretList.`metadata`(block: model_ListMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ListMeta()
+fun model_SecretList.metadata(block: model_ListMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ListMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
 
-fun model_Service.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ObjectMeta()
+fun model_Service.metadata(block: model_ObjectMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ObjectMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
 
-fun model_ServiceAccount.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ObjectMeta()
+fun model_ServiceAccount.metadata(block: model_ObjectMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ObjectMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
 
-fun model_ServiceAccountList.`metadata`(block: model_ListMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ListMeta()
+fun model_ServiceAccountList.metadata(block: model_ListMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ListMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
 
-fun model_ServiceList.`metadata`(block: model_ListMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ListMeta()
+fun model_ServiceList.metadata(block: model_ListMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ListMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
 
-fun model_Status.`metadata`(block: model_ListMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ListMeta()
+fun model_Status.metadata(block: model_ListMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ListMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 

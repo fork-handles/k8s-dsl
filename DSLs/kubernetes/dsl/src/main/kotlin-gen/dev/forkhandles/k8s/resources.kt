@@ -7,29 +7,29 @@ import io.fabric8.kubernetes.api.model.PersistentVolumeClaimSpec as model_Persis
 import io.fabric8.kubernetes.api.model.ResourceRequirements as model_ResourceRequirements
 
 
-fun model_Container.`resources`(block: model_ResourceRequirements.() -> Unit = {}) {
-    if (this.`resources` == null) {
-        this.`resources` = model_ResourceRequirements()
+fun model_Container.resources(block: model_ResourceRequirements.() -> Unit = {}) {
+    if (this.resources == null) {
+        this.resources = model_ResourceRequirements()
     }
 
-    this.`resources`.block()
+    this.resources!!.block()
 }
 
 
-fun model_EphemeralContainer.`resources`(block: model_ResourceRequirements.() -> Unit = {}) {
-    if (this.`resources` == null) {
-        this.`resources` = model_ResourceRequirements()
+fun model_EphemeralContainer.resources(block: model_ResourceRequirements.() -> Unit = {}) {
+    if (this.resources == null) {
+        this.resources = model_ResourceRequirements()
     }
 
-    this.`resources`.block()
+    this.resources!!.block()
 }
 
 
-fun model_PersistentVolumeClaimSpec.`resources`(block: model_ResourceRequirements.() -> Unit = {}) {
-    if (this.`resources` == null) {
-        this.`resources` = model_ResourceRequirements()
+fun model_PersistentVolumeClaimSpec.resources(block: model_ResourceRequirements.() -> Unit = {}) {
+    if (this.resources == null) {
+        this.resources = model_ResourceRequirements()
     }
 
-    this.`resources`.block()
+    this.resources!!.block()
 }
 

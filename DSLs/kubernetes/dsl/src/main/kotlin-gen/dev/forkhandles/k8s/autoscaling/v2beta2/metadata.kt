@@ -7,20 +7,20 @@ import io.fabric8.kubernetes.api.model.autoscaling.v2beta2.HorizontalPodAutoscal
 import io.fabric8.kubernetes.api.model.autoscaling.v2beta2.HorizontalPodAutoscalerList as v2beta2_HorizontalPodAutoscalerList
 
 
-fun v2beta2_HorizontalPodAutoscaler.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ObjectMeta()
+fun v2beta2_HorizontalPodAutoscaler.metadata(block: model_ObjectMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ObjectMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
 
-fun v2beta2_HorizontalPodAutoscalerList.`metadata`(block: model_ListMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ListMeta()
+fun v2beta2_HorizontalPodAutoscalerList.metadata(block: model_ListMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ListMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 

@@ -8,38 +8,38 @@ import io.fabric8.kubernetes.api.model.apps.ReplicaSetSpec as apps_ReplicaSetSpe
 import io.fabric8.kubernetes.api.model.apps.StatefulSetSpec as apps_StatefulSetSpec
 
 
-fun apps_DaemonSetSpec.`selector`(block: model_LabelSelector.() -> Unit = {}) {
-    if (this.`selector` == null) {
-        this.`selector` = model_LabelSelector()
+fun apps_DaemonSetSpec.selector(block: model_LabelSelector.() -> Unit = {}) {
+    if (this.selector == null) {
+        this.selector = model_LabelSelector()
     }
 
-    this.`selector`.block()
+    this.selector!!.block()
 }
 
 
-fun apps_DeploymentSpec.`selector`(block: model_LabelSelector.() -> Unit = {}) {
-    if (this.`selector` == null) {
-        this.`selector` = model_LabelSelector()
+fun apps_DeploymentSpec.selector(block: model_LabelSelector.() -> Unit = {}) {
+    if (this.selector == null) {
+        this.selector = model_LabelSelector()
     }
 
-    this.`selector`.block()
+    this.selector!!.block()
 }
 
 
-fun apps_ReplicaSetSpec.`selector`(block: model_LabelSelector.() -> Unit = {}) {
-    if (this.`selector` == null) {
-        this.`selector` = model_LabelSelector()
+fun apps_ReplicaSetSpec.selector(block: model_LabelSelector.() -> Unit = {}) {
+    if (this.selector == null) {
+        this.selector = model_LabelSelector()
     }
 
-    this.`selector`.block()
+    this.selector!!.block()
 }
 
 
-fun apps_StatefulSetSpec.`selector`(block: model_LabelSelector.() -> Unit = {}) {
-    if (this.`selector` == null) {
-        this.`selector` = model_LabelSelector()
+fun apps_StatefulSetSpec.selector(block: model_LabelSelector.() -> Unit = {}) {
+    if (this.selector == null) {
+        this.selector = model_LabelSelector()
     }
 
-    this.`selector`.block()
+    this.selector!!.block()
 }
 

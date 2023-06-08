@@ -5,11 +5,11 @@ import io.fabric8.kubernetes.api.model.extensions.IngressLoadBalancerStatus as e
 import io.fabric8.kubernetes.api.model.extensions.IngressStatus as extensions_IngressStatus
 
 
-fun extensions_IngressStatus.`loadBalancer`(block: extensions_IngressLoadBalancerStatus.() -> Unit = {}) {
-    if (this.`loadBalancer` == null) {
-        this.`loadBalancer` = extensions_IngressLoadBalancerStatus()
+fun extensions_IngressStatus.loadBalancer(block: extensions_IngressLoadBalancerStatus.() -> Unit = {}) {
+    if (this.loadBalancer == null) {
+        this.loadBalancer = extensions_IngressLoadBalancerStatus()
     }
 
-    this.`loadBalancer`.block()
+    this.loadBalancer!!.block()
 }
 

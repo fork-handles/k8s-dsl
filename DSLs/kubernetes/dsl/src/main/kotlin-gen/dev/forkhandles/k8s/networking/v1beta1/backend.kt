@@ -6,20 +6,20 @@ import io.fabric8.kubernetes.api.model.networking.v1beta1.IngressBackend as v1be
 import io.fabric8.kubernetes.api.model.networking.v1beta1.IngressSpec as v1beta1_IngressSpec
 
 
-fun v1beta1_HTTPIngressPath.`backend`(block: v1beta1_IngressBackend.() -> Unit = {}) {
-    if (this.`backend` == null) {
-        this.`backend` = v1beta1_IngressBackend()
+fun v1beta1_HTTPIngressPath.backend(block: v1beta1_IngressBackend.() -> Unit = {}) {
+    if (this.backend == null) {
+        this.backend = v1beta1_IngressBackend()
     }
 
-    this.`backend`.block()
+    this.backend!!.block()
 }
 
 
-fun v1beta1_IngressSpec.`backend`(block: v1beta1_IngressBackend.() -> Unit = {}) {
-    if (this.`backend` == null) {
-        this.`backend` = v1beta1_IngressBackend()
+fun v1beta1_IngressSpec.backend(block: v1beta1_IngressBackend.() -> Unit = {}) {
+    if (this.backend == null) {
+        this.backend = v1beta1_IngressBackend()
     }
 
-    this.`backend`.block()
+    this.backend!!.block()
 }
 

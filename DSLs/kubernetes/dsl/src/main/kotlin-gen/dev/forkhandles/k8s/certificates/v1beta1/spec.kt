@@ -5,11 +5,11 @@ import io.fabric8.kubernetes.api.model.certificates.v1beta1.CertificateSigningRe
 import io.fabric8.kubernetes.api.model.certificates.v1beta1.CertificateSigningRequestSpec as v1beta1_CertificateSigningRequestSpec
 
 
-fun v1beta1_CertificateSigningRequest.`spec`(block: v1beta1_CertificateSigningRequestSpec.() -> Unit = {}) {
-    if (this.`spec` == null) {
-        this.`spec` = v1beta1_CertificateSigningRequestSpec()
+fun v1beta1_CertificateSigningRequest.spec(block: v1beta1_CertificateSigningRequestSpec.() -> Unit = {}) {
+    if (this.spec == null) {
+        this.spec = v1beta1_CertificateSigningRequestSpec()
     }
 
-    this.`spec`.block()
+    this.spec!!.block()
 }
 

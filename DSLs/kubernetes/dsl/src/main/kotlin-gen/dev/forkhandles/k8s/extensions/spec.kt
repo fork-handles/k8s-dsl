@@ -13,47 +13,47 @@ import io.fabric8.kubernetes.api.model.extensions.ReplicaSet as extensions_Repli
 import io.fabric8.kubernetes.api.model.extensions.ReplicaSetSpec as extensions_ReplicaSetSpec
 
 
-fun extensions_DaemonSet.`spec`(block: extensions_DaemonSetSpec.() -> Unit = {}) {
-    if (this.`spec` == null) {
-        this.`spec` = extensions_DaemonSetSpec()
+fun extensions_DaemonSet.spec(block: extensions_DaemonSetSpec.() -> Unit = {}) {
+    if (this.spec == null) {
+        this.spec = extensions_DaemonSetSpec()
     }
 
-    this.`spec`.block()
+    this.spec!!.block()
 }
 
 
-fun extensions_Deployment.`spec`(block: extensions_DeploymentSpec.() -> Unit = {}) {
-    if (this.`spec` == null) {
-        this.`spec` = extensions_DeploymentSpec()
+fun extensions_Deployment.spec(block: extensions_DeploymentSpec.() -> Unit = {}) {
+    if (this.spec == null) {
+        this.spec = extensions_DeploymentSpec()
     }
 
-    this.`spec`.block()
+    this.spec!!.block()
 }
 
 
-fun extensions_Ingress.`spec`(block: extensions_IngressSpec.() -> Unit = {}) {
-    if (this.`spec` == null) {
-        this.`spec` = extensions_IngressSpec()
+fun extensions_Ingress.spec(block: extensions_IngressSpec.() -> Unit = {}) {
+    if (this.spec == null) {
+        this.spec = extensions_IngressSpec()
     }
 
-    this.`spec`.block()
+    this.spec!!.block()
 }
 
 
-fun extensions_NetworkPolicy.`spec`(block: extensions_NetworkPolicySpec.() -> Unit = {}) {
-    if (this.`spec` == null) {
-        this.`spec` = extensions_NetworkPolicySpec()
+fun extensions_NetworkPolicy.spec(block: extensions_NetworkPolicySpec.() -> Unit = {}) {
+    if (this.spec == null) {
+        this.spec = extensions_NetworkPolicySpec()
     }
 
-    this.`spec`.block()
+    this.spec!!.block()
 }
 
 
-fun extensions_ReplicaSet.`spec`(block: extensions_ReplicaSetSpec.() -> Unit = {}) {
-    if (this.`spec` == null) {
-        this.`spec` = extensions_ReplicaSetSpec()
+fun extensions_ReplicaSet.spec(block: extensions_ReplicaSetSpec.() -> Unit = {}) {
+    if (this.spec == null) {
+        this.spec = extensions_ReplicaSetSpec()
     }
 
-    this.`spec`.block()
+    this.spec!!.block()
 }
 

@@ -5,11 +5,11 @@ import io.fabric8.kubernetes.api.model.autoscaling.v1.CrossVersionObjectReferenc
 import io.fabric8.kubernetes.api.model.autoscaling.v1.HorizontalPodAutoscalerSpec as v1_HorizontalPodAutoscalerSpec
 
 
-fun v1_HorizontalPodAutoscalerSpec.`scaleTargetRef`(block: v1_CrossVersionObjectReference.() -> Unit = {}) {
-    if (this.`scaleTargetRef` == null) {
-        this.`scaleTargetRef` = v1_CrossVersionObjectReference()
+fun v1_HorizontalPodAutoscalerSpec.scaleTargetRef(block: v1_CrossVersionObjectReference.() -> Unit = {}) {
+    if (this.scaleTargetRef == null) {
+        this.scaleTargetRef = v1_CrossVersionObjectReference()
     }
 
-    this.`scaleTargetRef`.block()
+    this.scaleTargetRef!!.block()
 }
 

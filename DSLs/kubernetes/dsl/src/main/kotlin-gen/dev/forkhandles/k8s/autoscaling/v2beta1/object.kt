@@ -12,7 +12,7 @@ fun v2beta1_MetricSpec.`object`(block: v2beta1_ObjectMetricSource.() -> Unit = {
         this.`object` = v2beta1_ObjectMetricSource()
     }
 
-    this.`object`.block()
+    this.`object`!!.block()
 }
 
 
@@ -21,6 +21,6 @@ fun v2beta1_MetricStatus.`object`(block: v2beta1_ObjectMetricStatus.() -> Unit =
         this.`object` = v2beta1_ObjectMetricStatus()
     }
 
-    this.`object`.block()
+    this.`object`!!.block()
 }
 

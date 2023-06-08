@@ -6,20 +6,20 @@ import io.fabric8.kubernetes.api.model.autoscaling.v2.MetricTarget as v2_MetricT
 import io.fabric8.kubernetes.api.model.autoscaling.v2.MetricValueStatus as v2_MetricValueStatus
 
 
-fun v2_MetricTarget.`value`(block: model_Quantity.() -> Unit = {}) {
-    if (this.`value` == null) {
-        this.`value` = model_Quantity()
+fun v2_MetricTarget.value(block: model_Quantity.() -> Unit = {}) {
+    if (this.value == null) {
+        this.value = model_Quantity()
     }
 
-    this.`value`.block()
+    this.value!!.block()
 }
 
 
-fun v2_MetricValueStatus.`value`(block: model_Quantity.() -> Unit = {}) {
-    if (this.`value` == null) {
-        this.`value` = model_Quantity()
+fun v2_MetricValueStatus.value(block: model_Quantity.() -> Unit = {}) {
+    if (this.value == null) {
+        this.value = model_Quantity()
     }
 
-    this.`value`.block()
+    this.value!!.block()
 }
 

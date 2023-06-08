@@ -6,6 +6,6 @@ import io.fabric8.kubernetes.api.model.admission.v1.AdmissionRequest as v1_Admis
 
 
 fun v1_AdmissionRequest.`object`(block: model_KubernetesResource.() -> Unit = {}) {
-    this.`object`.block()
+    this.`object`!!.block()
 }
 

@@ -6,20 +6,20 @@ import io.fabric8.kubernetes.api.model.PersistentVolumeSpec as model_PersistentV
 import io.fabric8.kubernetes.api.model.Volume as model_Volume
 
 
-fun model_PersistentVolumeSpec.`gcePersistentDisk`(block: model_GCEPersistentDiskVolumeSource.() -> Unit = {}) {
-    if (this.`gcePersistentDisk` == null) {
-        this.`gcePersistentDisk` = model_GCEPersistentDiskVolumeSource()
+fun model_PersistentVolumeSpec.gcePersistentDisk(block: model_GCEPersistentDiskVolumeSource.() -> Unit = {}) {
+    if (this.gcePersistentDisk == null) {
+        this.gcePersistentDisk = model_GCEPersistentDiskVolumeSource()
     }
 
-    this.`gcePersistentDisk`.block()
+    this.gcePersistentDisk!!.block()
 }
 
 
-fun model_Volume.`gcePersistentDisk`(block: model_GCEPersistentDiskVolumeSource.() -> Unit = {}) {
-    if (this.`gcePersistentDisk` == null) {
-        this.`gcePersistentDisk` = model_GCEPersistentDiskVolumeSource()
+fun model_Volume.gcePersistentDisk(block: model_GCEPersistentDiskVolumeSource.() -> Unit = {}) {
+    if (this.gcePersistentDisk == null) {
+        this.gcePersistentDisk = model_GCEPersistentDiskVolumeSource()
     }
 
-    this.`gcePersistentDisk`.block()
+    this.gcePersistentDisk!!.block()
 }
 

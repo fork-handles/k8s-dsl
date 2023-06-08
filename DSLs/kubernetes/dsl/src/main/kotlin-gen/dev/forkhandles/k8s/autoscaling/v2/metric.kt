@@ -10,56 +10,56 @@ import io.fabric8.kubernetes.api.model.autoscaling.v2.PodsMetricSource as v2_Pod
 import io.fabric8.kubernetes.api.model.autoscaling.v2.PodsMetricStatus as v2_PodsMetricStatus
 
 
-fun v2_ExternalMetricSource.`metric`(block: v2_MetricIdentifier.() -> Unit = {}) {
-    if (this.`metric` == null) {
-        this.`metric` = v2_MetricIdentifier()
+fun v2_ExternalMetricSource.metric(block: v2_MetricIdentifier.() -> Unit = {}) {
+    if (this.metric == null) {
+        this.metric = v2_MetricIdentifier()
     }
 
-    this.`metric`.block()
+    this.metric!!.block()
 }
 
 
-fun v2_ExternalMetricStatus.`metric`(block: v2_MetricIdentifier.() -> Unit = {}) {
-    if (this.`metric` == null) {
-        this.`metric` = v2_MetricIdentifier()
+fun v2_ExternalMetricStatus.metric(block: v2_MetricIdentifier.() -> Unit = {}) {
+    if (this.metric == null) {
+        this.metric = v2_MetricIdentifier()
     }
 
-    this.`metric`.block()
+    this.metric!!.block()
 }
 
 
-fun v2_ObjectMetricSource.`metric`(block: v2_MetricIdentifier.() -> Unit = {}) {
-    if (this.`metric` == null) {
-        this.`metric` = v2_MetricIdentifier()
+fun v2_ObjectMetricSource.metric(block: v2_MetricIdentifier.() -> Unit = {}) {
+    if (this.metric == null) {
+        this.metric = v2_MetricIdentifier()
     }
 
-    this.`metric`.block()
+    this.metric!!.block()
 }
 
 
-fun v2_ObjectMetricStatus.`metric`(block: v2_MetricIdentifier.() -> Unit = {}) {
-    if (this.`metric` == null) {
-        this.`metric` = v2_MetricIdentifier()
+fun v2_ObjectMetricStatus.metric(block: v2_MetricIdentifier.() -> Unit = {}) {
+    if (this.metric == null) {
+        this.metric = v2_MetricIdentifier()
     }
 
-    this.`metric`.block()
+    this.metric!!.block()
 }
 
 
-fun v2_PodsMetricSource.`metric`(block: v2_MetricIdentifier.() -> Unit = {}) {
-    if (this.`metric` == null) {
-        this.`metric` = v2_MetricIdentifier()
+fun v2_PodsMetricSource.metric(block: v2_MetricIdentifier.() -> Unit = {}) {
+    if (this.metric == null) {
+        this.metric = v2_MetricIdentifier()
     }
 
-    this.`metric`.block()
+    this.metric!!.block()
 }
 
 
-fun v2_PodsMetricStatus.`metric`(block: v2_MetricIdentifier.() -> Unit = {}) {
-    if (this.`metric` == null) {
-        this.`metric` = v2_MetricIdentifier()
+fun v2_PodsMetricStatus.metric(block: v2_MetricIdentifier.() -> Unit = {}) {
+    if (this.metric == null) {
+        this.metric = v2_MetricIdentifier()
     }
 
-    this.`metric`.block()
+    this.metric!!.block()
 }
 

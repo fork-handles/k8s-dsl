@@ -5,11 +5,11 @@ import io.fabric8.kubernetes.api.model.NodeConfigSource as model_NodeConfigSourc
 import io.fabric8.kubernetes.api.model.NodeConfigStatus as model_NodeConfigStatus
 
 
-fun model_NodeConfigStatus.`lastKnownGood`(block: model_NodeConfigSource.() -> Unit = {}) {
-    if (this.`lastKnownGood` == null) {
-        this.`lastKnownGood` = model_NodeConfigSource()
+fun model_NodeConfigStatus.lastKnownGood(block: model_NodeConfigSource.() -> Unit = {}) {
+    if (this.lastKnownGood == null) {
+        this.lastKnownGood = model_NodeConfigSource()
     }
 
-    this.`lastKnownGood`.block()
+    this.lastKnownGood!!.block()
 }
 

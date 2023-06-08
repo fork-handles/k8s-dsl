@@ -8,29 +8,29 @@ import io.fabric8.kubernetes.api.model.policy.v1.PodDisruptionBudget as v1_PodDi
 import io.fabric8.kubernetes.api.model.policy.v1.PodDisruptionBudgetList as v1_PodDisruptionBudgetList
 
 
-fun v1_Eviction.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ObjectMeta()
+fun v1_Eviction.metadata(block: model_ObjectMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ObjectMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
 
-fun v1_PodDisruptionBudget.`metadata`(block: model_ObjectMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ObjectMeta()
+fun v1_PodDisruptionBudget.metadata(block: model_ObjectMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ObjectMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
 
-fun v1_PodDisruptionBudgetList.`metadata`(block: model_ListMeta.() -> Unit = {}) {
-    if (this.`metadata` == null) {
-        this.`metadata` = model_ListMeta()
+fun v1_PodDisruptionBudgetList.metadata(block: model_ListMeta.() -> Unit = {}) {
+    if (this.metadata == null) {
+        this.metadata = model_ListMeta()
     }
 
-    this.`metadata`.block()
+    this.metadata!!.block()
 }
 
