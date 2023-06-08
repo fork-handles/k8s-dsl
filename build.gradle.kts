@@ -39,6 +39,7 @@ subprojects {
                 jvmTarget.set(JVM_1_8)
                 apiVersion.set(KOTLIN_1_8)
                 languageVersion.set(KOTLIN_1_8)
+                allWarningsAsErrors.set(true)
                 freeCompilerArgs.addAll("-Xjsr305=strict", "-progressive")
             }
         }
