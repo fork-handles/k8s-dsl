@@ -6,6 +6,13 @@ plugins {
     kotlin("jvm") version "1.8.21"
 }
 
+kotlin {
+    jvmToolchain {
+        languageVersion.set(JavaLanguageVersion.of(17))
+        vendor.set(JvmVendorSpec.ADOPTIUM)
+    }
+}
+
 repositories {
     mavenCentral()
 }
