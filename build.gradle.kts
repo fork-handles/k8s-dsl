@@ -73,6 +73,10 @@ subprojects {
 val nexusUsername: String? by project
 val nexusPassword: String? by project
 
+version = project.properties["releaseVersion"] ?: "LOCAL"
+group = "dev.forkhandles"
+description = "Kotlin DSL for Kubernetes manifests"
+
 nexusPublishing {
     repositories {
         sonatype {
