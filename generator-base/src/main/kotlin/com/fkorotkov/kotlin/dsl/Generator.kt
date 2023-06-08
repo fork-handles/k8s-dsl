@@ -17,14 +17,16 @@ object Generator {
         outputPackage: String,
         excludePackagesPrefixes: Set<String> = emptySet()
     ) {
-        val allClasses = ClassUtil.findAllClassesOnClasspath().filter {
-            try {
-                it.isSubclassOf(clazz)
-            } catch (e: Throwable) {
-                false
+        val allClasses = ClassUtil.findAllClassesOnClasspath()
+            .filter { kClass ->
+                try {
+                    kClass.isSubclassOf(clazz)
+                } catch (e: Throwable) {
+                    false
+                }
             }
-        }.filterNot { kClass -> excludePackagesPrefixes.any { kClass.java.`package`.name.startsWith(it) }
-        }.filterNot { kClass -> kClass.isAbstract || kClass.typeParameters.isNotEmpty() }
+            .filterNot { kClass -> excludePackagesPrefixes.any { kClass.java.`package`.name.startsWith(it) } }
+            .filterNot { kClass -> kClass.isAbstract || kClass.typeParameters.isNotEmpty() }
 
         allClasses.flatMap { subClazz ->
             subClazz.memberProperties.mapNotNull {
