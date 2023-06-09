@@ -7,19 +7,11 @@ the [fabric8 client](https://github.com/fabric8io/kubernetes-client).
 
 ## Usage
 
-The `k8s-dsl` package can be found on [jitpack](https://jitpack.io/#fkorotkov/k8s-kotlin-dsl).
-Simply add following lines to your `build.gradle.kts`:
+The `k8s-dsl` library is published to Maven Central. Simply add the following line to your project's
+`dependencies` block:
 
- ```groovy
-allprojects {
-    repositories {
-        maven { url 'https://jitpack.io' }
-    }
-}
-
-dependencies {
-    implementation("dev.forkhandles:k8s-dsl:${kubernetes_dsl_version}")
-}
+ ```kotlin
+api("dev.forkhandles:k8s-dsl:3.5.0.0")
 ```
 
 ### Using with `kubernetes-client`
