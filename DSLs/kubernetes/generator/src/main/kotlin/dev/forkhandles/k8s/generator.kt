@@ -1,6 +1,6 @@
 package dev.forkhandles.k8s
 
-import com.fkorotkov.kotlin.dsl.Generator
+import dev.forkhandles.k8s.dsl.Generator
 import io.fabric8.kubernetes.api.model.KubernetesResource
 import java.io.File
 

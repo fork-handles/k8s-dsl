@@ -1,4 +1,4 @@
-package com.fkorotkov.kotlin.dsl.crd
+package dev.forkhandles.k8s.dsl.crd
 
 import com.google.common.io.Resources
 import com.google.gson.Gson

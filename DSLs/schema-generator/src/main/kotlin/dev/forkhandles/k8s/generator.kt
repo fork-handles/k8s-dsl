@@ -1,9 +1,9 @@
 package dev.forkhandles.k8s
 
-import com.fkorotkov.kotlin.dsl.crd.CRDDefinition
-import com.fkorotkov.kotlin.dsl.crd.OpenAPIV3Schema
 import com.google.gson.GsonBuilder
 import com.google.gson.typeadapters.RuntimeTypeAdapterFactory
+import dev.forkhandles.k8s.dsl.crd.CRDDefinition
+import dev.forkhandles.k8s.dsl.crd.OpenAPIV3Schema
 import java.io.File
 import java.util.TreeMap
 

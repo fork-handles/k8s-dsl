@@ -1,7 +1,7 @@
-package com.fkorotkov.kotlin.dsl
+package dev.forkhandles.k8s.dsl
 
-import com.fkorotkov.kotlin.util.ClassUtil
-import com.fkorotkov.kotlin.util.packageName
+import dev.forkhandles.k8s.ClassFinder
+import dev.forkhandles.k8s.packageName
 import java.io.File
 import kotlin.reflect.KClass
 import kotlin.reflect.KMutableProperty
@@ -17,7 +17,7 @@ object Generator {
         outputPackage: String,
         excludePackagesPrefixes: Set<String> = emptySet()
     ) {
-        val allClasses = ClassUtil.findAllClassesOnClasspath()
+        val allClasses = ClassFinder.findAllClassesOnClasspath()
             .filter { kClass ->
                 try {
                     kClass.isSubclassOf(clazz)

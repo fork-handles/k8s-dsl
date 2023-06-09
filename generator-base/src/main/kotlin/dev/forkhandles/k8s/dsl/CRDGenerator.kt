@@ -1,8 +1,8 @@
-package com.fkorotkov.kotlin.dsl
+package dev.forkhandles.k8s.dsl
 
-import com.fkorotkov.kotlin.dsl.crd.CRDDefinition
-import com.fkorotkov.kotlin.dsl.crd.OpenAPIV3Schema
 import dev.forkhandles.k8s.capitalise
+import dev.forkhandles.k8s.dsl.crd.CRDDefinition
+import dev.forkhandles.k8s.dsl.crd.OpenAPIV3Schema
 import java.io.File
 
 object CRDGenerator {

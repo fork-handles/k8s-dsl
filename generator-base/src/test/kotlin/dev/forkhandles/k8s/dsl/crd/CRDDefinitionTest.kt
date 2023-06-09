@@ -1,9 +1,9 @@
-package com.fkorotkov.kotlin.dsl.crd
+package dev.forkhandles.k8s.dsl.crd
 
 import org.junit.Test
 import kotlin.test.assertEquals
 
-internal class CRDDefinitionTest {
+class CRDDefinitionTest {
     @Test
     fun testParsing() {
         val crd = CRDDefinition.parseFromResource("kafkaclusters-crd.json")

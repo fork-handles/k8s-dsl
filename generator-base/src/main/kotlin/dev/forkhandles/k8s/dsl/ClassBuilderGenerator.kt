@@ -1,6 +1,6 @@
-package com.fkorotkov.kotlin.dsl
+package dev.forkhandles.k8s.dsl
 
-import com.fkorotkov.kotlin.util.uniqueSimpleAlias
+import dev.forkhandles.k8s.uniqueSimpleAlias
 import java.io.File
 import kotlin.reflect.KClass
 
