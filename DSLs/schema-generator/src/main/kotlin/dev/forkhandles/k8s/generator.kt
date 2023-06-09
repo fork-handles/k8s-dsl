@@ -7,6 +7,8 @@ import dev.forkhandles.k8s.dsl.crd.OpenAPIV3Schema
 import java.io.File
 import java.util.TreeMap
 
+private val packagePrefix = Schema::class.packageName
+
 fun main(args: Array<String>) {
     val schemeName = args[0]
     val outputFile = File(args[1])
@@ -38,7 +40,7 @@ fun createSchema(crd: CRDDefinition, schemeName: String): Schema {
     val typeDefinitionRegistry = mutableMapOf<String, TypeDefinition>()
     generateTypes(
         typeDefinitionRegistry,
-        "dev.forkhandles.k8s.$schemeName",
+        "$packagePrefix.$schemeName",
         crd.spec.names.kind,
         crd.spec.validation.openAPIV3Schema
     )
@@ -56,7 +58,7 @@ fun createSchema(crd: CRDDefinition, schemeName: String): Schema {
     }
 
     typeDefinitionRegistry["${crd.spec.names.kind}List"] = TypeDefinition().apply {
-        javaType = "dev.forkhandles.k8s.$schemeName.${crd.spec.names.kind}List"
+        javaType = "$packagePrefix.$schemeName.${crd.spec.names.kind}List"
         javaInterfaces = listOf(
             "io.fabric8.kubernetes.api.model.KubernetesResource",
             "io.fabric8.kubernetes.api.model.KubernetesResourceList<${crd.spec.names.kind}>"
@@ -69,7 +71,7 @@ fun createSchema(crd: CRDDefinition, schemeName: String): Schema {
             "items" to ArrayPropertyDefinition().apply {
                 items = RefPropertyDefinition().apply {
                     ref = "#/definitions/${crd.spec.names.kind}"
-                    javaType = "dev.forkhandles.k8s.$schemeName.${crd.spec.names.kind}"
+                    javaType = "$packagePrefix.$schemeName.${crd.spec.names.kind}"
                 }
             },
             "metadata" to ExistingTypePropertyDefinition().apply {
@@ -87,7 +89,7 @@ fun createSchema(crd: CRDDefinition, schemeName: String): Schema {
     result.properties = TreeMap(typeDefinitionRegistry.map { (name, _) ->
         name.decapitalise() to RefPropertyDefinition().apply {
             ref = "#/definitions/$name"
-            javaType = "dev.forkhandles.k8s.$schemeName.$name"
+            javaType = "$packagePrefix.$schemeName.$name"
         }
     }.toMap())
     return result
