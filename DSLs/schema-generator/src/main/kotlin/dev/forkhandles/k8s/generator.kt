@@ -38,7 +38,7 @@ fun createSchema(crd: CRDDefinition, schemeName: String): Schema {
     val typeDefinitionRegistry = mutableMapOf<String, TypeDefinition>()
     generateTypes(
         typeDefinitionRegistry,
-        "com.fkorotkov.kubernetes.$schemeName",
+        "dev.forkhandles.k8s.$schemeName",
         crd.spec.names.kind,
         crd.spec.validation.openAPIV3Schema
     )
@@ -56,7 +56,7 @@ fun createSchema(crd: CRDDefinition, schemeName: String): Schema {
     }
 
     typeDefinitionRegistry["${crd.spec.names.kind}List"] = TypeDefinition().apply {
-        javaType = "com.fkorotkov.kubernetes.$schemeName.${crd.spec.names.kind}List"
+        javaType = "dev.forkhandles.k8s.$schemeName.${crd.spec.names.kind}List"
         javaInterfaces = listOf(
             "io.fabric8.kubernetes.api.model.KubernetesResource",
             "io.fabric8.kubernetes.api.model.KubernetesResourceList<${crd.spec.names.kind}>"
@@ -69,7 +69,7 @@ fun createSchema(crd: CRDDefinition, schemeName: String): Schema {
             "items" to ArrayPropertyDefinition().apply {
                 items = RefPropertyDefinition().apply {
                     ref = "#/definitions/${crd.spec.names.kind}"
-                    javaType = "com.fkorotkov.kubernetes.$schemeName.${crd.spec.names.kind}"
+                    javaType = "dev.forkhandles.k8s.$schemeName.${crd.spec.names.kind}"
                 }
             },
             "metadata" to ExistingTypePropertyDefinition().apply {
@@ -87,7 +87,7 @@ fun createSchema(crd: CRDDefinition, schemeName: String): Schema {
     result.properties = TreeMap(typeDefinitionRegistry.map { (name, _) ->
         name.decapitalise() to RefPropertyDefinition().apply {
             ref = "#/definitions/$name"
-            javaType = "com.fkorotkov.kubernetes.$schemeName.$name"
+            javaType = "dev.forkhandles.k8s.$schemeName.$name"
         }
     }.toMap())
     return result
