@@ -3,7 +3,7 @@ import org.gradle.internal.impldep.org.bouncycastle.cms.RecipientId.password
 import org.gradle.jvm.toolchain.JvmVendorSpec.ADOPTIUM
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_1_8
 import org.jetbrains.kotlin.gradle.dsl.KotlinJvmCompilerOptions
-import org.jetbrains.kotlin.gradle.dsl.KotlinVersion.KOTLIN_1_8
+import org.jetbrains.kotlin.gradle.dsl.KotlinVersion.KOTLIN_1_9
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompilationTask
 import java.time.Duration
 
@@ -42,8 +42,8 @@ subprojects {
         withType<KotlinCompilationTask<KotlinJvmCompilerOptions>>().configureEach {
             compilerOptions {
                 jvmTarget.set(JVM_1_8)
-                apiVersion.set(KOTLIN_1_8)
-                languageVersion.set(KOTLIN_1_8)
+                apiVersion.set(KOTLIN_1_9)
+                languageVersion.set(KOTLIN_1_9)
                 allWarningsAsErrors.set(true)
                 freeCompilerArgs.addAll("-Xjsr305=strict", "-progressive")
             }
