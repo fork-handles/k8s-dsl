@@ -63,6 +63,10 @@ subprojects {
                 named<JvmTestSuite>("test") {
                     useJUnitJupiter("5.9.3")
 
+                    dependencies {
+                        implementation(Testing.kotest.assertions.core)
+                    }
+
                     targets.all {
                         testTask.configure {
                             testLogging {

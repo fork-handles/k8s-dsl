@@ -1,6 +1,6 @@
 import com.google.common.io.Resources
 import com.google.gson.GsonBuilder
-import org.junit.jupiter.api.Assertions.assertEquals
+import io.kotest.matchers.shouldBe
 import org.junit.jupiter.api.Test
 import java.nio.charset.Charset
 
@@ -12,7 +12,9 @@ class BaseDeploymentTest {
             .setPrettyPrinting()
             .setDateFormat("yyyy-MM-dd'T'HH:mm:ssXXX")
             .create()
+
         val expected = Resources.toString(Resources.getResource("deployment.json"), Charset.defaultCharset())
-        assertEquals(expected.trim(), gson.toJson(BaseDeployment("foo")).trim())
+
+        gson.toJson(BaseDeployment("foo")).trim() shouldBe expected.trim()
     }
 }

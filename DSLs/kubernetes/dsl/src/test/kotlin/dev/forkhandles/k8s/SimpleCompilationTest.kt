@@ -1,7 +1,7 @@
 package dev.forkhandles.k8s
 
 import io.fabric8.kubernetes.api.model.IntOrString
-import org.junit.jupiter.api.Assertions.assertEquals
+import io.kotest.matchers.shouldBe
 import org.junit.jupiter.api.Test
 
 class SimpleCompilationTest {
@@ -9,6 +9,7 @@ class SimpleCompilationTest {
     @Test
     fun testService() {
         val serviceName = "test"
+
         val myService = newService {
             metadata {
                 name = serviceName
@@ -37,14 +38,15 @@ class SimpleCompilationTest {
                 )
             }
         }
-        assertEquals(serviceName, myService.metadata.name)
-        assertEquals("NodePort", myService.spec.type)
+
+        myService.metadata.name shouldBe serviceName
+        myService.spec.type shouldBe "NodePort"
 
         myService.apply {
             metadata {
                 name = "foo"
             }
         }
-        assertEquals("foo", myService.metadata.name)
+        myService.metadata.name shouldBe "foo"
     }
 }
