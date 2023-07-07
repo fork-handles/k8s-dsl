@@ -1,5 +1,4 @@
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat.FULL
-import org.gradle.internal.impldep.org.bouncycastle.cms.RecipientId.password
 import org.gradle.jvm.toolchain.JvmVendorSpec.ADOPTIUM
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_1_8
 import org.jetbrains.kotlin.gradle.dsl.KotlinJvmCompilerOptions
@@ -89,11 +88,9 @@ group = "dev.forkhandles"
 description = "Kotlin DSL for Kubernetes manifests"
 
 nexusPublishing {
-    repositories {
-        sonatype {
-            username.set(nexusUsername)
-            password.set(nexusPassword)
-        }
+    repositories.sonatype {
+        username.set(nexusUsername)
+        password.set(nexusPassword)
     }
     transitionCheckOptions {
         maxRetries.set(150)
