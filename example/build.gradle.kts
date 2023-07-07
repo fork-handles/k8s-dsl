@@ -6,7 +6,7 @@ plugins {
 application.mainClass.set("ExampleKt")
 
 dependencies {
-    implementation(project(":DSLs:kubernetes:dsl"))
+    implementation(projects.dsLs.kubernetes.dsl)
 
     implementation(Kotlin.stdlib)
     implementation("org.jetbrains.kotlin:kotlin-reflect:_")

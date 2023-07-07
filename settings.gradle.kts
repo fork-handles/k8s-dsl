@@ -20,3 +20,5 @@ rootDir.walkTopDown()
     .forEach { include(it) }
 
 gradle.startParameter.isContinueOnFailure = true
+
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")

@@ -8,12 +8,11 @@ application {
 }
 
 tasks.named<JavaExec>("run").configure {
-    args = listOf("${project(":DSLs:kubernetes:dsl").projectDir}/src/main/kotlin-gen/")
-
+    args = listOf("${projects.dsLs.kubernetes.dsl.dependencyProject.projectDir}/src/main/kotlin-gen/")
 }
 
 dependencies {
-    implementation(project(":generator-base"))
+    implementation(projects.generatorBase)
 
     implementation(Kotlin.stdlib)
     implementation("org.jetbrains.kotlin:kotlin-reflect:_")

@@ -6,7 +6,7 @@ plugins {
 application.mainClass.set("dev.forkhandles.k8s.GeneratorKt")
 
 dependencies {
-    implementation(project(":generator-base"))
+    implementation(projects.generatorBase)
 
     implementation("com.google.code.gson:gson:_")
     implementation("com.google.code.gson:gson-extras:_")
