@@ -57,9 +57,20 @@ subprojects {
             options.compilerArgs.addAll(arrayOf("-Xlint:all:_", "-Werror"))
         }
 
-        named<Test>("test").configure {
-            testLogging {
-                exceptionFormat = FULL
+        @Suppress("UnstableApiUsage")
+        testing {
+            suites {
+                named<JvmTestSuite>("test") {
+                    useJUnitJupiter("5.9.3")
+
+                    targets.all {
+                        testTask.configure {
+                            testLogging {
+                                exceptionFormat = FULL
+                            }
+                        }
+                    }
+                }
             }
         }
 

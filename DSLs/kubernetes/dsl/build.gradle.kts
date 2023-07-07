@@ -98,7 +98,4 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect:_")
 
     api("io.fabric8:kubernetes-model:_")
-
-    testImplementation(Testing.junit4)
-    testImplementation(Kotlin.test.junit)
 }

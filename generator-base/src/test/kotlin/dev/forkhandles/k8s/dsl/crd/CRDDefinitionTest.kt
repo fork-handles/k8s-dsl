@@ -1,9 +1,10 @@
 package dev.forkhandles.k8s.dsl.crd
 
-import org.junit.Test
-import kotlin.test.assertEquals
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Test
 
 class CRDDefinitionTest {
+
     @Test
     fun testParsing() {
         val crd = CRDDefinition.parseFromResource("kafkaclusters-crd.json")

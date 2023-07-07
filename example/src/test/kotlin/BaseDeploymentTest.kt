@@ -1,10 +1,11 @@
 import com.google.common.io.Resources
 import com.google.gson.GsonBuilder
-import org.junit.Test
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Test
 import java.nio.charset.Charset
-import kotlin.test.assertEquals
 
 class BaseDeploymentTest {
+
     @Test
     fun testDeployment() {
         val gson = GsonBuilder()

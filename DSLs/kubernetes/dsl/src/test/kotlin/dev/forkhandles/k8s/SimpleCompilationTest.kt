@@ -1,10 +1,11 @@
 package dev.forkhandles.k8s
 
 import io.fabric8.kubernetes.api.model.IntOrString
-import org.junit.Test
-import kotlin.test.assertEquals
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Test
 
 class SimpleCompilationTest {
+
     @Test
     fun testService() {
         val serviceName = "test"

@@ -8,7 +8,4 @@ dependencies {
 
     implementation("com.google.code.gson:gson:_")
     implementation("com.google.guava:guava:_")
-
-    testImplementation(Testing.junit4)
-    testImplementation(Kotlin.test.junit)
 }
