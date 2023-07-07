@@ -1,3 +1,5 @@
+export GRADLE_OPTS := "-Dorg.gradle.warning.mode=fail -Dorg.gradle.logging.stacktrace=all"
+
 _targets:
   @just --list --unsorted --list-heading $'Available targets:\n' --list-prefix "  "
 
@@ -11,4 +13,4 @@ _targets:
 
 # runs tests across all sub-projects
 @check:
-  ./gradlew check --warning-mode=all
+  ./gradlew check
