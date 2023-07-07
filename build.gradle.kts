@@ -14,6 +14,10 @@ plugins {
     id("io.github.gradle-nexus.publish-plugin")
 }
 
+tasks.wrapper {
+    distributionType = Wrapper.DistributionType.ALL
+}
+
 kotlin {
     jvmToolchain {
         languageVersion.set(JavaLanguageVersion.of(17))
