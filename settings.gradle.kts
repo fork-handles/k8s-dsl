@@ -18,3 +18,5 @@ rootDir.walkTopDown()
     .filter { it.isDirectory && File(it, "build.gradle.kts").exists() }
     .map { it.relativeTo(rootDir).path.replace('/', ':') }
     .forEach { include(it) }
+
+gradle.startParameter.isContinueOnFailure = true
