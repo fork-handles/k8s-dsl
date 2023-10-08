@@ -81,6 +81,7 @@
               "periodSeconds": 60,
               "additionalProperties": {}
             },
+            "resizePolicy": [],
             "volumeDevices": [],
             "volumeMounts": [
               {

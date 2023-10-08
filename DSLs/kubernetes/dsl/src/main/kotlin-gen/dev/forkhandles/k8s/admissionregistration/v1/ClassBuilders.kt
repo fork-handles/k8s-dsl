@@ -1,6 +1,7 @@
 // GENERATE
 package dev.forkhandles.k8s.admissionregistration.v1
 
+import io.fabric8.kubernetes.api.model.admissionregistration.v1.MatchCondition as v1_MatchCondition
 import io.fabric8.kubernetes.api.model.admissionregistration.v1.MutatingWebhook as v1_MutatingWebhook
 import io.fabric8.kubernetes.api.model.admissionregistration.v1.MutatingWebhookConfiguration as v1_MutatingWebhookConfiguration
 import io.fabric8.kubernetes.api.model.admissionregistration.v1.MutatingWebhookConfigurationList as v1_MutatingWebhookConfigurationList
@@ -11,6 +12,12 @@ import io.fabric8.kubernetes.api.model.admissionregistration.v1.ValidatingWebhoo
 import io.fabric8.kubernetes.api.model.admissionregistration.v1.ValidatingWebhookConfiguration as v1_ValidatingWebhookConfiguration
 import io.fabric8.kubernetes.api.model.admissionregistration.v1.ValidatingWebhookConfigurationList as v1_ValidatingWebhookConfigurationList
 import io.fabric8.kubernetes.api.model.admissionregistration.v1.WebhookClientConfig as v1_WebhookClientConfig
+
+fun newMatchCondition(block: v1_MatchCondition.() -> Unit = {}): v1_MatchCondition {
+    val instance = v1_MatchCondition()
+    instance.block()
+    return instance
+}
 
 fun newMutatingWebhook(block: v1_MutatingWebhook.() -> Unit = {}): v1_MutatingWebhook {
     val instance = v1_MutatingWebhook()

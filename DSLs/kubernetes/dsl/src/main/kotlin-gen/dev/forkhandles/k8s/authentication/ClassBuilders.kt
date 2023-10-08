@@ -2,6 +2,8 @@
 package dev.forkhandles.k8s.authentication
 
 import io.fabric8.kubernetes.api.model.authentication.BoundObjectReference as authentication_BoundObjectReference
+import io.fabric8.kubernetes.api.model.authentication.SelfSubjectReview as authentication_SelfSubjectReview
+import io.fabric8.kubernetes.api.model.authentication.SelfSubjectReviewStatus as authentication_SelfSubjectReviewStatus
 import io.fabric8.kubernetes.api.model.authentication.TokenRequest as authentication_TokenRequest
 import io.fabric8.kubernetes.api.model.authentication.TokenRequestSpec as authentication_TokenRequestSpec
 import io.fabric8.kubernetes.api.model.authentication.TokenRequestStatus as authentication_TokenRequestStatus
@@ -12,6 +14,18 @@ import io.fabric8.kubernetes.api.model.authentication.UserInfo as authentication
 
 fun newBoundObjectReference(block: authentication_BoundObjectReference.() -> Unit = {}): authentication_BoundObjectReference {
     val instance = authentication_BoundObjectReference()
+    instance.block()
+    return instance
+}
+
+fun newSelfSubjectReview(block: authentication_SelfSubjectReview.() -> Unit = {}): authentication_SelfSubjectReview {
+    val instance = authentication_SelfSubjectReview()
+    instance.block()
+    return instance
+}
+
+fun newSelfSubjectReviewStatus(block: authentication_SelfSubjectReviewStatus.() -> Unit = {}): authentication_SelfSubjectReviewStatus {
+    val instance = authentication_SelfSubjectReviewStatus()
     instance.block()
     return instance
 }

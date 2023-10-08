@@ -44,6 +44,7 @@ import io.fabric8.kubernetes.api.model.ConfigMapVolumeSource as model_ConfigMapV
 import io.fabric8.kubernetes.api.model.Container as model_Container
 import io.fabric8.kubernetes.api.model.ContainerImage as model_ContainerImage
 import io.fabric8.kubernetes.api.model.ContainerPort as model_ContainerPort
+import io.fabric8.kubernetes.api.model.ContainerResizePolicy as model_ContainerResizePolicy
 import io.fabric8.kubernetes.api.model.ContainerState as model_ContainerState
 import io.fabric8.kubernetes.api.model.ContainerStateRunning as model_ContainerStateRunning
 import io.fabric8.kubernetes.api.model.ContainerStateTerminated as model_ContainerStateTerminated
@@ -95,6 +96,7 @@ import io.fabric8.kubernetes.api.model.GroupVersionResource as model_GroupVersio
 import io.fabric8.kubernetes.api.model.HTTPGetAction as model_HTTPGetAction
 import io.fabric8.kubernetes.api.model.HTTPHeader as model_HTTPHeader
 import io.fabric8.kubernetes.api.model.HostAlias as model_HostAlias
+import io.fabric8.kubernetes.api.model.HostIP as model_HostIP
 import io.fabric8.kubernetes.api.model.HostPathVolumeSource as model_HostPathVolumeSource
 import io.fabric8.kubernetes.api.model.ISCSIPersistentVolumeSource as model_ISCSIPersistentVolumeSource
 import io.fabric8.kubernetes.api.model.ISCSIVolumeSource as model_ISCSIVolumeSource
@@ -171,6 +173,7 @@ import io.fabric8.kubernetes.api.model.PodList as model_PodList
 import io.fabric8.kubernetes.api.model.PodOS as model_PodOS
 import io.fabric8.kubernetes.api.model.PodReadinessGate as model_PodReadinessGate
 import io.fabric8.kubernetes.api.model.PodResourceClaim as model_PodResourceClaim
+import io.fabric8.kubernetes.api.model.PodResourceClaimStatus as model_PodResourceClaimStatus
 import io.fabric8.kubernetes.api.model.PodSchedulingGate as model_PodSchedulingGate
 import io.fabric8.kubernetes.api.model.PodSecurityContext as model_PodSecurityContext
 import io.fabric8.kubernetes.api.model.PodSpec as model_PodSpec
@@ -510,6 +513,12 @@ fun newContainerPort(block: model_ContainerPort.() -> Unit = {}): model_Containe
     return instance
 }
 
+fun newContainerResizePolicy(block: model_ContainerResizePolicy.() -> Unit = {}): model_ContainerResizePolicy {
+    val instance = model_ContainerResizePolicy()
+    instance.block()
+    return instance
+}
+
 fun newContainerState(block: model_ContainerState.() -> Unit = {}): model_ContainerState {
     val instance = model_ContainerState()
     instance.block()
@@ -812,6 +821,12 @@ fun newHTTPHeader(block: model_HTTPHeader.() -> Unit = {}): model_HTTPHeader {
 
 fun newHostAlias(block: model_HostAlias.() -> Unit = {}): model_HostAlias {
     val instance = model_HostAlias()
+    instance.block()
+    return instance
+}
+
+fun newHostIP(block: model_HostIP.() -> Unit = {}): model_HostIP {
+    val instance = model_HostIP()
     instance.block()
     return instance
 }
@@ -1268,6 +1283,12 @@ fun newPodReadinessGate(block: model_PodReadinessGate.() -> Unit = {}): model_Po
 
 fun newPodResourceClaim(block: model_PodResourceClaim.() -> Unit = {}): model_PodResourceClaim {
     val instance = model_PodResourceClaim()
+    instance.block()
+    return instance
+}
+
+fun newPodResourceClaimStatus(block: model_PodResourceClaimStatus.() -> Unit = {}): model_PodResourceClaimStatus {
+    val instance = model_PodResourceClaimStatus()
     instance.block()
     return instance
 }
