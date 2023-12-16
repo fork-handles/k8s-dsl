@@ -16,6 +16,7 @@ rootProject.name = "k8s-dsl"
 
 rootDir.walkTopDown()
     .filter { it.isDirectory && File(it, "build.gradle.kts").exists() }
+    .filterNot { it.path.contains(".direnv") }
     .map { it.relativeTo(rootDir).path.replace('/', ':') }
     .forEach { include(it) }
 
