@@ -1,0 +1,33 @@
+apiVersion: k3d.io/v1alpha5
+kind: Simple
+metadata:
+  name: k8s-dsl
+servers: 1
+agents: 2
+kubeAPI:
+  hostIP: 0.0.0.0
+  hostPort: "6445"
+image: rancher/k3s:v1.28.4-k3s2
+ports:
+  - port: 8080:80
+    nodeFilters:
+      - loadbalancer
+  - port: 0.0.0.0:8443:443
+    nodeFilters:
+      - loadbalancer
+options:
+  k3d:
+    wait: true
+    timeout: 60s
+    disableLoadbalancer: false
+    disableImageVolume: false
+    disableRollback: false
+  k3s:
+    extraArgs:
+      - arg: --tls-san=127.0.0.1
+        nodeFilters:
+          - server:*
+    nodeLabels: []
+  kubeconfig:
+    updateDefaultKubeconfig: false
+    switchCurrentContext: true
