@@ -1,3 +1,4 @@
+[![CI GitHub Actions](https://github.com/fork-handles/k8s-dsl/workflows/CI/badge.svg)](https://github.com/fork-handles/k8s-dsl/actions?query=workflow%3A%22CI%22)
 [![Build Status](https://api.cirrus-ci.com/github/fork-handles/k8s-dsl.svg)](https://cirrus-ci.com/github/fork-handles/k8s-dsl)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue)](https://github.com/fork-handles/k8s-dsl/blob/trunk/LICENSE)
 
