@@ -10,6 +10,9 @@
       devShells.default = pkgs.mkShell rec {
         packages = with pkgs; [
           direnv
+          k3d
+          kubectl
+          kubectx
           temurin-bin-21
         ];
       };
