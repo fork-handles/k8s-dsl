@@ -8,3 +8,7 @@ _targets:
 # deletes the k3d cluster
 @delete:
   k3d cluster delete --config k3d-config.yaml
+
+# writes the k8s configuration
+@config:
+  k3d kubeconfig write k8s-dsl --output kube-config.yaml --overwrite
