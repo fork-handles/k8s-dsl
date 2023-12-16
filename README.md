@@ -1,4 +1,5 @@
 [![Build Status](https://api.cirrus-ci.com/github/fork-handles/k8s-dsl.svg)](https://cirrus-ci.com/github/fork-handles/k8s-dsl)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue)](https://github.com/fork-handles/k8s-dsl/blob/trunk/LICENSE)
 
 [Kotlin](https://kotlinlang.org) DSL for [Kubernetes](https://kubernetes.io/) generated on top of
 the [fabric8 client](https://github.com/fabric8io/kubernetes-client).
