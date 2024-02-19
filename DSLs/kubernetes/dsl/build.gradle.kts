@@ -1,3 +1,6 @@
+import org.jetbrains.kotlin.gradle.dsl.KotlinJvmCompilerOptions
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompilationTask
+
 plugins {
     kotlin("jvm")
     `java-library`
@@ -21,6 +24,12 @@ val javadocJar by tasks.creating(Jar::class) {
     archiveClassifier.set("javadoc")
     from(tasks.named<Javadoc>("javadoc").get().destinationDir)
     dependsOn(tasks.named("javadoc"))
+}
+
+tasks.withType<KotlinCompilationTask<KotlinJvmCompilerOptions>>().configureEach {
+    compilerOptions {
+        allWarningsAsErrors.set(false)
+    }
 }
 
 tasks.named<Jar>("jar") {
