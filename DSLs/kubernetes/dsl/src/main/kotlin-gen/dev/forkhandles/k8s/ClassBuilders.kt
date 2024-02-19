@@ -29,6 +29,7 @@ import io.fabric8.kubernetes.api.model.CinderVolumeSource as model_CinderVolumeS
 import io.fabric8.kubernetes.api.model.ClaimSource as model_ClaimSource
 import io.fabric8.kubernetes.api.model.ClientIPConfig as model_ClientIPConfig
 import io.fabric8.kubernetes.api.model.Cluster as model_Cluster
+import io.fabric8.kubernetes.api.model.ClusterTrustBundleProjection as model_ClusterTrustBundleProjection
 import io.fabric8.kubernetes.api.model.ComponentCondition as model_ComponentCondition
 import io.fabric8.kubernetes.api.model.ComponentStatus as model_ComponentStatus
 import io.fabric8.kubernetes.api.model.ComponentStatusList as model_ComponentStatusList
@@ -118,6 +119,7 @@ import io.fabric8.kubernetes.api.model.LocalObjectReference as model_LocalObject
 import io.fabric8.kubernetes.api.model.LocalVolumeSource as model_LocalVolumeSource
 import io.fabric8.kubernetes.api.model.ManagedFieldsEntry as model_ManagedFieldsEntry
 import io.fabric8.kubernetes.api.model.MicroTime as model_MicroTime
+import io.fabric8.kubernetes.api.model.ModifyVolumeStatus as model_ModifyVolumeStatus
 import io.fabric8.kubernetes.api.model.NFSVolumeSource as model_NFSVolumeSource
 import io.fabric8.kubernetes.api.model.NamedAuthInfo as model_NamedAuthInfo
 import io.fabric8.kubernetes.api.model.NamedCluster as model_NamedCluster
@@ -229,6 +231,7 @@ import io.fabric8.kubernetes.api.model.ServiceReference as model_ServiceReferenc
 import io.fabric8.kubernetes.api.model.ServiceSpec as model_ServiceSpec
 import io.fabric8.kubernetes.api.model.ServiceStatus as model_ServiceStatus
 import io.fabric8.kubernetes.api.model.SessionAffinityConfig as model_SessionAffinityConfig
+import io.fabric8.kubernetes.api.model.SleepAction as model_SleepAction
 import io.fabric8.kubernetes.api.model.Status as model_Status
 import io.fabric8.kubernetes.api.model.StatusCause as model_StatusCause
 import io.fabric8.kubernetes.api.model.StatusDetails as model_StatusDetails
@@ -250,6 +253,7 @@ import io.fabric8.kubernetes.api.model.VolumeDevice as model_VolumeDevice
 import io.fabric8.kubernetes.api.model.VolumeMount as model_VolumeMount
 import io.fabric8.kubernetes.api.model.VolumeNodeAffinity as model_VolumeNodeAffinity
 import io.fabric8.kubernetes.api.model.VolumeProjection as model_VolumeProjection
+import io.fabric8.kubernetes.api.model.VolumeResourceRequirements as model_VolumeResourceRequirements
 import io.fabric8.kubernetes.api.model.VsphereVirtualDiskVolumeSource as model_VsphereVirtualDiskVolumeSource
 import io.fabric8.kubernetes.api.model.WatchEvent as model_WatchEvent
 import io.fabric8.kubernetes.api.model.WeightedPodAffinityTerm as model_WeightedPodAffinityTerm
@@ -419,6 +423,12 @@ fun newClientIPConfig(block: model_ClientIPConfig.() -> Unit = {}): model_Client
 
 fun newCluster(block: model_Cluster.() -> Unit = {}): model_Cluster {
     val instance = model_Cluster()
+    instance.block()
+    return instance
+}
+
+fun newClusterTrustBundleProjection(block: model_ClusterTrustBundleProjection.() -> Unit = {}): model_ClusterTrustBundleProjection {
+    val instance = model_ClusterTrustBundleProjection()
     instance.block()
     return instance
 }
@@ -953,6 +963,12 @@ fun newManagedFieldsEntry(block: model_ManagedFieldsEntry.() -> Unit = {}): mode
 
 fun newMicroTime(block: model_MicroTime.() -> Unit = {}): model_MicroTime {
     val instance = model_MicroTime()
+    instance.block()
+    return instance
+}
+
+fun newModifyVolumeStatus(block: model_ModifyVolumeStatus.() -> Unit = {}): model_ModifyVolumeStatus {
+    val instance = model_ModifyVolumeStatus()
     instance.block()
     return instance
 }
@@ -1623,6 +1639,12 @@ fun newSessionAffinityConfig(block: model_SessionAffinityConfig.() -> Unit = {})
     return instance
 }
 
+fun newSleepAction(block: model_SleepAction.() -> Unit = {}): model_SleepAction {
+    val instance = model_SleepAction()
+    instance.block()
+    return instance
+}
+
 fun newStatus(block: model_Status.() -> Unit = {}): model_Status {
     val instance = model_Status()
     instance.block()
@@ -1745,6 +1767,12 @@ fun newVolumeNodeAffinity(block: model_VolumeNodeAffinity.() -> Unit = {}): mode
 
 fun newVolumeProjection(block: model_VolumeProjection.() -> Unit = {}): model_VolumeProjection {
     val instance = model_VolumeProjection()
+    instance.block()
+    return instance
+}
+
+fun newVolumeResourceRequirements(block: model_VolumeResourceRequirements.() -> Unit = {}): model_VolumeResourceRequirements {
+    val instance = model_VolumeResourceRequirements()
     instance.block()
     return instance
 }

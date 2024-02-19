@@ -1,31 +1,14 @@
 // GENERATE
 package dev.forkhandles.k8s.networking.v1alpha1
 
-import io.fabric8.kubernetes.api.model.networking.v1alpha1.ClusterCIDR as v1alpha1_ClusterCIDR
-import io.fabric8.kubernetes.api.model.networking.v1alpha1.ClusterCIDRList as v1alpha1_ClusterCIDRList
-import io.fabric8.kubernetes.api.model.networking.v1alpha1.ClusterCIDRSpec as v1alpha1_ClusterCIDRSpec
 import io.fabric8.kubernetes.api.model.networking.v1alpha1.IPAddress as v1alpha1_IPAddress
 import io.fabric8.kubernetes.api.model.networking.v1alpha1.IPAddressList as v1alpha1_IPAddressList
 import io.fabric8.kubernetes.api.model.networking.v1alpha1.IPAddressSpec as v1alpha1_IPAddressSpec
 import io.fabric8.kubernetes.api.model.networking.v1alpha1.ParentReference as v1alpha1_ParentReference
-
-fun newClusterCIDR(block: v1alpha1_ClusterCIDR.() -> Unit = {}): v1alpha1_ClusterCIDR {
-    val instance = v1alpha1_ClusterCIDR()
-    instance.block()
-    return instance
-}
-
-fun newClusterCIDRList(block: v1alpha1_ClusterCIDRList.() -> Unit = {}): v1alpha1_ClusterCIDRList {
-    val instance = v1alpha1_ClusterCIDRList()
-    instance.block()
-    return instance
-}
-
-fun newClusterCIDRSpec(block: v1alpha1_ClusterCIDRSpec.() -> Unit = {}): v1alpha1_ClusterCIDRSpec {
-    val instance = v1alpha1_ClusterCIDRSpec()
-    instance.block()
-    return instance
-}
+import io.fabric8.kubernetes.api.model.networking.v1alpha1.ServiceCIDR as v1alpha1_ServiceCIDR
+import io.fabric8.kubernetes.api.model.networking.v1alpha1.ServiceCIDRList as v1alpha1_ServiceCIDRList
+import io.fabric8.kubernetes.api.model.networking.v1alpha1.ServiceCIDRSpec as v1alpha1_ServiceCIDRSpec
+import io.fabric8.kubernetes.api.model.networking.v1alpha1.ServiceCIDRStatus as v1alpha1_ServiceCIDRStatus
 
 fun newIPAddress(block: v1alpha1_IPAddress.() -> Unit = {}): v1alpha1_IPAddress {
     val instance = v1alpha1_IPAddress()
@@ -47,6 +30,30 @@ fun newIPAddressSpec(block: v1alpha1_IPAddressSpec.() -> Unit = {}): v1alpha1_IP
 
 fun newParentReference(block: v1alpha1_ParentReference.() -> Unit = {}): v1alpha1_ParentReference {
     val instance = v1alpha1_ParentReference()
+    instance.block()
+    return instance
+}
+
+fun newServiceCIDR(block: v1alpha1_ServiceCIDR.() -> Unit = {}): v1alpha1_ServiceCIDR {
+    val instance = v1alpha1_ServiceCIDR()
+    instance.block()
+    return instance
+}
+
+fun newServiceCIDRList(block: v1alpha1_ServiceCIDRList.() -> Unit = {}): v1alpha1_ServiceCIDRList {
+    val instance = v1alpha1_ServiceCIDRList()
+    instance.block()
+    return instance
+}
+
+fun newServiceCIDRSpec(block: v1alpha1_ServiceCIDRSpec.() -> Unit = {}): v1alpha1_ServiceCIDRSpec {
+    val instance = v1alpha1_ServiceCIDRSpec()
+    instance.block()
+    return instance
+}
+
+fun newServiceCIDRStatus(block: v1alpha1_ServiceCIDRStatus.() -> Unit = {}): v1alpha1_ServiceCIDRStatus {
+    val instance = v1alpha1_ServiceCIDRStatus()
     instance.block()
     return instance
 }
