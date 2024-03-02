@@ -1,5 +1,7 @@
 export GRADLE_OPTS := "-Dorg.gradle.warning.mode=fail -Dorg.gradle.logging.stacktrace=all"
 
+set fallback := true
+
 _targets:
   @just --list --unsorted --list-heading $'Available targets:\n' --list-prefix "  "
 
