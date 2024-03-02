@@ -10,11 +10,17 @@
       devShells.default = pkgs.mkShell rec {
         packages = with pkgs; [
           direnv
+          just
           k3d
           kubectl
           kubectx
           temurin-bin-21
         ];
+
+        shellHook = ''
+          # health checks for Nix flake inputs
+          nix run "github:DeterminateSystems/flake-checker"
+        '';
       };
     });
 }

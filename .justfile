@@ -3,10 +3,6 @@ export GRADLE_OPTS := "-Dorg.gradle.warning.mode=fail -Dorg.gradle.logging.stack
 _targets:
   @just --list --unsorted --list-heading $'Available targets:\n' --list-prefix "  "
 
-# checks Nix flake inputs
-@check-flake:
-  nix run "github:DeterminateSystems/flake-checker"
-
 # updates the top-level flake lock file
 @update-flake:
   nix flake update --commit-lock-file --commit-lockfile-summary "update Nix flake inputs"
