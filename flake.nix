@@ -13,6 +13,7 @@
           just
           k3d
           kubectl
+          kubectl-explore
           kubectx
           temurin-bin-21
         ];
