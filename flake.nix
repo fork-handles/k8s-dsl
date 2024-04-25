@@ -10,12 +10,14 @@
       devShells.default = pkgs.mkShell rec {
         packages = with pkgs; [
           direnv
+          jq
           just
           k3d
           kubectl
           kubectl-explore
           kubectx
           temurin-bin-21
+          yq-go
         ];
 
         shellHook = ''
