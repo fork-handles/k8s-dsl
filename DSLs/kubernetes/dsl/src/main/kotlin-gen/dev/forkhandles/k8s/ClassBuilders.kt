@@ -12,6 +12,7 @@ import io.fabric8.kubernetes.api.model.APIServiceSpec as model_APIServiceSpec
 import io.fabric8.kubernetes.api.model.APIServiceStatus as model_APIServiceStatus
 import io.fabric8.kubernetes.api.model.AWSElasticBlockStoreVolumeSource as model_AWSElasticBlockStoreVolumeSource
 import io.fabric8.kubernetes.api.model.Affinity as model_Affinity
+import io.fabric8.kubernetes.api.model.AppArmorProfile as model_AppArmorProfile
 import io.fabric8.kubernetes.api.model.AttachedVolume as model_AttachedVolume
 import io.fabric8.kubernetes.api.model.AuthInfo as model_AuthInfo
 import io.fabric8.kubernetes.api.model.AuthProviderConfig as model_AuthProviderConfig
@@ -138,6 +139,8 @@ import io.fabric8.kubernetes.api.model.NodeConfigSource as model_NodeConfigSourc
 import io.fabric8.kubernetes.api.model.NodeConfigStatus as model_NodeConfigStatus
 import io.fabric8.kubernetes.api.model.NodeDaemonEndpoints as model_NodeDaemonEndpoints
 import io.fabric8.kubernetes.api.model.NodeList as model_NodeList
+import io.fabric8.kubernetes.api.model.NodeRuntimeHandler as model_NodeRuntimeHandler
+import io.fabric8.kubernetes.api.model.NodeRuntimeHandlerFeatures as model_NodeRuntimeHandlerFeatures
 import io.fabric8.kubernetes.api.model.NodeSelector as model_NodeSelector
 import io.fabric8.kubernetes.api.model.NodeSelectorRequirement as model_NodeSelectorRequirement
 import io.fabric8.kubernetes.api.model.NodeSelectorTerm as model_NodeSelectorTerm
@@ -251,6 +254,7 @@ import io.fabric8.kubernetes.api.model.UpdateOptions as model_UpdateOptions
 import io.fabric8.kubernetes.api.model.Volume as model_Volume
 import io.fabric8.kubernetes.api.model.VolumeDevice as model_VolumeDevice
 import io.fabric8.kubernetes.api.model.VolumeMount as model_VolumeMount
+import io.fabric8.kubernetes.api.model.VolumeMountStatus as model_VolumeMountStatus
 import io.fabric8.kubernetes.api.model.VolumeNodeAffinity as model_VolumeNodeAffinity
 import io.fabric8.kubernetes.api.model.VolumeProjection as model_VolumeProjection
 import io.fabric8.kubernetes.api.model.VolumeResourceRequirements as model_VolumeResourceRequirements
@@ -321,6 +325,12 @@ fun newAWSElasticBlockStoreVolumeSource(block: model_AWSElasticBlockStoreVolumeS
 
 fun newAffinity(block: model_Affinity.() -> Unit = {}): model_Affinity {
     val instance = model_Affinity()
+    instance.block()
+    return instance
+}
+
+fun newAppArmorProfile(block: model_AppArmorProfile.() -> Unit = {}): model_AppArmorProfile {
+    val instance = model_AppArmorProfile()
     instance.block()
     return instance
 }
@@ -1081,6 +1091,18 @@ fun newNodeList(block: model_NodeList.() -> Unit = {}): model_NodeList {
     return instance
 }
 
+fun newNodeRuntimeHandler(block: model_NodeRuntimeHandler.() -> Unit = {}): model_NodeRuntimeHandler {
+    val instance = model_NodeRuntimeHandler()
+    instance.block()
+    return instance
+}
+
+fun newNodeRuntimeHandlerFeatures(block: model_NodeRuntimeHandlerFeatures.() -> Unit = {}): model_NodeRuntimeHandlerFeatures {
+    val instance = model_NodeRuntimeHandlerFeatures()
+    instance.block()
+    return instance
+}
+
 fun newNodeSelector(block: model_NodeSelector.() -> Unit = {}): model_NodeSelector {
     val instance = model_NodeSelector()
     instance.block()
@@ -1755,6 +1777,12 @@ fun newVolumeDevice(block: model_VolumeDevice.() -> Unit = {}): model_VolumeDevi
 
 fun newVolumeMount(block: model_VolumeMount.() -> Unit = {}): model_VolumeMount {
     val instance = model_VolumeMount()
+    instance.block()
+    return instance
+}
+
+fun newVolumeMountStatus(block: model_VolumeMountStatus.() -> Unit = {}): model_VolumeMountStatus {
+    val instance = model_VolumeMountStatus()
     instance.block()
     return instance
 }

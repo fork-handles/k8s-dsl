@@ -2,8 +2,17 @@
 package dev.forkhandles.k8s.admissionregistration.v1
 
 import io.fabric8.kubernetes.api.model.LabelSelector as model_LabelSelector
+import io.fabric8.kubernetes.api.model.admissionregistration.v1.MatchResources as v1_MatchResources
 import io.fabric8.kubernetes.api.model.admissionregistration.v1.MutatingWebhook as v1_MutatingWebhook
 import io.fabric8.kubernetes.api.model.admissionregistration.v1.ValidatingWebhook as v1_ValidatingWebhook
+
+fun v1_MatchResources.objectSelector(block: model_LabelSelector.() -> Unit = {}) {
+    if (objectSelector == null) {
+        objectSelector = model_LabelSelector()
+    }
+
+    objectSelector.block()
+}
 
 fun v1_MutatingWebhook.objectSelector(block: model_LabelSelector.() -> Unit = {}) {
     if (objectSelector == null) {

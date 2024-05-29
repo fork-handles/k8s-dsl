@@ -15,6 +15,8 @@ import io.fabric8.kubernetes.api.model.batch.v1.PodFailurePolicy as v1_PodFailur
 import io.fabric8.kubernetes.api.model.batch.v1.PodFailurePolicyOnExitCodesRequirement as v1_PodFailurePolicyOnExitCodesRequirement
 import io.fabric8.kubernetes.api.model.batch.v1.PodFailurePolicyOnPodConditionsPattern as v1_PodFailurePolicyOnPodConditionsPattern
 import io.fabric8.kubernetes.api.model.batch.v1.PodFailurePolicyRule as v1_PodFailurePolicyRule
+import io.fabric8.kubernetes.api.model.batch.v1.SuccessPolicy as v1_SuccessPolicy
+import io.fabric8.kubernetes.api.model.batch.v1.SuccessPolicyRule as v1_SuccessPolicyRule
 import io.fabric8.kubernetes.api.model.batch.v1.UncountedTerminatedPods as v1_UncountedTerminatedPods
 
 fun newCronJob(block: v1_CronJob.() -> Unit = {}): v1_CronJob {
@@ -97,6 +99,18 @@ fun newPodFailurePolicyOnPodConditionsPattern(block: v1_PodFailurePolicyOnPodCon
 
 fun newPodFailurePolicyRule(block: v1_PodFailurePolicyRule.() -> Unit = {}): v1_PodFailurePolicyRule {
     val instance = v1_PodFailurePolicyRule()
+    instance.block()
+    return instance
+}
+
+fun newSuccessPolicy(block: v1_SuccessPolicy.() -> Unit = {}): v1_SuccessPolicy {
+    val instance = v1_SuccessPolicy()
+    instance.block()
+    return instance
+}
+
+fun newSuccessPolicyRule(block: v1_SuccessPolicyRule.() -> Unit = {}): v1_SuccessPolicyRule {
+    val instance = v1_SuccessPolicyRule()
     instance.block()
     return instance
 }

@@ -22,6 +22,7 @@ import io.fabric8.kubernetes.api.model.apiextensions.v1.JSONSchemaProps as v1_JS
 import io.fabric8.kubernetes.api.model.apiextensions.v1.JSONSchemaPropsOrArray as v1_JSONSchemaPropsOrArray
 import io.fabric8.kubernetes.api.model.apiextensions.v1.JSONSchemaPropsOrBool as v1_JSONSchemaPropsOrBool
 import io.fabric8.kubernetes.api.model.apiextensions.v1.JSONSchemaPropsOrStringArray as v1_JSONSchemaPropsOrStringArray
+import io.fabric8.kubernetes.api.model.apiextensions.v1.SelectableField as v1_SelectableField
 import io.fabric8.kubernetes.api.model.apiextensions.v1.ServiceReference as v1_ServiceReference
 import io.fabric8.kubernetes.api.model.apiextensions.v1.ValidationRule as v1_ValidationRule
 import io.fabric8.kubernetes.api.model.apiextensions.v1.WebhookClientConfig as v1_WebhookClientConfig
@@ -149,6 +150,12 @@ fun newJSONSchemaPropsOrBool(block: v1_JSONSchemaPropsOrBool.() -> Unit = {}): v
 
 fun newJSONSchemaPropsOrStringArray(block: v1_JSONSchemaPropsOrStringArray.() -> Unit = {}): v1_JSONSchemaPropsOrStringArray {
     val instance = v1_JSONSchemaPropsOrStringArray()
+    instance.block()
+    return instance
+}
+
+fun newSelectableField(block: v1_SelectableField.() -> Unit = {}): v1_SelectableField {
+    val instance = v1_SelectableField()
     instance.block()
     return instance
 }
