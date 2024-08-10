@@ -10,6 +10,7 @@ import io.fabric8.kubernetes.api.model.APIServiceCondition as model_APIServiceCo
 import io.fabric8.kubernetes.api.model.APIServiceList as model_APIServiceList
 import io.fabric8.kubernetes.api.model.APIServiceSpec as model_APIServiceSpec
 import io.fabric8.kubernetes.api.model.APIServiceStatus as model_APIServiceStatus
+import io.fabric8.kubernetes.api.model.APIVersions as model_APIVersions
 import io.fabric8.kubernetes.api.model.AWSElasticBlockStoreVolumeSource as model_AWSElasticBlockStoreVolumeSource
 import io.fabric8.kubernetes.api.model.Affinity as model_Affinity
 import io.fabric8.kubernetes.api.model.AppArmorProfile as model_AppArmorProfile
@@ -313,6 +314,12 @@ fun newAPIServiceSpec(block: model_APIServiceSpec.() -> Unit = {}): model_APISer
 
 fun newAPIServiceStatus(block: model_APIServiceStatus.() -> Unit = {}): model_APIServiceStatus {
     val instance = model_APIServiceStatus()
+    instance.block()
+    return instance
+}
+
+fun newAPIVersions(block: model_APIVersions.() -> Unit = {}): model_APIVersions {
+    val instance = model_APIVersions()
     instance.block()
     return instance
 }
