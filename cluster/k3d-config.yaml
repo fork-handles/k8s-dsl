@@ -7,7 +7,7 @@ agents: 2
 kubeAPI:
   hostIP: 0.0.0.0
   hostPort: "6445"
-image: rancher/k3s:v1.31.0-rc1-k3s1
+image: rancher/k3s:v1.31.1-k3s1
 ports:
   - port: 8080:80
     nodeFilters:
