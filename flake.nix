@@ -18,6 +18,7 @@
           kubectl-explore
           kubectx
           temurin-bin-21
+          tokei
           yq-go
         ];
 
