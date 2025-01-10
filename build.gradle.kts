@@ -14,8 +14,8 @@ plugins {
 }
 
 tasks.wrapper {
-    gradleVersion = "8.11.1"
-    distributionSha256Sum = "89d4e70e4e84e2d2dfbb63e4daa53e21b25017cc70c37e4eea31ee51fb15098a"
+    gradleVersion = "8.12"
+    distributionSha256Sum = "7ebdac923867a3cec0098302416d1e3c6c0c729fc4e2e05c10637a8af33a76c5"
     distributionType = Wrapper.DistributionType.ALL
 }
 
