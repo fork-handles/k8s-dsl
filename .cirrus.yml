@@ -1,8 +1,8 @@
 task:
   matrix:
-    - name: Tests (JDK 21 LTS)
+    - name: Tests (JDK LTS)
       container:
-        image: gradle:8.14-jdk-lts-and-current-alpine
+        image: public.ecr.aws/docker/library/gradle:9-jdk-lts-and-current-alpine
   gradle_cache:
     folder: ~/.gradle/caches
   check_script: gradle check --no-daemon --warning-mode=all

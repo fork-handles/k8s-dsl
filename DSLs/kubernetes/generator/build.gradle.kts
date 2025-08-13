@@ -8,7 +8,7 @@ application {
 }
 
 tasks.named<JavaExec>("run").configure {
-    args = listOf("${projects.dsLs.kubernetes.dsl.dependencyProject.projectDir}/src/main/kotlin-gen/")
+    args = listOf("${project.project(projects.dsLs.kubernetes.dsl.path).projectDir}/src/main/kotlin-gen/")
 }
 
 dependencies {
