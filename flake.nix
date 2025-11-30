@@ -13,7 +13,6 @@
           jq
           just
           k3d
-          k9s
           kubectl
           kubectl-explore
           kubectx
