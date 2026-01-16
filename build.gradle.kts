@@ -2,7 +2,7 @@ import org.gradle.api.tasks.testing.logging.TestExceptionFormat.FULL
 import org.gradle.jvm.toolchain.JvmVendorSpec.ADOPTIUM
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_1_8
 import org.jetbrains.kotlin.gradle.dsl.KotlinJvmCompilerOptions
-import org.jetbrains.kotlin.gradle.dsl.KotlinVersion.KOTLIN_2_2
+import org.jetbrains.kotlin.gradle.dsl.KotlinVersion.KOTLIN_2_3
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompilationTask
 import java.time.Duration
 
@@ -47,8 +47,8 @@ subprojects {
         withType<KotlinCompilationTask<KotlinJvmCompilerOptions>>().configureEach {
             compilerOptions {
                 jvmTarget.set(JVM_1_8)
-                apiVersion.set(KOTLIN_2_2)
-                languageVersion.set(KOTLIN_2_2)
+                apiVersion.set(KOTLIN_2_3)
+                languageVersion.set(KOTLIN_2_3)
                 allWarningsAsErrors.set(true)
                 freeCompilerArgs.addAll("-Xjsr305=strict", "-progressive")
             }
