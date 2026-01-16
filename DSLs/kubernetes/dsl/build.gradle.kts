@@ -47,10 +47,13 @@ configurations.create("testArtifacts") {
     extendsFrom(configurations["testApi"])
 }
 
+tasks.named("assemble") {
+    dependsOn(sourcesJar)
+    dependsOn(javadocJar)
+}
+
 artifacts {
     add("testArtifacts", testJar)
-    archives(sourcesJar)
-    archives(javadocJar)
 }
 
 val enableSigning = project.findProperty("sign") == "true"
