@@ -63,7 +63,7 @@ subprojects {
         testing {
             suites {
                 named<JvmTestSuite>("test") {
-                    useJUnitJupiter("5.10.0")
+                    useJUnitJupiter()
 
                     dependencies {
                         implementation(Testing.kotest.assertions.core)
