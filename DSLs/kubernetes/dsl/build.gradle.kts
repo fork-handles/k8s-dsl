@@ -14,13 +14,13 @@ buildscript {
     }
 }
 
-val sourcesJar by tasks.creating(Jar::class) {
+val sourcesJar by tasks.registering(Jar::class) {
     archiveClassifier.set("sources")
     from(project.the<SourceSetContainer>()["main"].allSource)
     dependsOn(tasks.named("classes"))
 }
 
-val javadocJar by tasks.creating(Jar::class) {
+val javadocJar by tasks.registering(Jar::class) {
     archiveClassifier.set("javadoc")
     from(tasks.named<Javadoc>("javadoc").get().destinationDir)
     dependsOn(tasks.named("javadoc"))
@@ -38,7 +38,7 @@ tasks.named<Jar>("jar") {
     }
 }
 
-val testJar by tasks.creating(Jar::class) {
+val testJar by tasks.registering(Jar::class) {
     archiveClassifier.set("test")
     from(project.the<SourceSetContainer>()["test"].output)
 }
