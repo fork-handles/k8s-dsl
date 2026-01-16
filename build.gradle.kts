@@ -59,27 +59,6 @@ subprojects {
             options.compilerArgs.addAll(arrayOf("-Xlint:all:_", "-Werror"))
         }
 
-        @Suppress("UnstableApiUsage")
-        testing {
-            suites {
-                named<JvmTestSuite>("test") {
-                    useJUnitJupiter()
-
-                    dependencies {
-                        implementation(Testing.kotest.assertions.core)
-                    }
-
-                    targets.all {
-                        testTask.configure {
-                            testLogging {
-                                exceptionFormat = FULL
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
         named<JacocoReport>("jacocoTestReport").configure {
             group = "Reporting"
             reports {
@@ -92,6 +71,24 @@ subprojects {
             doLast {
                 subprojects
                     .forEach { System.err.println(it.name) }
+            }
+        }
+    }
+
+    testing.suites {
+        named<JvmTestSuite>("test") {
+            useJUnitJupiter()
+
+            dependencies {
+                implementation(Testing.kotest.assertions.core)
+            }
+
+            targets.all {
+                testTask.configure {
+                    testLogging {
+                        exceptionFormat = FULL
+                    }
+                }
             }
         }
     }
